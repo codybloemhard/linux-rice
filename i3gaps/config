@@ -14,12 +14,15 @@ set $mod Mod4
 workspace 2 output HDMI-1
 workspace 1 output DP-1
 
+set $stdgap 20
+
 new_window 1pixel
-gaps inner 20
+gaps inner $stdgap
 gaps outer 0
 
 bindsym $mod+z gaps inner current plus 5
 bindsym $mod+Shift+z gaps inner current minus 5
+bindsym $mod+x gaps inner current set $stdgap 
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -54,24 +57,12 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -157,16 +148,11 @@ mode "resize" {
         # Pressing down will grow the window’s height.
         set $dt 5
 
-        bindsym j resize shrink width $dt px or $dt ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width $dt px or $dt ppt
+        bindsym Down resize grow height $dt px or $dt ppt
+        bindsym Up resize shrink height $dt px or $dt ppt
+        bindsym Right resize grow width $dt px or $dt ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
