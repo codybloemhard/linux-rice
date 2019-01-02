@@ -20,6 +20,9 @@ sudo xbps-install -S -y gcc
 sudo xbps-install -S -y make
 sudo xbps-install -S -y linux-headers
 sudo xbps-install -S -y chromium
+sudo xbps-install -S -y void-repo-multilib
+sudo xbps-install -S -y void-repo-multilib-nonfree
+sudo xbps-install -S -y void-repo-nonfree
 sudo xbps-install -S -y vscode
 sudo xbps-install -Suv
 echo "Configuring"
