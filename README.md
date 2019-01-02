@@ -1,2 +1,2 @@
 # VoidLinuxRice
-My Rice fo Void.
+My Rice for Void.
