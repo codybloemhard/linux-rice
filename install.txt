@@ -17,4 +17,7 @@ htop
 
 chromium
 git
-vscodev
+vscode
+vim
+scrot
+

@@ -168,4 +168,9 @@ Bar {
         status_command i3status
 }
 
-exec compton
+exec compton --config ~/.config/compton/compton.conf
+#exec compton
+#kill and start compton for games etc
+bindsym $mod+Shift+o exec compton --config ~/.config/compton/compton.conf
+bindsym $mod+Shift+p exec pkill compton
+
