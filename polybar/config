@@ -1,13 +1,17 @@
 [colors]
-background = ${xrdb:color128:#222}
-;background = #222
+background = #222
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
+temp = #229999
+cpu = #2222bb
+ram = #992299
+file = #22bb22
+nlan = #aa7722
+nwla = #bb2222
 
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -27,8 +31,8 @@ line-color = #f00
 border-size = 0
 border-color = #00000000
 
-padding-left = 2
-padding-right = 2
+padding-left = 1
+padding-right = 1
 
 module-margin-left = 0
 module-margin-right = 0
@@ -36,12 +40,9 @@ module-margin-right = 0
 font-0 = fixed:pixelsize=32;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 
-;modules-left = bspwm i3
-;modules-center = mpd
-;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 modules-right = date
-modules-center = wlan eth filesystem cpu memory temperature
-modules-left = xkeyboard
+modules-center = wlan eth filesystem temperature cpu memory
+modules-left = bspwm i3 xkeyboard
 
 tray-position = left
 tray-padding = 2
@@ -92,8 +93,27 @@ interval = 25
 mount-0 = /
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+label-mounted-background = ${colors.file}
+label-mounted-padding = 2
+
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %index%
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+
+label-occupied = %index%
+label-occupied-padding = 2
+
+label-urgent = %index%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+label-empty = %index%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
 
 [module/i3]
 type = internal/i3
@@ -130,23 +150,56 @@ label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 ; Separator in between workspaces
-; label-separator = |
+label-separator = 
 
 [module/cpu]
 type = internal/cpu
-interval = 2
-format-prefix = "CPU "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
-label = %percentage:2%%
+interval = 0.5
+
+#label = %percentage_used%%
+
+format = <label> <bar-load>
+format-padding = 2
+format-background = ${colors.cpu}
+format-foreground = ${colors.foreground}
+
+label = CPU
+label-font = 0
+
+bar-load-width = 20
+bar-load-indicator = |
+bar-load-indicator-font = 0
+bar-load-indicator-foreground = ${colors.foreground}
+bar-load-fill = ─
+bar-load-fill-font = 0
+bar-load-fill-foreground = ${colors.foreground}
+bar-load-empty = ─
+bar-load-empty-font = 0
+bar-load-empty-foreground = ${colors.foreground}
 
 [module/memory]
 type = internal/memory
-interval = 2
-format-prefix = "RAM "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
-label = %percentage_used%%
+interval = 0.5
+#label = %percentage_used%%
+
+format = <label> <bar-used>
+format-padding = 2
+format-background = ${colors.ram}
+format-foreground = ${colors.foreground}
+
+label = RAM
+label-font = 0
+
+bar-used-width = 20
+bar-used-indicator = |
+bar-used-indicator-font = 0
+bar-used-indicator-foreground = ${colors.foreground}
+bar-used-fill = ─
+bar-used-fill-font = 0
+bar-used-fill-foreground = ${colors.foreground}
+bar-used-empty = ─
+bar-used-empty-font = 0
+bar-used-empty-foreground = ${colors.foreground}
 
 [module/wlan]
 type = internal/network
@@ -154,13 +207,15 @@ interface = wlp5s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-label-connected = %essid%
+format-connected-background = ${colors.nwla}
+format-connected-padding = 2
+label-connected = %ifname% : %essid%
 
 format-disconnected = <label-disconnected>
-format-disconnected-underline = ${self.format-connected-underline}
-label-disconnected = %ifname% disconnected
-label-disconnected-foreground = ${colors.foreground-alt}
+format-disconnected-background = ${colors.nwla}
+format-disconnected-padding = 2
+label-disconnected = %ifname% : fail
+label-disconnected-foreground = ${colors.foreground}
 
 ramp-signal-0 = |
 ramp-signal-1 = ||
@@ -174,15 +229,15 @@ type = internal/network
 interface = enp6s0
 interval = 3.0
 
-format-connected-underline = #55aa55
-format-connected-prefix = ""
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+format-connected-background = ${colors.nlan}
+format-connected-padding = 2
+label-connected = %ifname% : %local_ip%
 
+format-disconnected-background = ${colors.nlan}
+format-disconnected-padding = 2
 format-disconnected = <label-disconnected>
-format-disconnected-underline = ${self.format-connected-underline}
-label-disconnected = %ifname% disconnected
-label-disconnected-foreground = ${colors.foreground-alt}
+label-disconnected = %ifname% : fail
+label-disconnected-foreground = ${colors.foreground}
 
 [module/date]
 type = internal/date
@@ -202,26 +257,18 @@ label = %time%%date%
 
 [module/temperature]
 type = internal/temperature
+interval = 2
 thermal-zone = 0
-warn-temperature = 60
 
-format = <ramp> <label>
-format-underline = #f50a4d
-format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
+format = <label>
+format-background = ${colors.temp}
+format-padding = 2
 
 label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
-
-ramp-0 = -
-ramp-1 = --
-ramp-2 = ---
-ramp-foreground = ${colors.foreground-alt}
 
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
-;compositing-background = screen
+compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
