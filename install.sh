@@ -17,6 +17,10 @@ cp compton/compton.conf ~/.config/compton/compton.conf
 mkdir ~/.config/terminator
 cp terminator/config ~/.config/terminator/config
 cp xserver/.xinitrc ~/.xinitrc
+mkdir ~/.config/polybar
+cp polybar/run-poly.sh ~/.config/polybar/run-poly.sh
+sudo chmod +x ~/.config/polybar/run-poly.sh
+cp polybar/config ~/.config/polybar/config
 mkdir ~/img
 cp background.jpg ~/img/background.jpg
 echo "Done"
