@@ -24,6 +24,7 @@
     cursor_blink = False
     cursor_color = "#11ff11"
     cursor_color_fg = False
+    cursor_shape = ibeam
     font = Monospace 14
     foreground_color = "#00ff00"
     icon_bell = False
