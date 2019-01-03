@@ -1,31 +1,15 @@
 #!/bin/bash
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 echo "Installing"
 sudo xbps-install -Suv
-sudo xbps-install -S -y xorg
-sudo xbps-install -S -y i3-gaps
-sudo xbps-install -S -y i3status
-sudo xbps-install -S -y dmenu
-sudo xbps-install -S -y feh
-sudo xbps-install -S -y lxappearance
-sudo xbps-install -S -y compton
-sudo xbps-install -S -y terminator
-sudo xbps-install -S -y NetworkManager
-sudo xbps-install -S -y vim
-sudo xbps-install -S -y scrot
-sudo xbps-install -S -y htop
-sudo xbps-install -S -y asla-firmware
-sudo xbps-install -S -y alsa-utils
-sudo xbps-install -S -y arc-theme
-sudo xbps-install -S -y gcc
-sudo xbps-install -S -y make
-sudo xbps-install -S -y linux-headers
-sudo xbps-install -S -y chromium
-sudo xbps-install -S -y void-repo-multilib
-sudo xbps-install -S -y void-repo-multilib-nonfree
-sudo xbps-install -S -y void-repo-nonfree
-sudo xbps-install -S -y vscode
+sudo xbps-install -Sy xorg i3-gaps i3status dmenu feh lxappearance compton terminator NetworkManager vim scrot htop alsa-firmware alsa-utils arc-theme gcc make linux-headers chromium
+sudo xbps-install -Sy void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree
+sudo xbps-install -S
+sudo xbps-install -Sy vscode
 sudo xbps-install -Suv
+cd $parent_path
 echo "Configuring"
+mkdir ~/.config
 mkdir ~/.config/i3
 cp i3gaps/config ~/.config/i3/config
 mkdir ~/.config/compton
