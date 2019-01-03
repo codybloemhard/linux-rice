@@ -2,7 +2,7 @@
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 echo "Installing"
 sudo xbps-install -Suv
-sudo xbps-install -Sy xorg i3-gaps i3status dmenu feh lxappearance compton terminator NetworkManager vim scrot htop alsa-firmware alsa-utils arc-theme gcc make linux-headers chromium
+sudo xbps-install -Sy xorg i3-gaps i3status dmenu feh lxappearance compton terminator NetworkManager network-manager-applet vim scrot htop alsa-firmware alsa-utils arc-theme gcc make linux-headers chromium
 sudo xbps-install -Sy void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree
 sudo xbps-install -S
 sudo xbps-install -Sy vscode
