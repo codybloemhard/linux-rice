@@ -1,22 +1,22 @@
 [colors]
-background = #222
-background-alt = #444
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
-temp = #229999
-cpu = #2222bb
-ram = #992299
-file = #22bb22
-nlan = #aa7722
-nwla = #bb2222
+background = #90111111
+background-alt = #80333333
+foreground = #fff
+foreground-alt = #888
+primary = #80000000
+secondary = #60bb0099
+alert = #60990044
+temp = #80229999
+cpu = #802222bb
+ram = #80992299
+file = #8022bb22
+nlan = #80aa7722
+nwla = #80bb2222
 
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 27
+height = 30
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
@@ -29,7 +29,7 @@ line-size = 0
 line-color = #f00
 
 border-size = 0
-border-color = #00000000
+border-color = #000
 
 padding-left = 1
 padding-right = 1
@@ -37,12 +37,12 @@ padding-right = 1
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = fixed:pixelsize=32;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-0 = fixed:pixelsize=64;1
+font-1 = unifont:fontformat=truetype:size32:antialias=false;0
 
 modules-right = date
 modules-center = wlan eth filesystem temperature cpu memory
-modules-left = bspwm i3 xkeyboard
+modules-left = i3 xkeyboard
 
 tray-position = left
 tray-padding = 2
@@ -78,11 +78,13 @@ format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
+label-layout-margin = 0
+label-layout-padding = 2
 label-layout = %layout%
 label-layout-underline = ${colors.secondary}
 
-label-indicator-padding = 2
-label-indicator-margin = 1
+label-indicator-padding = 1
+label-indicator-margin = 0
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 
@@ -156,7 +158,7 @@ label-separator =
 type = internal/cpu
 interval = 0.5
 
-#label = %percentage_used%%
+#label = %percentage_used%
 
 format = <label> <bar-load>
 format-padding = 2
@@ -180,7 +182,7 @@ bar-load-empty-foreground = ${colors.foreground}
 [module/memory]
 type = internal/memory
 interval = 0.5
-#label = %percentage_used%%
+#label = %percentage_used%
 
 format = <label> <bar-used>
 format-padding = 2
