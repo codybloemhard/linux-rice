@@ -9,6 +9,4 @@ sudo chmod +x install-specific.sh
 ./install-specific.sh
 sudo chmod +x config-std.sh
 ./config-std.sh
-sudo chmod +x config-compton-blur.sh
-./config-compton-blur.sh
 echo "Finalized"
