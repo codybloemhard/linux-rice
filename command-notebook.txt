@@ -1,0 +1,2 @@
+sudo unlink /etc/localtime
+sudo ln -s /usr/share/zoneinfo/Etc/GMT+0 /etc/localtime
