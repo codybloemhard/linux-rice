@@ -30,7 +30,6 @@ If you have Void on a usb:
 12. Should work now, ``xbps-install -S`` should work.
 13. If not, i also had to repeat some steps. If it prompts that it has this file in /usr/.... after step 10, just remove it with ``rm filename``. and repeat step 10.
 14. ``wpa_supplicant -B -i<interface_name> -c<path/to/configuration/file> -Dwext`` could also work at step 10.
-15. This was the hardest part of the whole install.
 ## Step 3 Install Rice:
 0. Assuming you have internet access now and you only have void installed: there is only a terminal. No windows etc.
 1. Login as a normal user.
@@ -45,13 +44,6 @@ If you have Void on a usb:
 10. You now have the programs, my configs, repos installed, system updated etc.
 11. ``startx``
 12. Should see a space image background.
-13. Press ``windowskey+enter``
-14. A terminal comes up (should be transparent and blurred bg and should be terminator).
-15. Press ``windowskey+d``, a small bar on top should appear, type in lxappearance, press enter.
-16. A window comes up, you can select themes. Adwaita-dark should be intalled. That is my choice.
-17. You can change the font also in the window, i use monospace-12.
-18. Press the button apply. 
-19. Press ``windowskey+shift+e``, a popup comes up, click yes, you go back to tty.
-20. ``startx`` again.
-21. ``windowskey+d``, type chromium, enter, chromium comes up, log in, browser should be dark themed, else choose gtk+ in the settings.
-22. Done.
+13. Press ``windowskey+enter`` to fire up a terminal.
+14. ``windowskey+shift+b``, to fire up the browser, log in, browser should be dark themed, else choose gtk+ in the settings.
+15. Done.
