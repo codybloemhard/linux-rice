@@ -46,9 +46,10 @@
 3. Make a dir for all git projects: ``mkdir ~/git``
 4. Goto the new dir: ``cd ~/git``
 5. Pull this repo(assuming you read this on another device): ``git clone https://github.com/ocdy1001/VoidLinuxRice.git``
-6. ``cd /``
-7. Give exec rights: ``chmod +x ~/git/VoidLinuxRice/install.sh``
-8. Run it ``~/git/VoidLinuxRice/install.sh``
+6. ``cd ~/git/LinuxRice/``
+7. Let FILENAME be ``Void/cvlr.sh`` || ``Arch/calr.sh``
+7. Give exec rights: ``chmod +x FILENAME``
+8. Run it ``./FILENAME``
 9. It does stuff(installing using xbps or pacman and copying config files).
 10. You now have the programs, my configs, repos installed, system updated etc.
 11. ``startx``
