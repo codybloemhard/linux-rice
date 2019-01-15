@@ -40,8 +40,7 @@
 13. If not, i also had to repeat some steps. If it prompts that it has this file in /usr/.... after step 10, just remove it with ``rm filename``. and repeat step 10.
 14. ``wpa_supplicant -B -i<interface_name> -c<path/to/configuration/file> -Dwext`` could also work at step 10.
 ## Step 2 Install Rice:
-0. Assuming you have internet access now and you only have void/arch installed: there is only a terminal. No windows etc.
-###Void/Arch (``void`` || ``arch``)
+0. Assuming you have internet access now and you only have void/arch installed: there is only a terminal. No windows etc. commands:(``void`` || ``arch``)
 1. Login as a normal user.
 2. Install git: ``sudo xbps-install -Sy git`` || ``sudo pacman -S git``
 3. Make a dir for all git projects: ``mkdir ~/git``
