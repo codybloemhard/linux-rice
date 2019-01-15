@@ -9,4 +9,9 @@ cd polybar
 makepkg -si
 cd ..
 rm -rf polybar
+git clone https://aur.archlinux.org/adwaita-dark.git
+cd adwaita-dark
+makepkg -si
+cd ..
+rm -rf adwaita-dark
 echo "Done"
