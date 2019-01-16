@@ -17,8 +17,10 @@ mkdir ~/.config/compton
 cp std-confs/compton-std.conf ~/.config/compton/compton.conf
 mkdir ~/.config/terminator
 cp std-confs/terminator-std.conf ~/.config/terminator/config
+mkdir ~/.config/neofetch
+cp std-confs/neofetch.conf ~/.config/neofetch/config.conf
 cp std-confs/vim-std.conf ~/.vimrc
-mkdir ~/img
 cp std-confs/bashrc.conf ~/.bashrc
+mkdir ~/img
 cp background.jpg ~/img/background.jpg
 echo "Done"
