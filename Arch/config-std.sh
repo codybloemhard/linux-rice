@@ -19,6 +19,8 @@ mkdir ~/.config/terminator
 cp std-confs/terminator-std.conf ~/.config/terminator/config
 mkdir ~/.config/neofetch
 cp std-confs/neofetch.conf ~/.config/neofetch/config.conf
+cp std-confs/zshrc-std.conf ~/.zshrc
+cp std-confs/cody-std.zsh-theme ~/.oh-my-zsh/themes/cody.zsh-theme
 cp std-confs/vim-std.conf ~/.vimrc
 cp std-confs/bashrc.conf ~/.bashrc
 mkdir ~/img

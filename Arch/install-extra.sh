@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "Installing (extra)"
-sudo pacman -Sy vim scrot htop alsa-firmware alsa-utils chromium lolcat sl neofetch unzip
+sudo pacman -Sy scrot alsa-firmware alsa-utils chromium sl unzip
 echo "Done"
