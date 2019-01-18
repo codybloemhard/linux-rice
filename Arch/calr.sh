@@ -13,3 +13,4 @@ sudo chmod +x config-std.sh
 #./config-var-blur.sh
 sudo shutdown -r now
 echo "Finalized"
+sudo shutdown -r now
