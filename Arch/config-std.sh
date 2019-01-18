@@ -33,6 +33,8 @@ chsh -s $(which zsh)
 cp std-confs/bashrc.conf ~/.bashrc
 # vim
 cp std-confs/vim-std.conf ~/.vimrc
+# to select right audio device(smsl m3 dac for me)
+cp std-confs/asoundrc.conf ~/.asoundrc
 # background
 mkdir ~/img
 cp background.jpg ~/img/background.jpg
