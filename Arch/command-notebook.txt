@@ -1,2 +1,5 @@
+# time
 sudo unlink /etc/localtime
 sudo ln -s /usr/share/zoneinfo/Etc/GMT+0 /etc/localtime
+# sound test where number after plughw: is the device. aplay -l to list devices
+speaker-test -c 2 -D plughw:2
