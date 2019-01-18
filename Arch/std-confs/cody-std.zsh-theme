@@ -61,8 +61,9 @@ prompt_end() {
 
 # Context: user@hostname (who am I and where am I)
 prompt_context() {
-  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment yellow black "λ %(!.%{%F{yellow}%}.)%n@%m"
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then 
+    echo -n "%F{yellow}%K{none}\ue0b2"
+    prompt_segment yellow black "%(!.%{%F{yellow}%}.)%n λ %m"
   fi
 }
 
@@ -85,6 +86,10 @@ prompt_git() {
     ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git rev-parse --short HEAD 2> /dev/null)"
     if [[ -n $dirty ]]; then
       prompt_segment red black
+    elif $(echo "$(git log origin/$(git_current_branch)..HEAD 2> /dev/null)" | grep '^commit' &> /dev/null); then
+      prompt_segment magenta black
+    elif $(echo "$(git log HEAD..origin/$(git_current_branch) 2> /dev/null)" | grep '^commit' &> /dev/null); then
+      prompt_segment magenta black
     else
       prompt_segment green black
     fi
@@ -95,6 +100,10 @@ prompt_git() {
       mode=" >M<"
     elif [[ -e "${repo_path}/rebase" || -e "${repo_path}/rebase-apply" || -e "${repo_path}/rebase-merge" || -e "${repo_path}/../.dotest" ]]; then
       mode=" >R>"
+    elif $(echo "$(git log origin/$(git_current_branch)..HEAD 2> /dev/null)" | grep '^commit' &> /dev/null); then
+      mode=" ↑"
+    elif $(echo "$(git log HEAD..origin/$(git_current_branch) 2> /dev/null)" | grep '^commit' &> /dev/null); then
+      mode=" ↓"
     fi
 
     setopt promptsubst
