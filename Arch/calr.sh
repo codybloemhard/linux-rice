@@ -11,6 +11,5 @@ sudo chmod +x config-std.sh
 ./config-std.sh
 #sudo chmod +x config-var-blur.sh
 #./config-var-blur.sh
-sudo shutdown -r now
 echo "Finalized"
 sudo shutdown -r now
