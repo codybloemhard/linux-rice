@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Installing (specific)"
 sudo pacman -Sy code
-sudo pacman -Sy texlive-most
+sudo pacman -Sy texlive-most mupdf
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
