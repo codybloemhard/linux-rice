@@ -23,18 +23,22 @@ cp std-confs/compton-std.conf ~/.config/compton/compton.conf
 # terminator
 mkdir ~/.config/terminator
 cp std-confs/terminator-std.conf ~/.config/terminator/config
-# neofetch
-mkdir ~/.config/neofetch
-cp std-confs/neofetch.conf ~/.config/neofetch/config.conf
 # zsh/bash
 cp std-confs/zshrc-std.conf ~/.zshrc
 cp std-confs/cody-std.zsh-theme ~/.oh-my-zsh/themes/cody.zsh-theme
+cp std-confs/zprofile-std.conf ~/.zprofile
 chsh -s $(which zsh)
-cp std-confs/bashrc.conf ~/.bashrc
+cp std-confs/bashrc-std.conf ~/.bashrc
 # vim
 cp std-confs/vim-std.conf ~/.vimrc
 # to select right audio device(smsl m3 dac for me)
-cp std-confs/asoundrc.conf ~/.asoundrc
+cp std-confs/asoundrc-std.conf ~/.asoundrc
+# profile
+cp std-confs/profile-std.conf ~/.profile
+# scripts folder
+mkdir ~/scripts
+echo "echo \"HENLO, THIS IS TEST SCRIPT. NICE TO MEET YOU.\"" > ~/scripts/test.sh
+chmod +x ~/scripts/test.sh
 # background
 mkdir ~/img
 cp background.jpg ~/img/background.jpg
