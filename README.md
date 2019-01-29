@@ -59,7 +59,7 @@
 - C: Control, S:Shift, M:Mod.
 - Mod = (arch: windowskey, void: alt).
 - This is because i use void on my laptop and it has the windows key on a weird place.
-###i3-gaps
+### i3-gaps
 - M-q           = close window
 - M-Enter       = open terminal
 - M-b           = open browser
