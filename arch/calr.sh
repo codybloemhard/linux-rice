@@ -9,7 +9,5 @@ sudo chmod +x install-extra.sh
 #./install-specific.sh
 sudo chmod +x config-std.sh
 ./config-std.sh
-#sudo chmod +x config-var-blur.sh
-#./config-var-blur.sh
 echo "Finalized"
 sudo shutdown -r now

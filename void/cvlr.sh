@@ -5,10 +5,8 @@ sudo chmod +x install-minimal.sh
 ./install-minimal.sh
 sudo chmod +x install-extra.sh
 ./install-extra.sh
-sudo chmod +x install-specific.sh
-./install-specific.sh
+#sudo chmod +x install-specific.sh
+#./install-specific.sh
 sudo chmod +x config-std.sh
 ./config-std.sh
-#sudo chmod +x config-var-blur.sh
-#./config-var-blur.sh
 echo "Finalized"
