@@ -55,3 +55,59 @@
 14. Press ``windowskey+enter`` to fire up a terminal.
 15. ``windowskey+b``, to fire up the browser, log in, browser should be dark themed, else choose gtk+ in the settings.
 16. Done.
+## Usefull Shortcuts
+- C: Control, S:Shift, M:Mod.
+- Mod = (arch: windowskey, void: alt).
+- This is because i use void on my laptop and it has the windows key on a weird place.
+###i3-gaps
+- M-q           = close window
+- M-Enter       = open terminal
+- M-b           = open browser
+- M-d           = open dmenu
+- 
+- M-j           = focus left window
+- M-l           = focus right window
+- M-i           = focus up window
+- M-k           = focus down window
+- M-S-j         = move left window
+- M-S-l         = move right window
+- M-S-i         = move up window
+- M-S-k         = move down window
+- M-Left        = focus left window
+- M-Right       = focus right window
+- M-Up          = focus up window
+- M-Down        = focus down window
+- M-S-Left      = move left window
+- M-S-Right     = move right window
+- M-S-Up        = move up window
+- M-S-Down      = move down window
+- M-h           = split horizontally from now on
+- M-v           = split vertically from now on
+- 
+- M-r           = go into resize mode
+- M-r           = (resize mode) go back to normal mode
+- M-Enter       = (resize mode) go back to normal mode
+- M-Esc         = (resize mode) go back to normal mode
+- j             = (resize mode) decrease width
+- u             = (resize mode) increase width
+- k             = (resize mode) decrease height
+- i             = (resize mode) increase height
+- Left          = (resize mode) decrease width
+- Right         = (resize mode) increase width
+- Down          = (resize mode) decrease height
+- Up            = (resize mode) increase height
+- 
+- M-f           = toggle fullscreen for selected window
+- M-z           = increase gap size
+- M-S-z         = decrease gap size
+- M-x           = set gap size to default
+- M-S-x         = set gap size to 0
+- 
+- M-(1..9,0)    = switch to workspace n
+- M-S(1..9,0)   = move window to workspace n
+- 
+- M-S-c         = reload config file
+- M-S-r         = restart i3, keep windows open
+- M-S-e         = close i3, xserver
+- M-S-o         = start compositor
+- M-S-p         = kill compositor
