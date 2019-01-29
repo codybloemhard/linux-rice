@@ -24,10 +24,7 @@ cp std-confs/compton-std.conf ~/.config/compton/compton.conf
 mkdir ~/git
 cd ~/git
 git clone https://github.com/ocdy1001/st-cody.git
-cd $parent_path
-cp bin/st ~/git/st-cody/st
-cd ~/git/st-cody
-sudo make install
+~/git/st-cody/installman
 cd $parent_path
 # zsh/bash
 #cp std-confs/zshrc-std.conf ~/.zshrc
