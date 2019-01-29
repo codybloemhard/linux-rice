@@ -27,26 +27,26 @@ git clone https://github.com/ocdy1001/st-cody.git
 ~/git/st-cody/installman
 cd $parent_path
 # zsh/bash
-#cp std-confs/zshrc-std.conf ~/.zshrc
-#cp std-confs/cody-std.zsh-theme ~/.oh-my-zsh/themes/cody.zsh-theme
-#cp std-confs/zprofile-std.conf ~/.zprofile
-#chsh -s $(which zsh)
-#cp std-confs/bashrc-std.conf ~/.bashrc
-# zsh-syntax-highlighter plugin
-#cd ~/.oh-my-zsh/custom/plugins
-#git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
-#cd $parent_path
-#cp std-confs/main-highlighter-std.zsh ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/highlighters/main/main-highlighter.zsh
+cp std-confs/zshrc-std.conf ~/.zshrc
+cp std-confs/cody-std.zsh-theme ~/.oh-my-zsh/themes/cody.zsh-theme
+cp std-confs/zprofile-std.conf ~/.zprofile
+chsh -s $(which zsh)
+cp std-confs/bashrc-std.conf ~/.bashrc
+zsh-syntax-highlighter plugin
+cd ~/.oh-my-zsh/custom/plugins
+git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+cd $parent_path
+cp std-confs/main-highlighter-std.zsh ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/highlighters/main/main-highlighter.zsh
 # vim
 cp std-confs/vim-std.conf ~/.vimrc
 # to select right audio device(smsl m3 dac for me)
 cp std-confs/asoundrc-std.conf ~/.asoundrc
 # profile
-#cp std-confs/profile-std.conf ~/.profile
+cp std-confs/profile-std.conf ~/.profile
 # scripts folder
-#mkdir ~/scripts
-#echo "echo \"HENLO, THIS IS TEST SCRIPT. NICE TO MEET YOU.\"" > ~/scripts/test.sh
-#chmod +x ~/scripts/test.sh
+mkdir ~/scripts
+echo "echo \"HENLO, THIS IS TEST SCRIPT. NICE TO MEET YOU.\"" > ~/scripts/test.sh
+chmod +x ~/scripts/test.sh
 # background
 mkdir ~/img
 cp background.jpg ~/img/background.jpg
