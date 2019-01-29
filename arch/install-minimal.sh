@@ -19,9 +19,9 @@ rm -rf adwaita-dark
 # Install ZSH, oh-my-zsh, and needed fonts for latter one
 sudo pacman -S zsh curl
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo "Done"
 git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
 ./install.sh
 cd ..
 rm -rf fonts
+echo "Done"
