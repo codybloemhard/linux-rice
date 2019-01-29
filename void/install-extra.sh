@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "Installing (extra)"
-sudo xbps-install -Sy dialog wifish scrot alsa-firmware alsa-utils gcc make chromium
+sudo xbps-install -Sy dialog wifish scrot alsa-firmware alsa-utils gcc make chromium pyhton3
 echo "Done"
