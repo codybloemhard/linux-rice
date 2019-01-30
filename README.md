@@ -111,3 +111,13 @@
 - M-S-e         = close i3, xserver
 - M-S-o         = start compositor
 - M-S-p         = kill compositor
+### st-cody
+- Mouse to select text(not keyboardshortcut but yea)
+- S-Up          = scroll n lines up
+- S-Down        = scroll n lines down
+- S-Pgup        = scroll n lines up
+- S-Pgdn        = scroll n lines down
+- C-S-Pgup      = increase font size
+- C-S-Pgdn      = decrease font size
+- C-S-c         = copy
+- C-S-v         = paste
