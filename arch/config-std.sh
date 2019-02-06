@@ -32,7 +32,6 @@ cp std-confs/zshrc-std.conf ~/.zshrc
 cp std-confs/cody-std.zsh-theme ~/.oh-my-zsh/themes/cody.zsh-theme
 cp std-confs/zprofile-std.conf ~/.zprofile
 chsh -s $(which zsh)
-cp std-confs/bashrc-std.conf ~/.bashrc
 # zsh-syntax-highlighter plugin
 cd ~/.oh-my-zsh/custom/plugins
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
