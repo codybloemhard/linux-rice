@@ -3,7 +3,7 @@ echo "Installing (minimal)"
 sudo pacman -Syu
 sudo pacman -S xorg-server xorg-xinit xorg-xrandr i3-gaps i3status dmenu feh compton linux-headers nvidia vim htop lolcat neofetch
 sudo pacman -S wifi-menu dialog wpa_supplicant
-sudo pacman -S base-devel
+sudo pacman -S base-devel pacman-contrib
 git clone https://aur.archlinux.org/polybar.git
 # Install Polybar
 cd polybar
