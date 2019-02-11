@@ -1,3 +1,4 @@
 #!/bin/bash
-upd=$(checkupdates | wc -l)
+exec checkupdates
+upd=$(pacman -Qu | wc -l)
 echo "Updates: $upd"
