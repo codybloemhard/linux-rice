@@ -2,6 +2,11 @@
 echo "Configuring"
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd $parent_path
+# scripts folder
+mkdir ~/scripts
+mkdir ~/scripts/.sfiles
+echo "echo \"HENLO, THIS IS TEST SCRIPT. NICE TO MEET YOU.\"" > ~/scripts/test.sh
+chmod +x ~/scripts/test.sh
 # xorg
 mkdir ~/.config
 cp std-confs/xinit-std.conf ~/.xinitrc
@@ -14,6 +19,8 @@ cp std-confs/run-poly-std.sh ~/.config/polybar/run-poly.sh
 sudo chmod +x ~/.config/polybar/run-poly.sh
 cp std-confs/polybar-std.conf ~/.config/polybar/config
 cp other/pacupdatespolybar.sh ~/scripts/pacupdatespolybar.sh
+cp other/pacupd.py ~/scripts/pacupd.py
+echo "0" > ~/scripts/.sfiles/pacupd.txt
 chmod +x ~/scripts/pacupdatespolybar.sh
 # gtk theme
 mkdir ~/.config/gtk-3.0
@@ -45,10 +52,6 @@ cp std-confs/vim-std.conf ~/.vimrc
 cp std-confs/asoundrc-std.conf ~/.asoundrc
 # profile
 cp std-confs/profile-std.conf ~/.profile
-# scripts folder
-mkdir ~/scripts
-echo "echo \"HENLO, THIS IS TEST SCRIPT. NICE TO MEET YOU.\"" > ~/scripts/test.sh
-chmod +x ~/scripts/test.sh
 # background
 mkdir ~/img
 cp background.jpg ~/img/background.jpg
