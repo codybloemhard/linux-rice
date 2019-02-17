@@ -9,5 +9,7 @@ sudo chmod +x install-extra.sh
 #./install-specific.sh
 sudo chmod +x config-std.sh
 ./config-std.sh
+sudo chmod +x config-extra.sh
+./config-extra.sh
 echo "Finalized"
 sudo shutdown -r now
