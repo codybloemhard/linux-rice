@@ -1,11 +1,19 @@
 #!/bin/bash
 echo "Installing (minimal)"
 sudo pacman -Syu
-sudo pacman -S xorg-server xorg-xinit xorg-xrandr i3-gaps i3status dmenu feh compton linux-headers nvidia vim htop lolcat neofetch
+sudo pacman -S xorg-server xorg-xinit xorg-xrandr i3-gaps i3status dmenu feh compton linux-headers nvidia vim htop neofetch
 sudo pacman -S wifi-menu dialog wpa_supplicant
 sudo pacman -S base-devel pacman-contrib
-git clone https://aur.archlinux.org/polybar.git
+# install yay
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ..
+rm -rf yay
+# install better lolcat
+yay -S c-lolcat
 # Install Polybar
+git clone https://aur.archlinux.org/polybar.git
 cd polybar
 makepkg -si
 cd ..
