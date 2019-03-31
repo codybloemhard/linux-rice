@@ -11,5 +11,7 @@ sudo chmod +x config-std.sh
 ./config-std.sh
 sudo chmod +x config-extra.sh
 ./config-extra.sh
+sudo chmod +x gen-wifi-std.sh
+./gen-wifi-std.sh
 echo "Finalized"
 sudo shutdown -r now
