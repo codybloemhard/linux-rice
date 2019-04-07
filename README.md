@@ -69,8 +69,9 @@ They are mainly forks of existing open source software, mostly suckless stuff.
 - M-q           = close window
 - M-Enter       = open terminal
 - M-b           = open browser
-- M-d           = open dmenu
-- 
+- M-BackSpace   = open dmenu
+- M-Space       = toggle popup terminal 
+-
 - M-j           = focus left window
 - M-l           = focus right window
 - M-i           = focus up window
@@ -104,6 +105,7 @@ They are mainly forks of existing open source software, mostly suckless stuff.
 - Up            = (resize mode) increase height
 - 
 - M-f           = toggle fullscreen for selected window
+- M-S-f         = toggle floating mode for selected window
 - M-z           = increase gap size
 - M-S-z         = decrease gap size
 - M-x           = set gap size to default
