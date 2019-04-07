@@ -31,13 +31,6 @@ cp std-confs/gtk-settings-std.ini ~/.config/gtk-3.0/settings.ini
 # compton
 mkdir ~/.config/compton
 cp std-confs/compton-std.conf ~/.config/compton/compton.conf
-# st
-mkdir ~/git
-cd ~/git
-git clone https://github.com/ocdy1001/st-cody.git
-cd st-cody
-sudo make install
-cd $parent_path
 # zsh/bash
 cp std-confs/zshrc-std.conf ~/.zshrc
 cp std-confs/cody-std.zsh-theme ~/.oh-my-zsh/themes/cody.zsh-theme

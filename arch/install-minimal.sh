@@ -1,11 +1,25 @@
 #!/bin/bash
 echo "Installing (minimal)"
+_path=$( pwd )
 sudo pacman -Syu
-sudo pacman -S xorg-server xorg-xinit xorg-xrandr i3-gaps i3status dmenu feh compton linux-headers nvidia vim htop neofetch
+sudo pacman -S xorg-server xorg-xinit xorg-xrandr i3-gaps i3status feh compton linux-headers nvidia vim htop neofetch
 sudo pacman -S wifi-menu dialog wpa_supplicant
 sudo pacman -S base-devel pacman-contrib
+# install st fork
+mkdir ~/git
+cd ~/git
+git clone https://github.com/ocdy1001/st-cody.git
+cd st-cody
+sudo make install
+cd $_path
+# install dmenu fork
+cd ~/git
+git clone https://gIthub.com/ocdy1001/dmenu-cody.gIt --depth=1
+cd dmenu-cody
+./build
+cd $_path
 # install yay
-git clone https://aur.archlinux.org/yay.git
+git clone https://aur.archlinux.org/yay.git --depth=1
 cd yay
 makepkg -si
 cd ..
@@ -13,13 +27,13 @@ rm -rf yay
 # install better lolcat
 yay -S c-lolcat
 # Install Polybar
-git clone https://aur.archlinux.org/polybar.git
+git clone https://aur.archlinux.org/polybar.git --depth=1
 cd polybar
 makepkg -si
 cd ..
 rm -rf polybar
 # Install Adwaita dark theme
-git clone https://aur.archlinux.org/adwaita-dark.git
+git clone https://aur.archlinux.org/adwaita-dark.git --depth=1
 cd adwaita-dark
 makepkg -si
 cd ..
