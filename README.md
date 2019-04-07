@@ -55,6 +55,12 @@
 14. Press ``windowskey+enter`` to fire up a terminal.
 15. ``windowskey+b``, to fire up the browser, log in, browser should be dark themed, else choose gtk+ in the settings.
 16. Done.
+## Dependencies
+This rice should install everything including it's dependencies.
+I clone some of my repo's in order or compile and install software.
+They are mainly forks of existing open source software, mostly suckless stuff.
+- https://github.com/ocdy1001/dmenu-cody
+- https://github.com/ocdy1001/st-cody
 ## Usefull Shortcuts
 - C: Control, S:Shift, M:Mod.
 - Mod = (arch: windowskey, void: alt).
