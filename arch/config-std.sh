@@ -3,7 +3,7 @@ echo "Configuring"
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd $parent_path
 # scripts folder
-cp ../scripts ~/scripts
+cp -frT ../scripts ~/scripts
 mkdir ~/scripts/.sfiles
 echo "echo \"HENLO, THIS IS TEST SCRIPT. NICE TO MEET YOU.\"" > ~/scripts/test.sh
 chmod +x ~/scripts/test.sh
@@ -18,8 +18,6 @@ mkdir ~/.config/polybar
 cp std-confs/run-poly-std.sh ~/.config/polybar/run-poly.sh
 sudo chmod +x ~/.config/polybar/run-poly.sh
 cp std-confs/polybar-std.conf ~/.config/polybar/config
-cp other/pacupdatespolybar.sh ~/scripts/pacupdatespolybar.sh
-cp other/pacupd.py ~/scripts/pacupd.py
 echo "0" > ~/scripts/.sfiles/pacupd.txt
 chmod +x ~/scripts/pacupdatespolybar.sh
 # gtk theme

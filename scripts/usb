@@ -2,7 +2,7 @@
 #get password so user only needs to type it once
 pass=$(
 echo -e "         " |                   # echo into dmenu to start it
-dmenu -p 'sudo: '                       # prompt for sudo password
+dmenu -P -p 'sudo: '                    # prompt for sudo password
 )
 part=$(
 echo "$pass" | sudo -S fdisk -l |       # pipe password into sudo, print partitions
