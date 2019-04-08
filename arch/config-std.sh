@@ -3,12 +3,10 @@ echo "Configuring"
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd $parent_path
 # scripts folder
-mkdir ~/scripts
+cp ../scripts ~/scripts
 mkdir ~/scripts/.sfiles
 echo "echo \"HENLO, THIS IS TEST SCRIPT. NICE TO MEET YOU.\"" > ~/scripts/test.sh
 chmod +x ~/scripts/test.sh
-cp other/zipdir ~/scripts/zipdir
-chmod +x ~/scripts/zipdir
 # xorg
 mkdir ~/.config
 cp std-confs/xinit-std.conf ~/.xinitrc

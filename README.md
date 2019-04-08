@@ -1,5 +1,5 @@
 # Cody's Linux Rice (Void / Arch)
-## Step 1: Install Void on your pc:
+## Step 1: Install distro on your pc:
 ### Void
 0. Boot from usb.
 1. Void boots and asks to login.

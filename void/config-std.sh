@@ -38,7 +38,7 @@ cp std-confs/asoundrc-std.conf ~/.asoundrc
 # profile
 cp std-confs/profile-std.conf ~/.profile
 # scripts folder
-mkdir ~/scripts
+cp ../scripts ~/scripts
 echo "echo \"HENLO, THIS IS TEST SCRIPT. NICE TO MEET YOU.\"" > ~/scripts/test.sh
 chmod +x ~/scripts/test.sh
 # background

@@ -1,0 +1,20 @@
+!/bin/bash
+#get password so user only needs to type it once
+pass=$(
+echo -e "         " |                   # echo into dmenu to start it
+dmenu -p 'sudo: '                       # prompt for sudo password
+)
+part=$(
+echo "$pass" | sudo -S fdisk -l |       # pipe password into sudo, print partitions
+grep ^/dev/ |                           # take lines that start with /dev/ (actual partition names)
+dmenu -l 12 |                           # list them in dmenu for user to pick, up to 12 before scroll 
+cut -f1 -d' '                           # remove everything after first space
+)                                       # save to partition var
+# let user choose or type path to mount to
+dest=$(
+echo -e "$HOME/usb/usb0\n$HOME/usb/usb1\n$HOME/usb/usb2\n$HOME/usb/usb3" |
+dmenu -p 'mount on path: '
+)
+echo "$pass" | sudo -S mount "$part" "$dest"
+cd "$dest"
+st &
