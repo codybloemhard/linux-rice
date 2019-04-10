@@ -1,0 +1,12 @@
+#!/bin/bash
+#get password so user only needs to type it once
+pass=$(
+echo -e "         " |                   # echo into dmenu to start it
+dmenu -P -p 'sudo: '                    # prompt for sudo password
+)
+#let user choose or type path to umount
+dest=$(
+echo -e "$HOME/usb/usb0\n$HOME/usb/usb1\n$HOME/usb/usb2\n$HOME/usb/usb3" |
+dmenu -p 'mount on path: '
+)
+echo "$pass" | sudo -S umount "$dest"
