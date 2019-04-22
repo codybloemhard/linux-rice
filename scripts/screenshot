@@ -1,0 +1,3 @@
+#!/bin/bash
+#one sec delay so that dmenu is gone when shot is taken
+scrot -d 1 -e 'mv $f ~/img/screenshots'
