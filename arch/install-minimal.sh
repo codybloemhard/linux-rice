@@ -14,7 +14,7 @@ sudo make install
 cd $_path
 # install dmenu fork
 cd ~/git
-git clone https://gIthub.com/ocdy1001/dmenu-cody.gIt --depth=1
+git clone https://gIthub.com/ocdy1001/dmenu-cody.git --depth=1
 cd dmenu-cody
 ./build
 cd $_path
