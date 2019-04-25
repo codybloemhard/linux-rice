@@ -11,3 +11,5 @@ yay -S vscodium-bin
 #rust lang
 curl https://sh.rustup.rs -sSf | sh
 echo "Done"
+#steam
+sudo pacman -Sy lib32-nvidia-utils steam
