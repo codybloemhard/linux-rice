@@ -16,6 +16,6 @@ sudo sh -c "wpa_passphrase $ssid "$key" >> /etc/wpa_supplicant/wpa_supp-std.conf
 rm ~/scripts/start-wifi-std.sh
 echo "killall wpa_applicant" >> ~/scripts/start-wifi-std.sh
 echo "wpa_supplicant -B -i $inter -c /etc/wpa_supplicant/wpa_supp-std.conf" >> ~/scripts/start-wifi-std.sh
-echo "sudo hcpcd $inter" >> ~/scripts/start-wifi-std.sh
+echo "sudo dhcpcd $inter" >> ~/scripts/start-wifi-std.sh
 sudo chmod +x ~/scripts/start-wifi-std.sh
 echo "done."

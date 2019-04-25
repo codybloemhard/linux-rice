@@ -28,10 +28,10 @@ cp std-confs/gtk-settings-std.ini ~/.config/gtk-3.0/settings.ini
 mkdir ~/.config/compton
 cp std-confs/compton-std.conf ~/.config/compton/compton.conf
 # zsh/bash
+chsh -s $(which zsh)
 cp std-confs/zshrc-std.conf ~/.zshrc
 cp std-confs/cody-std.zsh-theme ~/.oh-my-zsh/themes/cody.zsh-theme
 cp std-confs/zprofile-std.conf ~/.zprofile
-chsh -s $(which zsh)
 # zsh-syntax-highlighter plugin
 cd ~/.oh-my-zsh/custom/plugins
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git

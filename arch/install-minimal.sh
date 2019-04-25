@@ -1,10 +1,10 @@
 #!/bin/bash
 echo "Installing (minimal)"
 _path=$( pwd )
-sudo pacman -Syu
-sudo pacman -S xorg-server xorg-xinit xorg-xrandr i3-gaps i3status feh compton linux-headers nvidia vim htop neofetch
-sudo pacman -S wifi-menu dialog wpa_supplicant
-sudo pacman -S base-devel pacman-contrib
+sudo pacman -Syyu --noconfirm
+sudo pacman -Sy --noconfirm xorg-server xorg-xinit xorg-xrandr i3-gaps i3status feh compton linux-headers nvidia vim htop neofetch
+sudo pacman -Sy --noconfirm wifi-menu dialog wpa_supplicant iw
+sudo pacman -Sy --noconfirm base-devel pacman-contrib
 # install st fork
 mkdir ~/git
 cd ~/git
