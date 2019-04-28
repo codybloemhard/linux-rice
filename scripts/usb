@@ -12,7 +12,7 @@ cut -f1 -d' '                           # remove everything after first space
 )                                       # save to partition var
 # let user choose or type path to mount to
 dest=$(
-echo -e "$HOME/usb/usb0\n$HOME/usb/usb1\n$HOME/usb/usb2\n$HOME/usb/usb3" |
+echo -e "$HOME/mnt/usb0\n$HOME/mnt/usb1\n$HOME/mnt/usb2\n$HOME/mnt/usb3" |
 dmenu -p 'mount on path: '
 )
 echo "$pass" | sudo -S mount "$part" "$dest"
