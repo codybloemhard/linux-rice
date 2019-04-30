@@ -22,8 +22,11 @@ echo "0" > ~/scripts/.sfiles/pacupd.txt
 chmod +x ~/scripts/pacupdatespolybar.sh
 # gtk theme
 mkdir ~/.config/gtk-3.0
-cp std-confs/gtk-std.css ~/.config/gtk-3.0/gtk.css
-cp std-confs/gtk-settings-std.ini ~/.config/gtk-3.0/settings.ini
+cp std-confs/gtk-gtk3.css ~/.config/gtk-3.0/gtk.css
+cp std-confs/settings-gtk3.ini ~/.config/gtk-3.0/settings.ini
+mkdir ~/.config/gtk-2.0
+cp std-confs/gtkfilechooser-gtk2.ini ~/.config/gtk-2.0/gtkfilechooser.ini
+cp std-confs/settings-gtk2.ini ~/.config/gtk-2.0/settings.ini
 # compton
 mkdir ~/.config/compton
 cp std-confs/compton-std.conf ~/.config/compton/compton.conf

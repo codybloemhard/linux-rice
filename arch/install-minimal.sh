@@ -33,11 +33,7 @@ makepkg -si
 cd ..
 rm -rf polybar
 # Install Adwaita dark theme
-git clone https://aur.archlinux.org/adwaita-dark.git --depth=1
-cd adwaita-dark
-makepkg -si
-cd ..
-rm -rf adwaita-dark
+yay -S adwaita-slim-gtk-theme
 # Install ZSH, oh-my-zsh, and needed fonts for latter one
 sudo pacman -S zsh curl
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
