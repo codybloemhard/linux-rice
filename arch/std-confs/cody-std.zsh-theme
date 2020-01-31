@@ -63,7 +63,7 @@ prompt_end() {
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then 
     echo -n "%F{yellow}%K{none}\ue0b2"
-    prompt_segment yellow black "%(!.%{%F{yellow}%}.)%n λ %m"
+    prompt_segment yellow black "λ %(!.%{%F{yellow}%}.)%n"
   fi
 }
 
