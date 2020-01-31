@@ -1,117 +1,14 @@
 syntax on
 set number relativenumber
 
-" custom status bar
+let g:airline_powerline_fonts = 1
 
-let g:cnone=16
-let g:cblack=0
-let g:cred=1
-let g:cgreen=2
-let g:corange=3
-let g:cblue=4
-let g:cmagenta=5
-let g:ccyan=6
-let g:cwhite=7
-let g:ccurrent=16
+" plugins
 
-function GetFullMode()
-    let m = mode()
-    if m == "n"
-        return "NORMAL"
-    elseif m == "i"
-        return "INSERT"
-    elseif m == "v"
-        return "VISUAL by char"
-    elseif m == "V"
-        return "VISUAL by line"
-    elseif m == "s"
-        return "SELECT by char"
-    elseif m == "S"
-        return "SELECT by line"
-    elseif m == "R"
-        return "REPLACE"
-    elseif m == "c"
-        return "COMMAND/EXMODE"
-    elseif m == "r"
-        return "PROMPT"
-    elseif m == "!"
-        return "EXTERNAL EXECUTE"
-    elseif m == "t"
-        return "TERMINAL-JOB"
-    else
-        return "OTHER"
-    endif
-endfunction
+call plug#begin('~/.vim/plugged')
 
-function SetColors(usr,fg,bg)
-    let header = 'hi User' . a:usr
-    exe header . ' ctermfg=' . a:fg
-    exe header . ' ctermbg=' . a:bg
-    exe header . ' cterm=none'
-    return ""
-endfunction
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-function Sep(dir,usr,old,new)
-    :call SetColors(a:usr,a:old,a:new)
-    if a:dir == 0
-        return ''
-    else
-        return ''
-    endif
-endfunction
-
-function SetModeColors(usr)
-    let m = mode()
-    if m == "n"
-        let color=g:cwhite
-    elseif m == "i"
-        let color=g:cgreen
-    elseif m == "v"
-        let color=g:corange
-    elseif m == "V"
-        let color=g:corange
-    elseif m == "s"
-        let color=g:corange
-    elseif m == "S"
-        let color=g:corange
-    elseif m == "R"
-        let color=g:cred
-    elseif m == "c"
-        let color=g:cblue
-    elseif m == "r"
-        let color=g:cblue
-    elseif m == "!"
-        let color=g:cblue
-    elseif m == "t"
-        let color=g:cblue
-    else
-        let color=g:cred
-    endif
-    let g:ccurrent=color
-    :call SetColors(a:usr,g:cblack,color)
-    return ""
-endfunction
-
-"source of git stuff(edited): https://shapeshed.com/vim-statuslines/
-function! GitBranch()
-  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-endfunction
-function! StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?l:branchname:''
-endfunction
-
-set laststatus=2
-set noshowmode
-set statusline=
-set statusline+=%2*\ %{SetModeColors(2)}%{GetFullMode()}\
-set statusline+=%3*%{Sep(0,3,ccurrent,cmagenta)}
-set statusline+=%4*\ %{SetColors(4,cblack,cmagenta)}%<%F%m%r%h%w\
-set statusline+=%5*%{Sep(0,5,cmagenta,cwhite)}
-set statusline+=%6*%{SetColors(6,cblack,cwhite)}\ %p%%\
-set statusline+=%7*%{Sep(0,7,cwhite,cmagenta)}
-set statusline+=%8*%{SetColors(8,cblack,cmagenta)}\ %{StatuslineGit()}\
-set statusline+=%9*%{Sep(0,9,cmagenta,cnone)}
-set statusline+=%1*\
-
-hi User1 ctermfg=black ctermbg=none cterm=NONE
+call plug#end()
