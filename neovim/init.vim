@@ -2,6 +2,7 @@ syntax on
 set number relativenumber
 set expandtab
 set smarttab
+
 " toggle file finder
 nmap <C-n> :NERDTreeToggle<CR>
 " go to currently opened file in nerdtree
@@ -27,6 +28,8 @@ nnoremap <C-k> <C-W>k
 "Originaly on "i", now i use "i" to go up
 let NERDTreeMapOpenSplit='h'
 
+let g:rainbow_active = 1
+
 " Use fzf to find files, ignoring git files
 nmap <C-o> :GFiles<CR>
 
@@ -44,6 +47,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tomtom/tcomment_vim'
+Plug 'frazrepo/vim-rainbow'
 
 call plug#end()
 
