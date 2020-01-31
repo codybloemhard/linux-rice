@@ -33,8 +33,11 @@ let g:rainbow_active = 1
 " Use fzf to find files, ignoring git files
 nmap <C-o> :GFiles<CR>
 
-" TComment: select code and type "gc" to toggle commenting
+nmap <C-g> :GitGutterLineHighlightsToggle<CR>
 
+" TComment: select code and type "gc" to toggle commenting
+" Vim-Rainbow: colours matching bracket pairs the same color
+" auto-pairs: auto types the closing brackets
 " plugins
 
 call plug#begin('~/.vim/plugged')
@@ -48,6 +51,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'frazrepo/vim-rainbow'
+Plug 'jiangmiao/auto-pairs'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
