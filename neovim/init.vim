@@ -1,34 +1,5 @@
-set clipboard=unamedplus
 syntax on
 set number relativenumber
-
-" https://stackoverflow.com/questions/234564/tab-key-4-spaces-and-auto-indent-after-curly-braces-in-vim
-filetype plugin indent on
-" show existing tab with 4 spaces width
-set tabstop=4
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
-" On pressing tab, insert 4 spaces
-set expandtab
-
-" Vim plugins
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-call plug#begin('~/.vim/plugged')
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-call plug#end()
-
-" Mappings
-:nnoremap <silent><C-Up> :let save_a=@a<Cr><Up>"add"ap<Up>:let @a=save_a<Cr>
-:nnoremap <silent><C-Down> :let save_a=@a<Cr>"add"ap:let @a=save_a<Cr>
-map <C-n> :NERDTreeToggle<CR> 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " custom status bar
 
@@ -73,7 +44,7 @@ function GetFullMode()
 endfunction
 
 function SetColors(usr,fg,bg)
-    let header = 'hi User' . a:usr 
+    let header = 'hi User' . a:usr
     exe header . ' ctermfg=' . a:fg
     exe header . ' ctermbg=' . a:bg
     exe header . ' cterm=none'
@@ -81,7 +52,7 @@ function SetColors(usr,fg,bg)
 endfunction
 
 function Sep(dir,usr,old,new)
-    :call SetColors(a:usr,a:old,a:new)    
+    :call SetColors(a:usr,a:old,a:new)
     if a:dir == 0
         return ''
     else
@@ -133,14 +104,14 @@ endfunction
 set laststatus=2
 set noshowmode
 set statusline=
-set statusline+=%2*\ %{SetModeColors(2)}%{GetFullMode()}\ 
+set statusline+=%2*\ %{SetModeColors(2)}%{GetFullMode()}\
 set statusline+=%3*%{Sep(0,3,ccurrent,cmagenta)}
-set statusline+=%4*\ %{SetColors(4,cblack,cmagenta)}%<%F%m%r%h%w\ 
+set statusline+=%4*\ %{SetColors(4,cblack,cmagenta)}%<%F%m%r%h%w\
 set statusline+=%5*%{Sep(0,5,cmagenta,cwhite)}
-set statusline+=%6*%{SetColors(6,cblack,cwhite)}\ %p%%\ 
+set statusline+=%6*%{SetColors(6,cblack,cwhite)}\ %p%%\
 set statusline+=%7*%{Sep(0,7,cwhite,cmagenta)}
-set statusline+=%8*%{SetColors(8,cblack,cmagenta)}\ %{StatuslineGit()}\ 
+set statusline+=%8*%{SetColors(8,cblack,cmagenta)}\ %{StatuslineGit()}\
 set statusline+=%9*%{Sep(0,9,cmagenta,cnone)}
-set statusline+=%1*\ 
+set statusline+=%1*\
 
 hi User1 ctermfg=black ctermbg=none cterm=NONE

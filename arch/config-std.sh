@@ -40,8 +40,8 @@ cd ~/.oh-my-zsh/custom/plugins
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 cd $parent_path
 cp std-confs/main-highlighter-std.zsh ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/highlighters/main/main-highlighter.zsh
-# vim
-cp std-confs/vim-std.conf ~/.vimrc
+# nvim
+cp ../neovim/init.vim ~/.config/nvim/init.vim
 # to select right audio device(smsl m3 dac for me)
 cp std-confs/asoundrc-std.conf ~/.asoundrc
 # profile
