@@ -2,23 +2,35 @@ syntax on
 set number relativenumber
 set expandtab
 set smarttab
+set colorcolumn=81
 
 " toggle file finder
 nmap <C-n> :NERDTreeToggle<CR>
+
 " go to currently opened file in nerdtree
 nmap <C-S-f> :NERDTreeFind<CR>
+
 " scroll through buffers
 nmap <C-x> :bprev<CR>
 nmap <C-c> :bprev<CR>
+
 " enable powerline chars and the top bar
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+
+" whitespace config
+let g:better_whitespace_enabled = 1
+let g:strip_whitespace_on_save = 1
+let g:better_whitespace_ctermcolor = 'darkred'
+let g:strip_whitespace_confirm = 0
+
 " hjkl to jikl
 noremap h i
 noremap j h
 noremap k j
 noremap i k
 noremap h i
+
 " moving between windows
 nnoremap <C-j> <C-W>j
 nnoremap <C-l> <C-W>l
@@ -50,6 +62,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'frazrepo/vim-rainbow'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
+Plug 'ntpeters/vim-better-whitespace'
 
 call plug#end()
 
