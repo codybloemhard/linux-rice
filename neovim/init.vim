@@ -63,6 +63,8 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'tpope/vim-fugitive'
+Plug 'ervandew/supertab'
 
 call plug#end()
 
