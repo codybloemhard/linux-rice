@@ -6,7 +6,7 @@ set smarttab
 " toggle file finder
 nmap <C-n> :NERDTreeToggle<CR>
 " go to currently opened file in nerdtree
-nmap <C-f> :NERDTreeFind<CR>
+nmap <C-S-f> :NERDTreeFind<CR>
 " scroll through buffers
 nmap <C-x> :bprev<CR>
 nmap <C-c> :bprev<CR>
@@ -31,7 +31,7 @@ let NERDTreeMapOpenSplit='h'
 let g:rainbow_active = 1
 
 " Use fzf to find files, ignoring git files
-nmap <C-o> :GFiles<CR>
+nmap <C-f> :GFiles<CR>
 
 nmap <C-g> :GitGutterLineHighlightsToggle<CR>
 
@@ -54,12 +54,14 @@ Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " VIM TIPS
+" ":Tutor" to learn vim!
 " ":bd" to close a buffer
-" "<a>" to insert after cursor
+" "<0>" to go to begin of line
 " "<$>" to go to end of line
 " "<S-a>" to insert after line
 " "<C-w>" to delete word before cursor
 " "<S-V" to select lines
+" "H,M,L" to go to top screen, middle screem, low screen
 
 " PLUGIN TIPS
 " TComment: select code and type "gc" to toggle commenting
