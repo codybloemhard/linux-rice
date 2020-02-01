@@ -30,6 +30,11 @@ let g:strip_whitespace_on_save = 1
 let g:better_whitespace_ctermcolor = 'darkred'
 let g:strip_whitespace_confirm = 0
 
+" 0 = home nonwhite, - = end, 9 = home absolute
+nnoremap 9 _
+nnoremap 0 $
+nnoremap _ 0
+
 " hjkl to jikl
 nnoremap h i
 nnoremap j h
