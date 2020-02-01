@@ -35,9 +35,6 @@ nmap <C-o> :GFiles<CR>
 
 nmap <C-g> :GitGutterLineHighlightsToggle<CR>
 
-" TComment: select code and type "gc" to toggle commenting
-" Vim-Rainbow: colours matching bracket pairs the same color
-" auto-pairs: auto types the closing brackets
 " plugins
 
 call plug#begin('~/.vim/plugged')
@@ -55,4 +52,17 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 
 call plug#end()
+
+" VIM TIPS
+" ":bd" to close a buffer
+" "<a>" to insert after cursor
+" "<$>" to go to end of line
+" "<S-a>" to insert after line
+" "<C-w>" to delete word before cursor
+" "<S-V" to select lines
+
+" PLUGIN TIPS
+" TComment: select code and type "gc" to toggle commenting
+" Vim-Rainbow: colours matching bracket pairs the same color
+" auto-pairs: auto types the closing brackets
 
