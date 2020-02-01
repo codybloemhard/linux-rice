@@ -16,6 +16,10 @@ nmap <C-c> :bprev<CR>
 
 map <F6> :setlocal spell! spelllang=en_us<CR>
 map <F7> :Gdiff<CR>
+
+vmap <expr> <S-I> DVB_Drag('up')
+vmap <expr> <S-K> DVB_Drag('down')
+
 " enable powerline chars and the top bar
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -32,6 +36,10 @@ nnoremap j h
 nnoremap k j
 nnoremap i k
 nnoremap h i
+vnoremap j h
+vnoremap k j
+vnoremap i k
+vnoremap h i
 
 " moving between windows
 nnoremap <C-j> <C-W>j
@@ -69,6 +77,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'ervandew/supertab'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'lilydjwg/colorizer'
+Plug 'gavinbeatty/dragvisuals.vim'
 
 call plug#end()
 
