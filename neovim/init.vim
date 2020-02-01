@@ -2,18 +2,20 @@ syntax on
 set number relativenumber
 set expandtab
 set smarttab
-set colorcolumn=81
-
+" set colorcolumn=81
+call matchadd('ColorColumn', '\%81v', 100)
 " toggle file finder
-nmap <C-n> :NERDTreeToggle<CR>
+nmap <C-h> :NERDTreeToggle<CR>
 
 " go to currently opened file in nerdtree
-nmap <C-S-f> :NERDTreeFind<CR>
+nmap <F3> :NERDTreeFind<CR>
 
 " scroll through buffers
 nmap <C-x> :bprev<CR>
 nmap <C-c> :bprev<CR>
 
+map <F6> :setlocal spell! spelllang=en_us<CR>
+map <F7> :Gdiff<CR>
 " enable powerline chars and the top bar
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -25,11 +27,11 @@ let g:better_whitespace_ctermcolor = 'darkred'
 let g:strip_whitespace_confirm = 0
 
 " hjkl to jikl
-noremap h i
-noremap j h
-noremap k j
-noremap i k
-noremap h i
+nnoremap h i
+nnoremap j h
+nnoremap k j
+nnoremap i k
+nnoremap h i
 
 " moving between windows
 nnoremap <C-j> <C-W>j
