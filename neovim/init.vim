@@ -65,6 +65,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-fugitive'
 Plug 'ervandew/supertab'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'lilydjwg/colorizer'
 
 call plug#end()
 
