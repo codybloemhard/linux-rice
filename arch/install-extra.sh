@@ -2,5 +2,5 @@
 echo "Installing (extra)"
 sudo pacman -Sy --noconfirm scrot alsa-firmware alsa-utils firefox sl unzip zip zathura-pdf-mupdf
 sudo pacman -Sy --noconfirm pulseaudio cmus
-sudo pacman -Sy --noconfirm the_silver_searcher #ag
+sudo pacman -Sy --noconfirm the_silver_searcher fzf #ag and more
 echo "Done"
