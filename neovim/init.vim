@@ -14,6 +14,8 @@ nmap <F3> :NERDTreeFind<CR>
 nmap <C-x> :bprev<CR>
 nmap <C-c> :bprev<CR>
 
+map <F4> ::source ~/.config/nvim/init.vim<CR>
+map <F5> :!cargo run<CR>
 map <F6> :setlocal spell! spelllang=en_us<CR>
 map <F7> :Gdiff<CR>
 
