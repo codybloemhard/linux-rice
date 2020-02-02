@@ -5,32 +5,6 @@ set smarttab
 " set colorcolumn=81
 call matchadd('ColorColumn', '\%81v', 100)
 " toggle file finder
-nmap <C-h> :NERDTreeToggle<CR>
-
-" go to currently opened file in nerdtree
-nmap <F3> :NERDTreeFind<CR>
-
-" scroll through buffers
-nmap <C-x> :bprev<CR>
-nmap <C-c> :bprev<CR>
-
-map <F4> ::source ~/.config/nvim/init.vim<CR>
-map <F5> :!cargo run<CR>
-map <F6> :setlocal spell! spelllang=en_us<CR>
-map <F7> :Gdiff<CR>
-
-vmap <expr> <S-I> DVB_Drag('up')
-vmap <expr> <S-K> DVB_Drag('down')
-
-" enable powerline chars and the top bar
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-
-" whitespace config
-let g:better_whitespace_enabled = 1
-let g:strip_whitespace_on_save = 1
-let g:better_whitespace_ctermcolor = 'darkred'
-let g:strip_whitespace_confirm = 0
 
 " 0 = home nonwhite, - = end, 9 = home absolute
 nnoremap 9 _
@@ -54,15 +28,44 @@ nnoremap <C-l> <C-W>l
 nnoremap <C-i> <C-W>i
 nnoremap <C-k> <C-W>k
 
+" Use fzf to find files, ignoring git files
+nmap <C-f> :GFiles<CR>
+nmap <C-l> :Line<CR>
+nmap <C-a> :Ag<CR>
+
+nmap <C-g> :GitGutterLineHighlightsToggle<CR>
+nmap <C-h> :NERDTreeToggle<CR>
+
+" go to currently opened file in nerdtree
+
+" scroll through buffers
+nmap <C-x> :bprev<CR>
+nmap <C-c> :bprev<CR>
+
+nmap <F3> :NERDTreeFind<CR>
+map <F4> ::source ~/.config/nvim/init.vim<CR>
+map <F5> :!cargo run<CR>
+map <F6> :setlocal spell! spelllang=en_us<CR>
+map <F7> :Gdiff<CR>
+
+" dragging lines
+vmap <expr> <S-I> DVB_Drag('up')
+vmap <expr> <S-K> DVB_Drag('down')
+
+" enable powerline chars and the top bar
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+" whitespace config
+let g:better_whitespace_enabled = 1
+let g:strip_whitespace_on_save = 1
+let g:better_whitespace_ctermcolor = 'darkred'
+let g:strip_whitespace_confirm = 0
 "Originaly on "i", now i use "i" to go up
 let NERDTreeMapOpenSplit='h'
 
 let g:rainbow_active = 1
 
-" Use fzf to find files, ignoring git files
-nmap <C-f> :GFiles<CR>
-
-nmap <C-g> :GitGutterLineHighlightsToggle<CR>
 
 " plugins
 
