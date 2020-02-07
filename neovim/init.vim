@@ -7,8 +7,7 @@ call matchadd('ColorColumn', '\%81v', 100)
 " toggle file finder
 
 " 0 = home nonwhite, - = end, 9 = home absolute
-nnoremap 9 _
-nnoremap 0 $
+nnoremap 0 _
 nnoremap _ 0
 
 " hjkl to jikl
@@ -44,7 +43,7 @@ nmap <C-c> :bprev<CR>
 
 nmap <F3> :NERDTreeFind<CR>
 map <F4> ::source ~/.config/nvim/init.vim<CR>
-map <F5> :!cargo run<CR>
+map <F5> :w<CR>:!cargo run<CR>
 map <F6> :setlocal spell! spelllang=en_us<CR>
 map <F7> :Gdiff<CR>
 
