@@ -2,6 +2,7 @@ syntax on
 set number relativenumber
 set expandtab
 set smarttab
+set shiftwidth=4
 " set colorcolumn=81
 call matchadd('ColorColumn', '\%81v', 100)
 " toggle file finder
