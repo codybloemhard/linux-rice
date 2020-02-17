@@ -33,7 +33,7 @@ nmap <C-f> :GFiles<CR>
 nmap <C-l> :Line<CR>
 nmap <C-a> :Ag<CR>
 
-nmap <C-g> :GitGutterLineHighlightsToggle<CR>
+"nmap <C-g> :GitGutterLineHighlightsToggle<CR>
 nmap <C-h> :NERDTreeToggle<CR>
 
 " go to currently opened file in nerdtree
@@ -81,7 +81,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'frazrepo/vim-rainbow'
 Plug 'jiangmiao/auto-pairs'
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-fugitive'
 Plug 'ervandew/supertab'

@@ -8,3 +8,5 @@ network={
 }
 #hasing todo manual:
 echo "password" | tr -d '[:space:]' | iconv -t utf16le | openssl md4 | awk '{print $2}'
+#hashing for wpa password/psk:
+wpa_passphrase ssid pass
