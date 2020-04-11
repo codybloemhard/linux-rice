@@ -91,6 +91,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'lilydjwg/colorizer'
 Plug 'gavinbeatty/dragvisuals.vim'
 Plug 'Yggdroot/indentLine'
+Plug 'udalov/kotlin-vim'
 
 call plug#end()
 
