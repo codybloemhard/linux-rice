@@ -40,13 +40,14 @@ nmap <C-h> :NERDTreeToggle<CR>
 
 " scroll through buffers
 nmap <C-x> :bprev<CR>
-nmap <C-c> :bprev<CR>
+nmap <C-c> :bnext<CR>
 
+map <F2> :w<CR>
 nmap <F3> :NERDTreeFind<CR>
 map <F4> ::source ~/.config/nvim/init.vim<CR>
 map <F5> :w<CR>:!cargo run<CR>
 map <F6> :setlocal spell! spelllang=en_us<CR>
-map <F7> :Gdiff<CR>
+" map <F7> :Gdiff<CR>
 
 " dragging lines
 vmap <expr> <S-I> DVB_Drag('up')
@@ -65,14 +66,15 @@ let g:strip_whitespace_confirm = 0
 let NERDTreeMapOpenSplit='h'
 
 let g:rainbow_active = 1
-
+let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```', '"""':'"""', "'''":"'''"}
+let g:indentLine_char = '┆'
 
 " plugins
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -83,11 +85,12 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'jiangmiao/auto-pairs'
 "Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 Plug 'ervandew/supertab'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'lilydjwg/colorizer'
 Plug 'gavinbeatty/dragvisuals.vim'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
