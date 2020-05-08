@@ -27,9 +27,9 @@ cp std-confs/settings-gtk3.ini ~/.config/gtk-3.0/settings.ini
 mkdir ~/.config/gtk-2.0
 cp std-confs/gtkfilechooser-gtk2.ini ~/.config/gtk-2.0/gtkfilechooser.ini
 cp std-confs/settings-gtk2.ini ~/.config/gtk-2.0/settings.ini
-# compton
-mkdir ~/.config/compton
-cp std-confs/compton-std.conf ~/.config/compton/compton.conf
+# picom
+mkdir ~/.config/picom
+cp std-confs/picom-std.conf ~/.config/picom/picom.conf
 # zsh/bash
 chsh -s $(which zsh)
 cp std-confs/zshrc-std.conf ~/.zshrc
