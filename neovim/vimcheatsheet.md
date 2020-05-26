@@ -21,7 +21,7 @@
 - `t{`, `T{` go to (one char before) the next and previous `{`
 - `f0`, `F0` go onto the next and previous char '0'
 - `$` to go to the end of the line
-- 'H', `M`, `L` go to the first line, middle line and last line in view
+- `H`, `M`, `L` go to the first line, middle line and last line in view
 -  `gg` and `G` to go to the start end end of a file
 - `:123` to go to line 123
 - `zz`, `zb`, `zt` change view so that current line is in the middle, to the bottom and to the top
@@ -43,4 +43,4 @@
 ### Non editing
 - `:w`, `:q`, `:wq`, `q!` write, close vim, write and close, close without saving
 - `:bprev`, `:bnext`, `:bd` previous buffer, next buffer, close buffer
-- `` set vim as background process and return to terminal, `fg` to go back to vim
+- `^Z` set vim as background process and return to terminal, `fg` to go back to vim
