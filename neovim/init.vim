@@ -17,6 +17,7 @@ nnoremap <leader>w :w<CR>
 vnoremap <leader>w :w<CR>
 nnoremap <leader>q :wq<CR>
 vnoremap <leader>q :wq<CR>
+nnoremap <leader>e :w<CR>
 " 0 = home nonwhite, - = end, 9 = home absolute
 nnoremap 0 _
 nnoremap _ 0
@@ -45,7 +46,6 @@ nnoremap <leader>x :bprev<CR>
 nnoremap <leader>c :bnext<CR>
 nnoremap <leader>d :bd<CR>
 " some extras
-map <F2> :w<CR>
 map <F4> :source ~/.config/nvim/init.vim<CR>
 map <F5> :w<CR>:!cargo run<CR>
 map <F6> :setlocal spell! spelllang=en_us<CR>
