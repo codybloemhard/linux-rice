@@ -5,6 +5,7 @@ set smarttab
 set shiftwidth=4
 set hidden
 set noswapfile
+set clipboard+=unnamedplus " use system clipboard(needs xclip)
 " set colorcolumn=81
 call matchadd('ColorColumn', '\%81v', 100)
 highlight ColorColumn ctermbg=0
@@ -31,27 +32,37 @@ vnoremap j h
 vnoremap k j
 vnoremap i k
 vnoremap h i
+nnoremap J 5h
+nnoremap I 5k
+nnoremap K 5j
+nnoremap L 5l
+vnoremap J 5h
+vnoremap I 5k
+vnoremap K 5j
+vnoremap L 5l
+" dragging lines
+vnoremap <C-S-K> :m '>+1<CR>gv=gv
+vnoremap <C-S-I> :m '<-2<CR>gv=gv
+" clear search highlight
+nnoremap <leader>c :noh<CR>
 " moving between windows
-nnoremap <C-j> <C-W>j
-nnoremap <C-l> <C-W>l
-nnoremap <C-i> <C-W>i
-nnoremap <C-k> <C-W>k
+nnoremap <A-j> <C-W>h
+nnoremap <A-i> <C-W>k
+nnoremap <A-k> <C-W>j
+nnoremap <A-l> <C-W>l
 " Use fzf to find files, ignoring git files
 nnoremap <leader>f :GFiles<CR>
 nnoremap <leader>l :Line<CR>
 nnoremap <leader>a :Ag<CR>
 nnoremap <leader>g :Files<CR>
 " scroll through buffers
-nnoremap <leader>x :bprev<CR>
-nnoremap <leader>c :bnext<CR>
-nnoremap <leader>d :bd<CR>
+nnoremap <C-x> :bprev<CR>
+nnoremap <C-c> :bnext<CR>
+nnoremap <C-d> :bd<CR>
 " some extras
 map <F4> :source ~/.config/nvim/init.vim<CR>
 map <F5> :w<CR>:!cargo run<CR>
 map <F6> :setlocal spell! spelllang=en_us<CR>
-" dragging lines
-vnoremap K :m '>+1<CR>gv=gv
-vnoremap I :m '<-2<CR>gv=gv
 " enable powerline chars and the top bar
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
