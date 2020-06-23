@@ -32,14 +32,10 @@ vnoremap j h
 vnoremap k j
 vnoremap i k
 vnoremap h i
-nnoremap J 5h
 nnoremap I 5k
 nnoremap K 5j
-nnoremap L 5l
-vnoremap J 5h
 vnoremap I 5k
 vnoremap K 5j
-vnoremap L 5l
 " dragging lines
 vnoremap <C-S-K> :m '>+1<CR>gv=gv
 vnoremap <C-S-I> :m '<-2<CR>gv=gv
