@@ -13,13 +13,9 @@ cp std-confs/xinit-std.conf ~/.xinitrc
 # i3
 mkdir ~/.config/i3
 cp std-confs/i3gaps-std.conf ~/.config/i3/config
-# polybar
-mkdir ~/.config/polybar
-cp std-confs/run-poly-std.sh ~/.config/polybar/run-poly.sh
-sudo chmod +x ~/.config/polybar/run-poly.sh
-cp std-confs/polybar-std.conf ~/.config/polybar/config
-echo "0" > ~/scripts/.sfiles/pacupd.txt
-chmod +x ~/scripts/pacupdatespolybar.sh
+# shapebar
+cp ~/git/shapebar/run-shapebar ~/scripts/run-shapebar
+cp ~/git/shapebar/shapebar-conf ~/scripts/shapebar-conf
 # gtk theme
 mkdir ~/.config/gtk-3.0
 cp std-confs/gtk-gtk3.css ~/.config/gtk-3.0/gtk.css
