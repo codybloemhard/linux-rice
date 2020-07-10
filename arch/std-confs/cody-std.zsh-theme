@@ -1,17 +1,4 @@
-# vim:ft=zsh ts=2 sw=2 sts=2
-#
-# Cody theme (based on agnoster)
-# agnoster's Theme - https://gist.github.com/3712874
-# A Powerline-inspired theme for ZSH
-#
-# # README
-#
-# In order for this theme to render correctly, you will need a
-# [Powerline-patched font](https://github.com/Lokaltog/powerline-fonts).
-# Make sure you have a recent version: the code points that Powerline
-# uses changed in 2012, and older versions will display incorrectly,
-# in confusing ways.
-
+# Based on Agnoster
 ### Segment drawing
 # A few utility functions to make it easy and re-usable to draw segmented prompts
 
@@ -25,7 +12,8 @@ esac
 # Special Powerline characters
 
 () {
-  local LC_ALL="" LC_CTYPE="en_US.UTF-8"
+  local LC_ALL="en_US.UTF-8" LC_CTYPE="en_US.UTF-8"
+  # Do not change this! Do not make it '\u2b80'; that is the old, wrong code point.
   SEGMENT_SEPARATOR=$'\ue0b0'
 }
 
@@ -58,16 +46,13 @@ prompt_end() {
 
 ### Prompt components
 # Each component will draw itself, and hide itself if no information needs to be shown
-
-# Context: user@hostname (who am I and where am I)
 prompt_context() {
-  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then 
-    echo -n "%F{yellow}%K{none}\ue0b2"
-    prompt_segment yellow black "λ %(!.%{%F{yellow}%}.)%n"
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    echo -n "%F{black}%K{yellow}$SEGMENT_SEPARATOR"
+    prompt_segment yellow black "λ"
   fi
 }
 
-# Git: branch/detached head, dirty status
 prompt_git() {
   (( $+commands[git] )) || return
   if [[ "$(git config --get oh-my-zsh.hide-status 2>/dev/null)" = 1 ]]; then
@@ -123,7 +108,7 @@ prompt_git() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment cyan $CURRENT_FG '%~'
+  prompt_segment cyan $CURRENT_FG '%c' # %~ for whole path
 }
 
 # Status:
@@ -137,7 +122,6 @@ prompt_status() {
   [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡"
   [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙"
 
-  #[[ -n "$symbols" ]] && prompt_segment black default "$symbols" 
   [[ -n "$symbols" ]] && echo -n "$symbols "
 }
 
@@ -151,4 +135,4 @@ build_prompt() {
   prompt_end
 }
 
-PROMPT='%{%f%b%k%}$(build_prompt) '
+prompt='$(build_prompt) '

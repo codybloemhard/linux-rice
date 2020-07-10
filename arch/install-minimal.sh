@@ -3,9 +3,11 @@ echo "Installing (minimal)"
 _path=$( pwd )
 sudo pacman -Syyu --noconfirm
 sudo pacman -Sy --noconfirm xorg-server xorg-xinit xorg-xrandr i3-gaps i3status feh picom linux-headers nvidia htop neofetch exa neovim
-sudo pacman -Sy --noconfirm iw networkmanager
+sudo pacman -Sy --noconfirm iw #networkmanager
 sudo pacman -Sy --noconfirm base-devel pacman-contrib
 sudo ../neovim/install.sh
+# install neovim things
+../neovim/install.sh
 # install st fork
 mkdir ~/git
 cd ~/git

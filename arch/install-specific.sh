@@ -15,3 +15,5 @@ echo "Done"
 sudo pacman -Sy lib32-nvidia-utils steam
 #to change gtk theme by hand
 sudo pacman -S lxappearance-gtk3
+# japanese font
+yay ttf-koruri
