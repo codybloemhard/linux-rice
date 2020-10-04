@@ -4,6 +4,8 @@ echo "Installing (specific)"
 sudo pacman -Sy texlive-most mupdf
 #discord
 yay -S discord
+## Add discord to startup
+echo "exec --no-startup-id i3-msg 'workspace $ws1; exec /usr/bin/discord --start-minimized'" >> ~/.config/i3/config
 #minecraft
 yay -S minecraft-launcher
 #vscode opensource
