@@ -37,9 +37,9 @@ sudo make install
 cd $_path
 # Install Adwaita dark theme
 yay -S adwaita-slim-gtk-theme
-# Install ZSH, oh-my-zsh, and needed fonts for latter one
-sudo pacman -S zsh curl
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# Install fish and rust and starship and needed fonts for latter one
+sudo pacman -S fish rust
+cargo install starship
 git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
 ./install.sh

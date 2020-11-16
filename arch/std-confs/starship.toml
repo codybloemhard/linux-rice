@@ -1,0 +1,43 @@
+format = """
+$status$jobs[ λ ](bg:yellow fg:black bold)[](bg:cyan fg:yellow)$directory$git_branch$git_status$git_commit$git_state$package$cmd_duration """
+
+# Disable the newline at the start of the prompt
+add_newline = false
+
+[status]
+style = "bg:black fg:red bold"
+format = "[$symbol ]($style)"
+disabled = false
+
+[jobs]
+symbol = "⚙"
+style = "bg:black fg:cyan bold"
+
+[directory]
+format = "[ $path ]($style)[$read_only]($read_only_style)[](bg:black fg:cyan)"
+style = "bg:cyan fg:black bold"
+read_only_style = "bg:cyan fg:red"
+
+#TODO: make the background colour change
+[git_branch]
+format = "\b[](bg:red fg:cyan)[ $symbol$branch ]($style)[](bg:black fg:red)"
+style = "bg:red fg:black bold"
+
+[git_status]
+format = "(\b[$all_status$ahead_behind ]($style)[](bg:black fg:red))"
+style = "bg:red fg:black bold"
+staged = "✚"
+modified = "●"
+
+[git_commit]
+format = "\b[\\($hash\\)]($style)([\\($tag\\)]($style))[ ]($style)[](bg:black fg:red)"
+style = "bg:red fg:green green bold"
+only_detached = true
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\)[ ]($style)[](bg:black fg:red)'
+style = "bg:red fg:black bold"
+
+[package]
+format = "\b[](bg:yellow fg:red)[ $symbol $version]($style)[ ]($style)[](bg:black fg:yellow)"
+style = "bg:yellow fg:black bold"

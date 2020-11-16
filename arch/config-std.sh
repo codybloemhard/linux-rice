@@ -28,15 +28,9 @@ cp std-confs/settings-gtk2.ini ~/.config/gtk-2.0/settings.ini
 mkdir ~/.config/picom
 cp std-confs/picom-std.conf ~/.config/picom/picom.conf
 # zsh/bash
-chsh -s $(which zsh)
-cp std-confs/zshrc-std.conf ~/.zshrc
-cp std-confs/zprofile-std.conf ~/.zprofile
-#cp std-confs/cody-std.zsh-theme ~/.oh-my-zsh/themes/cody.zsh-theme
-# zsh-syntax-highlighter plugin
-cd ~/.oh-my-zsh/custom/plugins
-git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
-cd $parent_path
-cp std-confs/main-highlighter-std.zsh ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/highlighters/main/main-highlighter.zsh
+chsh -s $(which fish)
+cp std-confs/starship.toml ~/.config/
+cp std-confs/config.fish ~/.config/fish/
 # to select right audio device(smsl m3 dac for me)
 cp std-confs/asoundrc-std.conf ~/.asoundrc
 # profile
