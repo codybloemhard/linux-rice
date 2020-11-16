@@ -83,6 +83,12 @@ let g:strip_whitespace_confirm = 0
 let g:rainbow_active = 1
 let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```', '"""':'"""', "'''":"'''"}
 let g:indentLine_char = '┆'
+" Limelight
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+let g:limelight_default_coefficient = 0.7
+let g:limelight_paragraph_span = 1
+let g:limelight_priority = 10
 " plugins
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
@@ -96,4 +102,8 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'lilydjwg/colorizer'
 Plug 'Yggdroot/indentLine'
+Plug 'junegunn/limelight.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'dag/vim-fish'
 call plug#end()

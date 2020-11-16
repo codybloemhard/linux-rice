@@ -45,5 +45,15 @@ abbr -a cb 'cargo build'
 abbr -a cr 'cargo run'
 abbr -a cbr 'cargo build --release'
 abbr -a crr 'cargo run --release'
-
+# BANG BANG ----------------
+function __history_previous_command
+  switch (commandline -t)
+  case "!"
+    commandline -t $history[1]; commandline -f repaint
+  case "*"
+    commandline -i !
+  end
+end
+bind ! __history_previous_command
+# STARSHIP ----------------
 starship init fish | source

@@ -41,3 +41,6 @@ style = "bg:red fg:black bold"
 [package]
 format = "\b[](bg:yellow fg:red)[ $symbol $version]($style)[ ]($style)[](bg:black fg:yellow)"
 style = "bg:yellow fg:black bold"
+
+[cmd_duration]
+format = "[ $duration]($style)"
