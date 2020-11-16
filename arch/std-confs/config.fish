@@ -56,4 +56,5 @@ function __history_previous_command
 end
 bind ! __history_previous_command
 # STARSHIP ----------------
+export PATH="$HOME/.cargo/bin:$PATH"
 starship init fish | source
