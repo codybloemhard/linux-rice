@@ -1,36 +1,61 @@
+# FISH SETTINGS ----------------
 set fish_greeting
-
+set -U fish_color_normal normal
+set -U fish_color_command brmagenta
+set -U fish_color_end green
+set -U fish_color_redirection green
+set -U fish_color_quote yellow
+set -U fish_color_error brred
+set -U fish_color_param blue
+set -U fish_color_operator green
+set -U fish_color_escape bryellow
+set -U fish_color_cwd green
+set -U fish_color_cwd_root red
+set -U fish_color_valid_path --bold
+set -U fish_color_autosuggestion BD93F9
+set -U fish_color_user brgreen
+set -U fish_color_host normal
+set -U fish_color_cancel brred
+set -U fish_pager_color_completion normal
+set -U fish_pager_color_description B3A06D yellow
+set -U fish_pager_color_prefix white --bold --underline
+set -U fish_pager_color_progress brwhite --background=cyan
+set -U fish_color_match --background=brblue
+set -U fish_color_comment gray
 # PACMAN ----------------
-function pacin
+function pin
     sudo pacman -S $argv | lolcat
 end
-function pacrm
+function prm
     sudo pacman -Rns $argv | lolcat
 end
-function pacss
+function pss
     pacman -Ss $argv | lolcat
 end
-abbr -a pacls 'pacman -Qd | lolcat'
+abbr -a pls 'pacman -Qd | lolcat'
 abbr -a aurls "yay -Qm"
-abbr -a pacct 'pacman -Q | wc -l | lolcat'
-abbr -a syu 'pacman -Syu | lolcat;yay -Syu | lolcat'
-abbr -a pacuc 'pacman -Qu | wc -l | lolcat'
-abbr -a paccl 'sudo pacman -Scc;yay -Sc;yay -Yc'
-abbr -a pacfd 'pacman -Q | grep'
+abbr -a pct 'pacman -Q | wc -l | lolcat'
+abbr -a syu 'yay -Syu | lolcat'
+abbr -a puc 'pacman -Qu | wc -l | lolcat'
+abbr -a pcl 'sudo pacman -Scc; yay -Sc; yay -Yc'
+abbr -a pfd 'pacman -Q | grep'
 # GIT ----------------
-abbr -a gitad 'git add -A;git status | lolcat'
-function gitpu
+abbr -a ga 'git add -A; git status | lolcat'
+abbr -a gr 'git reset | lolcat'
+abbr -a gd 'git diff'
+abbr -a gl 'git log'
+function gp
     git push origin $argv | lolcat;
 end
-function gitco
+function gc
     git commit -m $argv | lolcat;
 end
 # MISC ----------------
 abbr -a la 'exa -la'
 abbr -a l 'ls'
 abbr -a neo 'neofetch | lolcat;'
-abbr -a shutdown 'sudo shutdown -P now;'
-abbr -a restart 'sudo shutdown -r now;'
+abbr -a sd 'sudo shutdown -P now'
+abbr -a rs 'sudo shutdown -r now'
 abbr -a py 'python'
 abbr -a snek 'python'
 abbr -a vim 'nvim'
