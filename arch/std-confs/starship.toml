@@ -15,32 +15,32 @@ style = "fg:cyan bold"
 
 [directory]
 # use bg:none to flex my bugfix
-format = "[ $path ]($style)[$read_only]($read_only_style)[](bg:none fg:cyan)"
+format = "[ $path ]($style)[$read_only]($read_only_style)[](cyan)"
 style = "bg:cyan fg:black bold"
 read_only_style = "bg:cyan fg:red"
 
 #TODO: make the background colour change
 [git_branch]
-format = "\b[](bg:red fg:cyan)[ $symbol$branch ]($style)[](fg:red)"
+format = "\b[](bg:red fg:cyan)[ $symbol$branch ]($style)[](red)"
 style = "bg:red fg:black bold"
 
 [git_status]
-format = "(\b[$all_status$ahead_behind ]($style)[](fg:red))"
+format = "(\b[$all_status$ahead_behind ]($style)[](red))"
 style = "bg:red fg:black bold"
 staged = "✚"
 modified = "●"
 
 [git_commit]
-format = "\b[\\($hash\\)]($style)([\\($tag\\)]($style))[ ]($style)[](fg:red)"
+format = "\b[\\($hash\\)]($style)([\\($tag\\)]($style))[ ]($style)[](red)"
 style = "bg:red fg:green green bold"
 only_detached = true
 
 [git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\)[ ]($style)[](fg:red)'
+format = '\([$state( $progress_current/$progress_total)]($style)\)[ ]($style)[](red)'
 style = "bg:red fg:black bold"
 
 [package]
-format = "\b[](bg:yellow fg:red)[ $symbol$version]($style)[ ]($style)[](fg:yellow)"
+format = "\b[](bg:yellow fg:red)[ $symbol$version]($style)[ ]($style)[](yellow)"
 style = "bg:yellow fg:black bold"
 
 [cmd_duration]

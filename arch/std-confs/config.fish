@@ -65,11 +65,15 @@ abbr -a ix "curl -s -F 'f:1=<-' ix.io"
 abbr -a ccat "pigmentize -g"
 abbr -a feh 'feh --scale-down -d'
 abbr -a ka 'sudo killall'
+# RUST ----------------
 abbr -a cc 'cargo check'
 abbr -a cb 'cargo build'
 abbr -a cr 'cargo run'
 abbr -a cbr 'cargo build --release'
 abbr -a crr 'cargo run --release'
+abbr -a ct 'cargo test'
+abbr -a ccl 'cargo clippy --all-targets --all-features'
+abbr -a cf 'cargo fmt'
 # BANG BANG ----------------
 function __history_previous_command
   switch (commandline -t)
