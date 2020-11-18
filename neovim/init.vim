@@ -82,6 +82,8 @@ let g:strip_whitespace_confirm = 0
 " some visual stuff
 let g:rainbow_active = 1
 let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```', '"""':'"""', "'''":"'''"}
+" leave out black and gray
+let g:rainbow_ctermfgs = ['red','green','yellow','blue','magenta','cyan']
 let g:indentLine_char = '┆'
 " Limelight
 let g:limelight_conceal_ctermfg = 'gray'
@@ -106,4 +108,5 @@ Plug 'junegunn/limelight.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'dag/vim-fish'
+Plug 'cespare/vim-toml'
 call plug#end()
