@@ -50,6 +50,15 @@ end
 function gc
     git commit -m $argv | lolcat;
 end
+# RUST ----------------
+abbr -a cc 'cargo check'
+abbr -a cb 'cargo build'
+abbr -a cr 'cargo run'
+abbr -a cbr 'cargo build --release'
+abbr -a crr 'cargo run --release'
+abbr -a ct 'cargo test'
+abbr -a ccl 'cargo clippy --all-targets --all-features'
+abbr -a cf 'cargo fmt'
 # MISC ----------------
 abbr -a la 'exa -la'
 abbr -a l 'ls'
@@ -65,15 +74,7 @@ abbr -a ix "curl -s -F 'f:1=<-' ix.io"
 abbr -a ccat "pigmentize -g"
 abbr -a feh 'feh --scale-down -d'
 abbr -a ka 'sudo killall'
-# RUST ----------------
-abbr -a cc 'cargo check'
-abbr -a cb 'cargo build'
-abbr -a cr 'cargo run'
-abbr -a cbr 'cargo build --release'
-abbr -a crr 'cargo run --release'
-abbr -a ct 'cargo test'
-abbr -a ccl 'cargo clippy --all-targets --all-features'
-abbr -a cf 'cargo fmt'
+abbr -a pass 'termpasshash'
 # BANG BANG ----------------
 function __history_previous_command
   switch (commandline -t)
@@ -85,5 +86,5 @@ function __history_previous_command
 end
 bind ! __history_previous_command
 # STARSHIP ----------------
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/scripts:$PATH"
 starship init fish | source

@@ -1,1 +1,2 @@
+#!/bin/bash
 echo "HENLO, THIS IS TEST SCRIPT. NICE TO MEET YOU."

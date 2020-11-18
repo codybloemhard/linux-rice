@@ -1,1 +1,2 @@
-curl 'dict://dict.org/d:$1'
+#!/bin/bash
+curl "dict://dict.org/d:$1"
