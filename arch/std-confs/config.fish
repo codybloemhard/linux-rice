@@ -88,3 +88,7 @@ bind ! __history_previous_command
 # STARSHIP ----------------
 export PATH="$HOME/.cargo/bin:$HOME/scripts:$PATH"
 starship init fish | source
+# STARTX
+if status --is-login
+    exec startx
+end
