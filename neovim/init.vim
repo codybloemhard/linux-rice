@@ -38,12 +38,14 @@ nnoremap k o
 nnoremap K O
 nnoremap l u
 nnoremap L U
+nnoremap W e
 vnoremap h a
 vnoremap H A
 vnoremap k o
 vnoremap K O
 vnoremap l u
 vnoremap L U
+vnoremap W e
 " faster jumps
 nnoremap U 5k
 nnoremap E 5j
