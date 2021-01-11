@@ -51,13 +51,13 @@ function gc
     git commit -m $argv | lolcat;
 end
 # RUST ----------------
-abbr -a cc 'cargo check'
+abbr -a cc 'cargo clippy --all-features'
 abbr -a cb 'cargo build'
 abbr -a cr 'cargo run'
 abbr -a cbr 'cargo build --release'
 abbr -a crr 'cargo run --release'
 abbr -a ct 'cargo test'
-abbr -a ccl 'cargo clippy --all-targets --all-features'
+abbr -a ccc 'cargo check'
 abbr -a cf 'cargo fmt'
 # MISC ----------------
 abbr -a la 'exa -la'
