@@ -26,18 +26,18 @@ set -U fish_color_comment gray
 function pin
     sudo pacman -S $argv | lolcat
 end
-function prm
+function pun
     sudo pacman -Rns $argv | lolcat
 end
 function pss
     pacman -Ss $argv | lolcat
 end
-abbr -a pls 'pacman -Qd | lolcat'
-abbr -a aurls "yay -Qm"
+abbr -a pls 'pacman -Qd'
+abbr -a aurls "paru -Qm"
 abbr -a pct 'pacman -Q | wc -l | lolcat'
-abbr -a syu 'yay -Syu | lolcat'
-abbr -a puc 'pacman -Qu | wc -l | lolcat'
-abbr -a pcl 'sudo pacman -Scc; yay -Sc; yay -Yc'
+abbr -a syu 'paru -Syu'
+abbr -a puc 'pacman -Qu | wc -l'
+abbr -a pcl 'sudo pacman -Scc; paru -Sc; paru --clean'
 abbr -a pfd 'pacman -Q | grep'
 # GIT ----------------
 abbr -a ga 'git add -A; git status | lolcat'

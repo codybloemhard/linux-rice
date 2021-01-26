@@ -22,11 +22,12 @@ cd dmenu-cody
 ./build
 cd $_path
 # install yay
-git clone https://aur.archlinux.org/yay.git --depth=1
-cd yay
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git --depth=1
+cd paru
 makepkg -si
 cd ..
-rm -rf yay
+rm -rf paru
 # install better lolcat
 yay -S c-lolcat
 # Install Shapebar
