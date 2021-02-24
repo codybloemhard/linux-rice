@@ -21,7 +21,7 @@ git clone https://github.com/ocdy1001/dmenu-cody.git --depth=1
 cd dmenu-cody
 ./build
 cd $_path
-# install yay
+# install aur helper (paru)
 sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git --depth=1
 cd paru

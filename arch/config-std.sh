@@ -10,7 +10,7 @@ echo "echo \"HENLO, THIS IS TEST SCRIPT. NICE TO MEET YOU.\"" > ~/scripts/test.s
 chmod +x ~/scripts/test.sh
 # xorg
 mkdir ~/.config
-cp std-confs/xinit-std.conf ~/.xinitrc
+cp std-confs/.xinitrc ~/.xinitrc
 # i3
 mkdir ~/.config/i3
 cp std-confs/i3gaps-std.conf ~/.config/i3/config
@@ -28,7 +28,7 @@ cp std-confs/settings-gtk2.ini ~/.config/gtk-2.0/settings.ini
 # picom
 mkdir ~/.config/picom
 cp std-confs/picom-std.conf ~/.config/picom/picom.conf
-# zsh/bash
+# fish
 chsh -s $(which fish)
 cp std-confs/starship.toml ~/.config/
 cp std-confs/config.fish ~/.config/fish/
