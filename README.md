@@ -1,4 +1,65 @@
-# Cody's Linux Rice (Void / Arch)
+# Cody's Linux Rice (Arch / Artix / Void)
+## Maintained?
+* Arch/Artix: Yes, I use this rice on my Artix Desktop daily
+* Void: No, I used to use void on Desktop and Laptop but not anymore. The config is outdated.
+## About
+Category                | Program
+------------------------|-----------------------------------
+Os                      | Artix/Arch
+Tiling window manager   | i3-gaps
+Shell                   | Fish
+Terminal                | St (https://github.com/ocdy1001/st-cody)
+Launcher                | Dmenu (https://github.com/ocdy1001/dmenu-cody)
+Status bar              | Shapebar (https://github.com/ocdy1001/shapebar)
+Prompt                  | Starship (https://github.com/starship/starship)
+Text Editor             | NeoVim
+Compositor              | Picom
+AUR Helper              | Paru
+Keymap                  | Physical: QMK (https://github.com/ocdy1001/qmk-cody)
+Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, c-lolcat, Bat
+## Usefull Shortcuts
+- C: Control, S:Shift, M:Mod.
+- Mod = (arch: windowskey, void: alt).
+### i3-gaps
+- M-f           = close window
+- M-b           = open terminal
+- M-j           = open browser
+- M-h           = open dmenu
+- M-Space       = toggle popup terminal 
+- M-a           = focus left window
+- M-o           = focus right window
+- M-u           = focus up window
+- M-e           = focus down window
+- M-S-a         = move left window
+- M-S-o         = move right window
+- M-S-u         = move up window
+- M-S-e         = move down window
+- M-k           = split horizontally from now on
+- M-p           = split vertically from now on
+- M-r           = toggle into resize mode
+- a             = (resize mode) decrease width
+- o             = (resize mode) increase width
+- u             = (resize mode) decrease height
+- e             = (resize mode) increase height
+- M-n           = toggle fullscreen for selected window
+- M-S-f         = toggle floating mode for selected window
+- M-z           = increase gap size
+- M-S-z         = decrease gap size
+- M-x           = set gap size to default
+- M-S-x         = set gap size to 0
+- M-(q,g,m,l,w,y)  = switch to workspace n
+- M-S(q,g,m,l,w,y) = move window to workspace n
+- M-S-d         = reload config file
+- M-S-s         = restart i3, keep windows open
+- M-S-t         = close i3, xserver
+### st-cody
+- Mouse to select text(not keyboardshortcut but yea)
+- C-u           = scroll up
+- C-e           = scroll down
+- C-S-Pgup      = increase font size
+- C-S-Pgdn      = decrease font size
+- C-S-c         = copy
+- C-S-v         = paste
 ## Step 1: Install distro on your pc:
 ### Void
 0. Boot from usb.
@@ -55,77 +116,3 @@
 14. Press ``windowskey+enter`` to fire up a terminal.
 15. ``windowskey+b``, to fire up the browser, log in, browser should be dark themed, else choose gtk+ in the settings.
 16. Done.
-## Dependencies
-This rice should install everything including it's dependencies.
-I clone some of my repo's in order or compile and install software.
-They are mainly forks of existing open source software, mostly suckless stuff.
-- https://github.com/ocdy1001/dmenu-cody
-- https://github.com/ocdy1001/st-cody
-## Usefull Shortcuts
-- C: Control, S:Shift, M:Mod.
-- Mod = (arch: windowskey, void: alt).
-- This is because i use void on my laptop and it has the windows key on a weird place.
-### i3-gaps
-- M-q           = close window
-- M-Enter       = open terminal
-- M-b           = open browser
-- M-BackSpace   = open dmenu
-- M-Space       = toggle popup terminal 
--
-- M-j           = focus left window
-- M-l           = focus right window
-- M-i           = focus up window
-- M-k           = focus down window
-- M-S-j         = move left window
-- M-S-l         = move right window
-- M-S-i         = move up window
-- M-S-k         = move down window
-- M-Left        = focus left window
-- M-Right       = focus right window
-- M-Up          = focus up window
-- M-Down        = focus down window
-- M-S-Left      = move left window
-- M-S-Right     = move right window
-- M-S-Up        = move up window
-- M-S-Down      = move down window
-- M-h           = split horizontally from now on
-- M-v           = split vertically from now on
-- 
-- M-r           = go into resize mode
-- M-r           = (resize mode) go back to normal mode
-- M-Enter       = (resize mode) go back to normal mode
-- M-Esc         = (resize mode) go back to normal mode
-- j             = (resize mode) decrease width
-- u             = (resize mode) increase width
-- k             = (resize mode) decrease height
-- i             = (resize mode) increase height
-- Left          = (resize mode) decrease width
-- Right         = (resize mode) increase width
-- Down          = (resize mode) decrease height
-- Up            = (resize mode) increase height
-- 
-- M-f           = toggle fullscreen for selected window
-- M-S-f         = toggle floating mode for selected window
-- M-z           = increase gap size
-- M-S-z         = decrease gap size
-- M-x           = set gap size to default
-- M-S-x         = set gap size to 0
-- 
-- M-(1..9,0)    = switch to workspace n
-- M-S(1..9,0)   = move window to workspace n
-- 
-- M-S-c         = reload config file
-- M-S-r         = restart i3, keep windows open
-- M-S-e         = close i3, xserver
-- M-S-o         = start compositor
-- M-S-p         = kill compositor
-### st-cody
-- Mouse to select text(not keyboardshortcut but yea)
-- S-Up          = scroll n lines up
-- S-Down        = scroll n lines down
-- S-Pgup        = scroll n lines up
-- S-Pgdn        = scroll n lines down
-- C-S-Pgup      = increase font size
-- C-S-Pgdn      = decrease font size
-- C-S-c         = copy
-- C-S-v         = paste
