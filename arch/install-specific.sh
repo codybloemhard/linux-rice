@@ -1,19 +1,23 @@
 #!/bin/bash
 echo "Installing (specific)"
-#latex
+# latex
 sudo pacman -Sy texlive-most mupdf
-#discord
+# discord
 yay -S discord
-#minecraft
+# minecraft
 yay -S minecraft-launcher
-#vscode opensource
+# vscode opensource
 yay -S vscodium-bin
 #rust lang
 curl https://sh.rustup.rs -sSf | sh
-echo "Done"
-#steam
+# steam
 sudo pacman -Sy lib32-nvidia-utils steam
-#to change gtk theme by hand
+# to change gtk theme by hand
 sudo pacman -S lxappearance-gtk3
 # japanese font
 yay ttf-koruri
+# pdf reader
+sudo pacman -Sy --noconfirm zathura-pdf-mupdf
+# music player
+sudo pacman -Sy --noconfirm cmus
+echo "Done"

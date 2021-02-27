@@ -16,7 +16,7 @@ Text Editor             | NeoVim
 Compositor              | Picom
 AUR Helper              | Paru
 Keymap                  | Physical: QMK (https://github.com/ocdy1001/qmk-cody)
-Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, c-lolcat, Bat
+Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, c-lolcat, Bat, Exa
 ## Usefull Shortcuts
 - C: Control, S:Shift, M:Mod.
 - Mod = (arch: windowskey, void: alt).
@@ -25,7 +25,7 @@ Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, c-lolcat, Bat
 - M-b           = open terminal
 - M-j           = open browser
 - M-h           = open dmenu
-- M-Space       = toggle popup terminal 
+- M-Space       = toggle popup terminal
 - M-a           = focus left window
 - M-o           = focus right window
 - M-u           = focus up window
@@ -60,6 +60,7 @@ Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, c-lolcat, Bat
 - C-S-Pgdn      = decrease font size
 - C-S-c         = copy
 - C-S-v         = paste
+# Install
 ## Step 1: Install distro on your pc:
 ### Void
 0. Boot from usb.

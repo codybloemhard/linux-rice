@@ -71,7 +71,6 @@ abbr -a vim 'nvim'
 abbr -a v 'nvim'
 abbr -a rmd 'rm -rf'
 abbr -a ix "curl -s -F 'f:1=<-' ix.io"
-abbr -a ccat "pigmentize -g"
 abbr -a feh 'feh --scale-down -d'
 abbr -a ka 'sudo killall'
 abbr -a pass 'termpasshash'
@@ -90,5 +89,5 @@ export PATH="$HOME/.cargo/bin:$HOME/scripts:$PATH"
 starship init fish | source
 # STARTX
 if status --is-login
-    exec startx
+    # exec startx
 end

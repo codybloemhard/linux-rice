@@ -1,9 +1,13 @@
 #!/bin/bash
 echo "Installing (minimal)"
 _path=$( pwd )
+# Sync and update
 sudo pacman -Syyu --noconfirm
-sudo pacman -Sy --noconfirm xorg-server xorg-xinit xorg-xrandr i3-gaps i3status feh picom linux-headers nvidia htop neofetch exa neovim
+# Xorg and essentials
+sudo pacman -Sy --noconfirm xorg-server xorg-xinit xorg-xrandr i3-gaps i3status feh picom linux-headers nvidia htop neovim
+# Network
 sudo pacman -Sy --noconfirm iw #networkmanager
+# Dev
 sudo pacman -Sy --noconfirm base-devel pacman-contrib
 sudo ../neovim/install.sh
 # install neovim things
@@ -46,4 +50,6 @@ cd fonts
 ./install.sh
 cd ..
 rm -rf fonts
+# Utilities
+sudo pacman -Sy --noconfirm neofetch exa scrot alsa-firmware alsa-utils firefox sl unzip zip slock pulseaudio the_silver_searcher fzf xclip bat
 echo "Done"
