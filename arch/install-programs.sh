@@ -40,6 +40,7 @@ git clone https://github.com/ocdy1001/shapebar
 cd shapebar
 sudo make install
 cd $_path
+sudo pacman -Sy xorg-xset # needed for caps module
 # Install Adwaita dark theme
 yay -S adwaita-slim-gtk-theme
 # Install fish and rust and starship and needed fonts for latter one
