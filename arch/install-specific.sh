@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "Installing (specific)"
 # latex
 sudo pacman -Sy texlive-most mupdf

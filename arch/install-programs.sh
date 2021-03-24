@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "Installing (minimal)"
 _path=$( pwd )
 # Sync and update
@@ -33,7 +33,7 @@ makepkg -si
 cd ..
 rm -rf paru
 # install better lolcat
-yay -S c-lolcat
+paru -S c-lolcat
 # Install Shapebar
 cd ~/git
 git clone https://github.com/ocdy1001/shapebar
@@ -42,7 +42,7 @@ sudo make install
 cd $_path
 sudo pacman -Sy xorg-xset # needed for caps module
 # Install Adwaita dark theme
-yay -S adwaita-slim-gtk-theme
+paru -S adwaita-slim-gtk-theme
 # Install fish and rust and starship and needed fonts for latter one
 sudo pacman -S fish rust
 cargo install starship
@@ -51,6 +51,8 @@ cd fonts
 ./install.sh
 cd ..
 rm -rf fonts
+# Use dash as shell
+paru -S dashbinsh
 # Utilities
 sudo pacman -Sy --noconfirm neofetch exa scrot alsa-firmware alsa-utils firefox sl unzip zip slock pulseaudio the_silver_searcher fzf xclip bat
 echo "Done"

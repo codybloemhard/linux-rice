@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e "                             " | dmenu -p 'bash: ' | bash | dmenu 
+echo -e "                             " | dmenu -p 'bash: ' | bash | dmenu

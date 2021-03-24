@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #get password so user only needs to type it once
 pass=$(
 echo -e "         " |                   # echo into dmenu to start it
