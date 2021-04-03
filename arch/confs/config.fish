@@ -74,6 +74,7 @@ abbr -a ix "curl -s -F 'f:1=<-' ix.io"
 abbr -a feh 'feh --scale-down -d'
 abbr -a ka 'sudo killall'
 abbr -a pass 'termpasshash'
+abbr -a pp pplanner
 # BANG BANG ----------------
 function __history_previous_command
   switch (commandline -t)
@@ -84,6 +85,10 @@ function __history_previous_command
   end
 end
 bind ! __history_previous_command
+# Don't search pacman for commands when command not found:
+function fish_command_not_found
+    __fish_default_command_not_found_handler $argv
+end
 # STARSHIP ----------------
 export PATH="$HOME/.cargo/bin:$HOME/scripts:$PATH"
 starship init fish | source

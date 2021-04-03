@@ -1,7 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 echo "Configuring extra"
-parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
-cd $parent_path
 #cmus
 cp confs/cmusrc-std.conf ~/.config/cmus/rc
 cp confs/cmus-autosave-std.conf ~/.config/cmus/autosave

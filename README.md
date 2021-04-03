@@ -7,8 +7,8 @@ Category                | Program
 ------------------------|-----------------------------------
 Os                      | Artix/Arch
 Tiling window manager   | i3-gaps
-Shell (Login)           | Fish
 Shell (bin/sh)          | Dash
+Shell (Login)           | Fish
 Terminal                | St (https://github.com/ocdy1001/st-cody)
 Launcher                | Dmenu (https://github.com/ocdy1001/dmenu-cody)
 Status bar              | Shapebar (https://github.com/ocdy1001/shapebar)

@@ -1,7 +1,4 @@
-#!/bin/bash
-echo "Configuring"
-parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
-cd $parent_path
+#!/bin/sh
 sudo cp confs/pacman.conf /etc/pacman.conf
 # scripts folder
 cp -frT ../scripts ~/scripts
