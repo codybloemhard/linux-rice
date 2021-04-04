@@ -20,7 +20,7 @@ Keymap                  | Physical: QMK (https://github.com/ocdy1001/qmk-cody)
 Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, c-lolcat, Bat, Exa
 ## Usefull Shortcuts
 - C: Control, S:Shift, M:Mod.
-- Mod = (arch: windowskey, void: alt).
+- M = Mod (arch: windowskey, void: alt).
 ### i3-gaps
 - M-f           = close window
 - M-b           = open terminal
@@ -54,13 +54,22 @@ Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, c-lolcat, Bat, Exa
 - M-S-s         = restart i3, keep windows open
 - M-S-t         = close i3, xserver
 ### st-cody
-- Mouse to select text(not keyboardshortcut but yea)
+- Mouse to select text(if you want)
 - C-u           = scroll up
 - C-e           = scroll down
 - C-S-Pgup      = increase font size
 - C-S-Pgdn      = decrease font size
 - C-S-c         = copy
 - C-S-v         = paste
+- C-v           = Select mode (Vim-like)
+    - a,u,e,o   = Move around
+    - arrows    = Move around
+    - s         = Toggle select mode
+    - t         = Toggle block mode
+    - Escape    = Quit select mode
+    - Return    = Quit select mode and keep selection
+    - /, ?      = Search forward, backwards
+    - n, N      = Next, previous search result
 # Install
 ## Step 1: Install distro on your pc:
 ### Void
