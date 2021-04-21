@@ -189,12 +189,13 @@ bindsym $mod+r mode "resize"
 
 bindsym $mod+j exec firefox
 
+for_window [class="ffplay"] floating enable
 # Simple bar when shit breaks
 #Bar {  status_command i3status }
 
-exec --no-startup-id ~/.config/polybar/run-poly.sh
+exec --no-startup-id ~/scripts/run-shapebar
 
-exec picom
+exec picom --xrender-sync-fence
 
 #kill and start compton for games etc
 #bindsym $mod+Shift+o exec picom
