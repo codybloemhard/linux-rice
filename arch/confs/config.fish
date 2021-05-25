@@ -75,6 +75,7 @@ abbr -a feh 'feh --scale-down -d'
 abbr -a ka 'sudo killall'
 abbr -a pass 'termpasshash'
 abbr -a pp pplanner
+abbr -a fp 'ffplay'
 # BANG BANG ----------------
 function __history_previous_command
   switch (commandline -t)

@@ -6,6 +6,8 @@ set shiftwidth=4
 set hidden
 set noswapfile
 set clipboard+=unnamedplus " use system clipboard(needs xclip)
+set backupcopy=yes
+set mouse=c " disable mouse
 " set colorcolumn=81
 call matchadd('ColorColumn', '\%81v', 100)
 highlight ColorColumn ctermbg=0
@@ -111,4 +113,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'dag/vim-fish'
 Plug 'cespare/vim-toml'
+Plug 'udalov/kotlin-vim'
+Plug 'tikhomirov/vim-glsl'
+Plug 'tbastos/vim-lua'
 call plug#end()
