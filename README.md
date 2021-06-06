@@ -3,7 +3,7 @@
 * Arch/Artix: Yes, I use this rice on my Artix Desktop daily
 * Void: No, I used to use void on Desktop and Laptop but not anymore. The config is outdated.
 ## About
-Category                | Program
+Key                     | Value
 ------------------------|-----------------------------------
 Os                      | Artix/Arch
 Tiling window manager   | i3-gaps

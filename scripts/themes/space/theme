@@ -4,6 +4,7 @@ cp ~/scripts/themes/space/st-float ~/scripts/st-float
 cp ~/scripts/themes/space/shapebar-conf ~/scripts/shapebar-conf
 cp ~/scripts/themes/space/run-shapebar ~/scripts/run-shapebar
 cp ~/scripts/themes/space/init-background ~/scripts/init-background
+cp ~/scripts/themes/space/Xdmenu ~/scripts/Xdmenu
 ~/scripts/themes/space/init-background
 xrdb -merge ~/scripts/themes/space/Xdmenu
 killall shapebar

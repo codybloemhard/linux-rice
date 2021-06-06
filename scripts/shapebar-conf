@@ -21,7 +21,7 @@ while :; do
         diskv=$(~/scripts/modules/disk-mod)
     fi
 
-    outp="%{W25}"
+    outp="%{W26}"
     outp+="%{l}"
     outp+="%{B-}"
     outp+="%{B-} %{B#BF616A}%{F-}%{Zt>}%{F#11113A} $(~/scripts/modules/wifi-mod) %{F#BF616A}%{B#3b4252}%{Zt>}"

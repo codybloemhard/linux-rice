@@ -4,6 +4,7 @@ cp ~/scripts/themes/nord/st-float ~/scripts/st-float
 cp ~/scripts/themes/nord/shapebar-conf ~/scripts/shapebar-conf
 cp ~/scripts/themes/nord/run-shapebar ~/scripts/run-shapebar
 cp ~/scripts/themes/nord/init-background ~/scripts/init-background
+cp ~/scripts/themes/nord/Xdmenu ~/scripts/Xdmenu
 ~/scripts/themes/nord/init-background
 xrdb -merge ~/scripts/themes/nord/Xdmenu
 killall shapebar
