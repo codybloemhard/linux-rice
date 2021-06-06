@@ -65,7 +65,7 @@ abbr -a l 'ls'
 abbr -a neo 'neofetch | lolcat;'
 abbr -a sd 'sudo shutdown -hP now'
 abbr -a rs 'sudo shutdown -r now'
-abbr -a py 'python'
+abbr -a p 'python'
 abbr -a snek 'python'
 abbr -a vim 'nvim'
 abbr -a v 'nvim'
@@ -74,8 +74,9 @@ abbr -a ix "curl -s -F 'f:1=<-' ix.io"
 abbr -a feh 'feh --scale-down -d'
 abbr -a ka 'sudo killall'
 abbr -a pass 'termpasshash'
-abbr -a pp pplanner
+abbr -a pp 'pplanner'
 abbr -a fp 'ffplay'
+abbr -a ff 'firefox'
 # BANG BANG ----------------
 function __history_previous_command
   switch (commandline -t)

@@ -1,0 +1,3 @@
+#!/bin/sh
+theme=$(echo 'space\nnord' | dmenu -p '')
+~/scripts/themes/$theme/theme &> /dev/null &

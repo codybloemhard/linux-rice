@@ -50,8 +50,8 @@ font pango:monospace 12
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+b exec st
-exec --no-startup-id "st -n stfloat"
+bindsym $mod+b exec ~/scripts/st.sh
+exec --no-startup-id ~/scripts/st-float
 for_window [class="st" instance="stfloat"] move scratchpad, resize set 2400 1300, move position 80 70;
 bindsym $mod+space [class="st" instance="stfloat"] scratchpad show;
 # kill focused window
@@ -60,10 +60,6 @@ bindsym $mod+f kill
 # start dmenu (a program launcher)
 bindsym $mod+h exec dmenu_run
 bindsym Print exec screenshot0d
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+Left focus left
@@ -190,14 +186,10 @@ bindsym $mod+r mode "resize"
 bindsym $mod+j exec firefox
 
 for_window [class="ffplay"] floating enable
+
 # Simple bar when shit breaks
 #Bar {  status_command i3status }
 
 exec --no-startup-id ~/scripts/run-shapebar
 
 exec picom --xrender-sync-fence
-
-#kill and start compton for games etc
-#bindsym $mod+Shift+o exec picom
-#bindsym $mod+Shift+p exec pkill picom
-

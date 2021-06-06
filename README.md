@@ -18,6 +18,7 @@ Compositor              | Picom
 AUR Helper              | Paru
 Keymap                  | Physical: QMK (https://github.com/ocdy1001/qmk-cody)
 Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, c-lolcat, Bat, Exa
+Themes                  | Space, Nord
 ## Usefull Shortcuts
 - C: Control, S:Shift, M:Mod.
 - M = Mod (arch: windowskey, void: alt).
