@@ -3,6 +3,9 @@
 * Arch/Artix: Yes, I use this rice on my Artix Desktop daily
 * Void: No, I used to use void on Desktop and Laptop but not anymore. The config is outdated.
 ## About
+- A minimal but useable desktop environment for my personal use.
+- Supports live theme changing.
+
 Key                     | Value
 ------------------------|-----------------------------------
 Os                      | Artix/Arch

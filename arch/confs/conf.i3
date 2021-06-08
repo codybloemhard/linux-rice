@@ -50,15 +50,15 @@ font pango:monospace 12
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+b exec ~/scripts/st.sh
-exec --no-startup-id ~/scripts/st-float
-for_window [class="st" instance="stfloat"] move scratchpad, resize set 2400 1300, move position 80 70;
-bindsym $mod+space [class="st" instance="stfloat"] scratchpad show;
+bindsym $mod+b exec st
+exec --no-startup-id "st -c stfloat"
+for_window [class="stfloat" instance="st"] move scratchpad, resize set 2400 1300, move position 80 70;
+bindsym $mod+space [class="stfloat" instance="st"] scratchpad show;
 # kill focused window
 bindsym $mod+f kill
 
 # start dmenu (a program launcher)
-bindsym $mod+h exec dmenu_run
+bindsym $mod+h exec --no-startup-id dmenu_run
 bindsym Print exec screenshot0d
 
 # change focus
