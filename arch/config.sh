@@ -33,7 +33,6 @@ cp confs/config.fish ~/.config/fish/
 cp confs/asoundrc-std.conf ~/.asoundrc
 # profile
 cp confs/profile-std.conf ~/.profile
-# background
-mkdir ~/img
-cp background.jpg ~/img/background.jpg
+# backgrounds
+cp -rT ../img ~/img
 echo "Done"
