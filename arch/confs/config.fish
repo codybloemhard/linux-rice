@@ -24,31 +24,31 @@ set -U fish_color_match --background=brblue
 set -U fish_color_comment gray
 # PACMAN ----------------
 function pin
-    sudo pacman -S $argv | lolcat
+    sudo pacman -S $argv
 end
 function pun
-    sudo pacman -Rns $argv | lolcat
+    sudo pacman -Rns $argv
 end
 function pss
-    pacman -Ss $argv | lolcat
+    pacman -Ss $argv
 end
 abbr -a pls 'pacman -Qd'
 abbr -a aurls "paru -Qm"
-abbr -a pct 'pacman -Q | wc -l | lolcat'
+abbr -a pct 'pacman -Q | wc -l'
 abbr -a syu 'paru -Syu'
 abbr -a puc 'pacman -Qu | wc -l'
 abbr -a pcl 'sudo pacman -Scc; paru -Sc; paru --clean'
 abbr -a pfd 'pacman -Q | grep'
 # GIT ----------------
-abbr -a ga 'git add -A; git status | lolcat'
-abbr -a gr 'git reset | lolcat'
+abbr -a ga 'git add -A; git status'
+abbr -a gr 'git reset'
 abbr -a gd 'git diff'
 abbr -a gl 'git log'
 function gp
-    git push origin $argv | lolcat;
+    git push origin $argv
 end
 function gc
-    git commit -m $argv | lolcat;
+    git commit -m $argv
 end
 # RUST ----------------
 abbr -a cc 'cargo clippy --all-features'
@@ -62,7 +62,7 @@ abbr -a cf 'cargo fmt'
 # MISC ----------------
 abbr -a la 'exa -la'
 abbr -a l 'ls'
-abbr -a neo 'neofetch | lolcat;'
+abbr -a neo 'neofetch'
 abbr -a sd 'sudo shutdown -hP now'
 abbr -a rs 'sudo shutdown -r now'
 abbr -a p 'python'
