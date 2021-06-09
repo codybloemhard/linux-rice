@@ -22,16 +22,16 @@ while :; do
     fi
 
     outp="%{l}"
-    outp+="%{B-}"
-    outp+="%{O12}%{F#dc322f} $(~/scripts/modules/wifi-mod) "
-    outp+="%{O24}%{F#b58900} $(~/scripts/modules/sensor-mod) "
-    outp+="%{O24}%{F#859900} $diskv "
-    outp+="%{O24}%{F#268bd2} $cpu_outp% "
-    outp+="%{O24}%{F#d33682} $(~/scripts/modules/mem-mod) "
-    outp+="%{O24}%{F#d65d0e}$(~/scripts/modules/caps-mod)%{B-}"
+    outp+="%{B-}%{F#000000}"
+    outp+="%{B#cc241d} $(~/scripts/modules/wifi-mod) "
+    outp+="%{B-}%{O8}%{B#d79921} $(~/scripts/modules/sensor-mod) "
+    outp+="%{B-}%{O8}%{B#98971a} $diskv "
+    outp+="%{B-}%{O8}%{B#458588} $cpu_outp% "
+    outp+="%{B-}%{O8}%{B#b16286} $(~/scripts/modules/mem-mod) "
+    outp+="%{B-}%{O8}%{B#d65d0e}$(~/scripts/modules/caps-mod)%{B-}"
     outp+="%{r}%{B-}%{F#fbf1c7}"
-    outp+="%{O24}%{F#93a1a1} $updv "
-    outp+="%{O24}%{F#839496} $(~/scripts/modules/dt-mod) %{B-}%{O12}"
+    outp+="%{B-}%{O8}%{B#504945} $updv "
+    outp+="%{B-}%{O8}%{B#3c3836} $(~/scripts/modules/dt-mod) %{B-}"
 
     echo "$outp"
 

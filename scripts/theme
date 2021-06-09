@@ -1,5 +1,9 @@
 #!/bin/sh
-theme=$(echo 'space\nnord' | dmenu -p '')
+theme=$(echo 'space\nnord\ngruvbox\nhawkrad' | dmenu -p '')
+if [ -z "$theme" ]
+then
+    exit;
+fi
 cp ~/scripts/themes/$theme/shapebar-conf ~/scripts/shapebar-conf
 cp ~/scripts/themes/$theme/run-shapebar ~/scripts/run-shapebar
 cp ~/scripts/themes/$theme/init-background ~/scripts/init-background
