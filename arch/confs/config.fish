@@ -77,6 +77,7 @@ abbr -a pass 'termpasshash'
 abbr -a pp 'pplanner'
 abbr -a fp 'ffplay'
 abbr -a ff 'firefox'
+abbr -a du 'dust'
 # BANG BANG ----------------
 function __history_previous_command
   switch (commandline -t)
