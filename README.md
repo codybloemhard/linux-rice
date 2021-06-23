@@ -22,6 +22,10 @@ AUR Helper              | Paru
 Keymap                  | Physical: QMK (https://github.com/ocdy1001/qmk-cody)
 Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, Bat, Exa, Dust
 Themes                  | Space, Nord, Gruvbox, Hawkrad
+
+## Example Image
+![Nord Theme Example](https://codyb.xyz/img/rice0.webp)
+
 ## Usefull Shortcuts
 - C: Control, S:Shift, M:Mod.
 - M = Mod (arch: windowskey, void: alt).
@@ -131,3 +135,8 @@ Themes                  | Space, Nord, Gruvbox, Hawkrad
 14. Press ``windowskey+enter`` to fire up a terminal.
 15. ``windowskey+b``, to fire up the browser, log in, browser should be dark themed, else choose gtk+ in the settings.
 16. Done.
+
+## More Examples
+
+![Gruvbox Theme Example](https://codyb.xyz/img/rice1.webp)
+![Hawkrad Theme Example](https://codyb.xyz/img/rice2.webp)
