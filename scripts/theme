@@ -1,5 +1,5 @@
 #!/bin/sh
-theme=$(echo 'space\nnord\ngruvbox\nhawkrad' | dmenu -p '')
+theme=$(echo 'space\nnord\ngruvbox\nhawkrad\ntokyo-night' | dmenu -p '')
 if [ -z "$theme" ]
 then
     exit;

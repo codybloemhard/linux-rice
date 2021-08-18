@@ -1,7 +1,7 @@
 #!/bin/sh
 #get password so user only needs to type it once
 pass=$(
-echo -e "         " |                   # echo into dmenu to start it
+echo "         " |                   # echo into dmenu to start it
 dmenu -P -p 'sudo: '                    # prompt for sudo password
 )
 part=$(
@@ -12,7 +12,7 @@ cut -f1 -d' '                           # remove everything after first space
 )                                       # save to partition var
 # let user choose or type path to mount to
 dest=$(
-echo -e "$HOME/mnt/usb0\n$HOME/mnt/usb1\n$HOME/mnt/usb2\n$HOME/mnt/usb3" |
+echo "$HOME/mnt/usb0\n$HOME/mnt/usb1\n$HOME/mnt/usb2\n$HOME/mnt/usb3" |
 dmenu -p 'mount on path: '
 )
 echo "$pass" | sudo -S mount "$part" "$dest"

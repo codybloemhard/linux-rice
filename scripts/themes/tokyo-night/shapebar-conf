@@ -21,17 +21,19 @@ while :; do
         diskv=$(~/scripts/modules/disk-mod)
     fi
 
-    outp="%{l}"
-    outp+="%{B-}%{F#000000}"
-    outp+="%{B#cc241d} $(~/scripts/modules/wifi-mod) "
-    outp+="%{B-}%{O8}%{B#d79921} $(~/scripts/modules/sensor-mod) "
-    outp+="%{B-}%{O8}%{B#98971a} $diskv "
-    outp+="%{B-}%{O8}%{B#458588} $cpu_outp% "
-    outp+="%{B-}%{O8}%{B#b16286} $(~/scripts/modules/mem-mod) "
-    outp+="%{B-}%{O8}%{B#d65d0e}$(~/scripts/modules/caps-mod)%{B-}"
-    outp+="%{r}%{B-}%{F#fbf1c7}"
-    outp+="%{B-}%{O8}%{B#504945} $updv "
-    outp+="%{B-}%{O8}%{B#3c3836} $(~/scripts/modules/dt-mod) %{B-}"
+    outp="%{W26}"
+    outp+="%{l}"
+    outp+="%{B-}"
+    outp+="%{B-} %{B#f7768e}%{F-}%{Zt>}%{F#11113A} $(~/scripts/modules/wifi-mod) %{F#f7768e}%{B#00000000}%{Zt>}"
+    outp+="%{B#ff9e64}%{F-}%{Zt>}%{F#11113A} $(~/scripts/modules/sensor-mod) %{F#ff9e64}%{B#00000000}%{Zt>}"
+    outp+="%{B#9ece6a}%{F-}%{Zt>}%{F#11113A} $diskv %{F#9ece6a}%{B#00000000}%{Zt>}"
+    outp+="%{B#7aa2f7}%{F-}%{Zt>}%{F#11113A} $cpu_outp% %{F#7aa2f7}%{B#00000000}%{Zt>}"
+    outp+="%{B#bb9af7}%{F-}%{Zt>}%{F#11113A} $(~/scripts/modules/mem-mod) %{F#bb9af7}%{B#00000000}%{Zt>}"
+    outp+="%{B-}"
+    outp+="%{r}"
+    outp+="%{B#565f89}%{F-}%{Zt>}%{F#11113A}$(~/scripts/modules/caps-mod)%{F#565f89}%{B-}%{Zt>}"
+    outp+="%{B#565f89}%{F-}%{Zt>}%{F#11113A} $updv %{F#565f89}%{B-}%{Zt>}"
+    outp+="%{B#414868}%{F-}%{Zt>}%{F#a9b1d6} $(~/scripts/modules/dt-mod) %{F#414868}%{B-}%{Zt>} "
 
     echo "$outp"
 
