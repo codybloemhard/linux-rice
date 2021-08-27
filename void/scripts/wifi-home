@@ -1,4 +1,0 @@
-#!/bin/bash
-sudo killall wpa_supplicant
-sudo wpa_supplicant -B -i wlp4s0 -c /etc/wpa_supplicant/home-wpa -Dwext
-sudo dhcpcd wlp4s0

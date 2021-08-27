@@ -32,8 +32,6 @@ cd paru
 makepkg -si
 cd ..
 rm -rf paru
-# install better lolcat
-paru -S c-lolcat
 # Install Shapebar
 cd ~/git
 git clone https://github.com/ocdy1001/shapebar
