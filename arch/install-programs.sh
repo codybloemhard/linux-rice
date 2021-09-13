@@ -4,7 +4,7 @@ _path=$( pwd )
 # Sync and update
 sudo pacman -Syyu --noconfirm
 # Xorg and essentials
-sudo pacman -Sy --noconfirm xorg-server xorg-xinit xorg-xrandr i3-gaps i3status feh picom linux-headers nvidia htop neovim
+sudo pacman -Sy --noconfirm xorg-server xorg-xinit xorg-xrandr xorg-xrdb i3-gaps i3status feh picom linux-headers nvidia htop neovim
 # Network
 sudo pacman -Sy --noconfirm iw #networkmanager
 # Dev

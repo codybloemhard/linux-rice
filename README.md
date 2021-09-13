@@ -21,7 +21,7 @@ Compositor              | Picom
 AUR Helper              | Paru
 Keymap                  | Physical: QMK (https://github.com/ocdy1001/qmk-cody)
 Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, Bat, Exa, Dust
-Themes                  | Space, Nord, Gruvbox, Hawkrad
+Themes                  | Space, Nord, Gruvbox, Hawkrad, Tokyo Night
 
 ## Example Image
 ![Nord Theme Example](https://codyb.xyz/img/rice0.webp)
@@ -97,7 +97,7 @@ Themes                  | Space, Nord, Gruvbox, Hawkrad
 0. Follow Arch wiki
 1. When wifi only use ``wifi-menu``
 2. If you use grub and it boots to an grub terminal instead of the menu, boot from usb again, arch-chroot into your system, install grub with ``--removable`` flag.
-3. when chrooted in, install ``pacman -S dialog wpa_supplicant wifi-menu`` as they are only present at the install iso and not in your fresh system.
+3. when chrooted in, install ``pacman -S iwd dhcpcd`` as they are only present at the install iso and not in your fresh system.
 4. Install sudo ``pacman -S sudo``
 5. Make a normal user ``useradd -m username`` and set password ``passwd username``
 6. Add user as sudoer ``su -c visudo``, scroll down till you see ``root ALL=(ALL) ALL``, add under that line ``username ALL=(ALL) ALL``
@@ -131,10 +131,7 @@ Themes                  | Space, Nord, Gruvbox, Hawkrad
 10. It does stuff(installing using xbps or pacman and copying config files).
 11. You now have the programs, my configs, repos installed, system updated etc.
 12. ``startx``
-13. Should see a space image background.
-14. Press ``windowskey+enter`` to fire up a terminal.
-15. ``windowskey+b``, to fire up the browser, log in, browser should be dark themed, else choose gtk+ in the settings.
-16. Done.
+13. Done.
 
 ## More Examples
 

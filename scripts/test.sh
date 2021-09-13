@@ -1,2 +1,0 @@
-#!/bin/sh
-echo "HENLO, THIS IS TEST SCRIPT. NICE TO MEET YOU."

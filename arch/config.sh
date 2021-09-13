@@ -3,8 +3,6 @@ sudo cp confs/pacman.conf /etc/pacman.conf
 # scripts folder
 cp -frT ../scripts ~/scripts
 mkdir ~/scripts/.sfiles
-echo "echo \"HENLO, THIS IS TEST SCRIPT. NICE TO MEET YOU.\"" > ~/scripts/test.sh
-chmod +x ~/scripts/test.sh
 # xorg
 mkdir ~/.config
 cp confs/.xinitrc ~/.xinitrc
