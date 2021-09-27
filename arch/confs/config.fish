@@ -23,15 +23,9 @@ set -U fish_pager_color_progress brwhite --background=cyan
 set -U fish_color_match --background=brblue
 set -U fish_color_comment gray
 # PACMAN ----------------
-function pin
-    sudo pacman -S $argv
-end
-function pun
-    sudo pacman -Rns $argv
-end
-function pss
-    pacman -Ss $argv
-end
+abbr -a pin 'sudo pacman -S'
+abbr -a pun 'sudo pacman -Rns'
+abbr -a pss 'pacman -Ss'
 abbr -a pls 'pacman -Qd'
 abbr -a aurls "paru -Qm"
 abbr -a pct 'pacman -Q | wc -l'
@@ -43,6 +37,7 @@ abbr -a pfd 'pacman -Q | grep'
 abbr -a ga 'git add -A; git status'
 abbr -a gr 'git reset'
 abbr -a gd 'git diff'
+abbr -a gdc 'git diff HEAD~0 --stat'
 abbr -a gl 'git log'
 function gp
     git push origin $argv
