@@ -34,3 +34,5 @@ cp confs/profile-std.conf ~/.profile
 # backgrounds
 cp -rT ../img ~/img
 echo "Done"
+# set browser
+xdg-settings set default-web-browser firefox.desktop
