@@ -1,5 +1,8 @@
+# Current powerline solution: use spaces instead of \b to overwrite
+# See: https://github.com/starship/starship/issues/528
+
 format = """
-$status$jobs[ λ ](bg:yellow fg:black bold)[](bg:cyan fg:yellow)$directory$git_branch$git_status$git_commit$git_state$package$cmd_duration """
+$status$jobs[ λ ](bg:yellow fg:black bold)[](bg:black fg:yellow)$directory$git_branch$git_status$git_commit$git_state$package$cmd_duration """
 
 # Disable the newline at the start of the prompt
 add_newline = false
@@ -15,13 +18,13 @@ style = "fg:cyan bold"
 
 [directory]
 # use bg:none to flex my bugfix
-format = "[ $path ]($style)[$read_only]($read_only_style)[](cyan)"
+format = "[](bg:cyan fg:black)[ $path ]($style)[$read_only]($read_only_style)[](cyan)"
 style = "bg:cyan fg:black bold"
 read_only_style = "bg:cyan fg:red"
 
 #TODO: make the background colour change
 [git_branch]
-format = "\b[](bg:red fg:cyan)[ $symbol$branch ]($style)[](red)"
+format = "[](bg:red fg:black)[ $symbol$branch ]($style)[](red)"
 style = "bg:red fg:black bold"
 
 [git_status]
@@ -31,16 +34,16 @@ staged = "✚"
 modified = "●"
 
 [git_commit]
-format = "\b[\\($hash\\)]($style)([\\($tag\\)]($style))[ ]($style)[](red)"
+format = "(\b[\\($hash\\)]($style)([\\($tag\\)]($style))[ ]($style)[](red))"
 style = "bg:red fg:green green bold"
 only_detached = true
 
 [git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\)[ ]($style)[](red)'
+format = "([$state( $progress_current/$progress_total)]($style))[ ]($style)[](red)"
 style = "bg:red fg:black bold"
 
 [package]
-format = "\b[](bg:yellow fg:red)[ $symbol$version]($style)[ ]($style)[](yellow)"
+format = "[](bg:yellow fg:black)[ $symbol$version]($style)[ ]($style)[](yellow)"
 style = "bg:yellow fg:black bold"
 
 [cmd_duration]

@@ -39,6 +39,8 @@ abbr -a gr 'git reset'
 abbr -a gd 'git diff'
 abbr -a gdc 'git diff HEAD~0 --stat'
 abbr -a gl 'git log'
+abbr -a gb 'git branch'
+abbr -a gc 'git checkout'
 function gp
     git push origin $argv
 end
@@ -73,6 +75,7 @@ abbr -a pp 'pplanner'
 abbr -a fp 'ffplay'
 abbr -a ff 'firefox'
 abbr -a du 'dust'
+abbr -a day 'bat git/misc/day-plan'
 # BANG BANG ----------------
 function __history_previous_command
   switch (commandline -t)

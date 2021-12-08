@@ -36,3 +36,5 @@ cp -rT ../img ~/img
 echo "Done"
 # set browser
 xdg-settings set default-web-browser firefox.desktop
+# git
+git config --global core.editor "nvim"
