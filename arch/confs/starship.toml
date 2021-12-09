@@ -2,7 +2,7 @@
 # See: https://github.com/starship/starship/issues/528
 
 format = """
-$status$jobs[ λ ](bg:yellow fg:black bold)[](bg:black fg:yellow)$directory$git_branch$git_status$git_commit$git_state$package$cmd_duration """
+[ λ ](bg:yellow fg:black bold)[](bg:black fg:yellow)$directory$git_branch$git_status$git_commit$git_state$package $jobs$status$cmd_duration """
 
 # Disable the newline at the start of the prompt
 add_newline = false
@@ -47,4 +47,4 @@ format = "[](bg:yellow fg:black)[ $symbol$version]($style)[ ]($style)[](ye
 style = "bg:yellow fg:black bold"
 
 [cmd_duration]
-format = "[ $duration]($style)"
+format = "[$duration]($style)"

@@ -37,16 +37,12 @@ abbr -a pfd 'pacman -Q | grep'
 abbr -a ga 'git add -A; git status'
 abbr -a gr 'git reset'
 abbr -a gd 'git diff'
+abbr -a gc 'git commit -m'
 abbr -a gdc 'git diff HEAD~0 --stat'
 abbr -a gl 'git log'
 abbr -a gb 'git branch'
-abbr -a gc 'git checkout'
-function gp
-    git push origin $argv
-end
-function gc
-    git commit -m $argv
-end
+abbr -a gp 'git push origin'
+abbr -a gch 'git checkout'
 # RUST ----------------
 abbr -a cc 'cargo clippy --all-features'
 abbr -a cb 'cargo build'
