@@ -44,13 +44,13 @@ abbr -a gb 'git branch'
 abbr -a gp 'git push origin'
 abbr -a gch 'git checkout'
 # RUST ----------------
-abbr -a cc 'cargo clippy --all-features'
+abbr -a ccc 'cargo clippy --all-features'
+abbr -a cc 'cargo check'
 abbr -a cb 'cargo build'
 abbr -a cr 'cargo run'
 abbr -a cbr 'cargo build --release'
 abbr -a crr 'cargo run --release'
 abbr -a ct 'cargo test'
-abbr -a ccc 'cargo check'
 abbr -a cf 'cargo fmt'
 # MISC ----------------
 abbr -a la 'exa -la'
@@ -72,6 +72,7 @@ abbr -a fp 'ffplay'
 abbr -a ff 'firefox'
 abbr -a du 'dust'
 abbr -a day 'bat git/misc/day-plan'
+abbr -a encrypt 'gpg -c --no-symkey-cache --cipher-algo AES256'
 # BANG BANG ----------------
 function __history_previous_command
   switch (commandline -t)
