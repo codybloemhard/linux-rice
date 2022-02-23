@@ -12,14 +12,14 @@ Os                      | Artix/Arch
 Tiling window manager   | i3-gaps
 Shell (bin/sh)          | Dash
 Shell (Login)           | Fish
-Terminal                | St (https://github.com/ocdy1001/st-cody)
-Launcher                | Dmenu (https://github.com/ocdy1001/dmenu-cody)
-Status bar              | Shapebar (https://github.com/ocdy1001/shapebar)
+Terminal                | St (https://github.com/codybloemhard/st-cody)
+Launcher                | Dmenu (https://github.com/codybloemhard/dmenu-cody)
+Status bar              | Shapebar (https://github.com/codybloemhard/shapebar)
 Prompt                  | Starship (https://github.com/starship/starship)
 Text Editor             | NeoVim
 Compositor              | Picom
 AUR Helper              | Paru
-Keymap                  | Physical: QMK (https://github.com/ocdy1001/qmk-cody)
+Keymap                  | Physical: QMK (https://github.com/codybloemhard/qmk-cody)
 Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, Bat, Exa, Dust
 Themes                  | Space, Nord, Gruvbox, Hawkrad, Tokyo Night
 
@@ -123,7 +123,7 @@ Themes                  | Space, Nord, Gruvbox, Hawkrad, Tokyo Night
 2. Install git: ``sudo xbps-install -Sy git`` || ``sudo pacman -S git``
 3. Make a dir for all git projects: ``mkdir ~/git``
 4. Goto the new dir: ``cd ~/git``
-5. Pull this repo(assuming you read this on another device): ``git clone https://github.com/ocdy1001/VoidLinuxRice.git``
+5. Pull this repo(assuming you read this on another device): ``git clone https://github.com/codybloemhard/VoidLinuxRice.git``
 6. ``cd ~/git/LinuxRice/void`` || ``cd ~/git/LinuxRice/arch``
 7. Let FILENAME be ``cvlr.sh`` || ``calr.sh``
 8. Give exec rights: ``chmod +x FILENAME``

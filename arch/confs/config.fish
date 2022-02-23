@@ -30,7 +30,6 @@ abbr -a pls 'pacman -Qd'
 abbr -a aurls "paru -Qm"
 abbr -a pct 'pacman -Q | wc -l'
 abbr -a syu 'paru -Syu'
-abbr -a puc 'pacman -Qu | wc -l'
 abbr -a pcl 'sudo pacman -Scc; paru -Sc; paru --clean'
 abbr -a pfd 'pacman -Q | grep'
 # GIT ----------------
@@ -44,26 +43,22 @@ abbr -a gb 'git branch'
 abbr -a gp 'git push origin'
 abbr -a gch 'git checkout'
 # RUST ----------------
-abbr -a ccc 'cargo clippy --all-features'
-abbr -a cc 'cargo check'
+abbr -a cc 'cargo clippy --all-features'
+abbr -a ccc 'cargo check'
 abbr -a cb 'cargo build'
 abbr -a cr 'cargo run'
 abbr -a cbr 'cargo build --release'
 abbr -a crr 'cargo run --release'
 abbr -a ct 'cargo test'
-abbr -a cf 'cargo fmt'
 # MISC ----------------
 abbr -a la 'exa -la'
-abbr -a l 'ls'
 abbr -a neo 'neofetch'
 abbr -a sd 'sudo shutdown -hP now'
 abbr -a rs 'sudo shutdown -r now'
 abbr -a p 'python'
-abbr -a snek 'python'
 abbr -a vim 'nvim'
 abbr -a v 'nvim'
 abbr -a rmd 'rm -rf'
-abbr -a ix "curl -s -F 'f:1=<-' ix.io"
 abbr -a feh 'feh --scale-down -d'
 abbr -a ka 'sudo killall'
 abbr -a pass 'termpasshash'
@@ -88,7 +83,7 @@ function fish_command_not_found
     __fish_default_command_not_found_handler $argv
 end
 # STARSHIP ----------------
-export PATH="$HOME/.cargo/bin:$HOME/scripts:$PATH"
+export PATH="$HOME/.stack/programs/x86_64-linux/ghc-tinfo6-8.10.7/bin:$HOME/.cargo/bin:$HOME/scripts:$PATH"
 starship init fish | source
 # STARTX
 if status --is-login
