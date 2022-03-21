@@ -1,0 +1,1 @@
+javascript:(function(){viewer.style = 'filter: invert(1) contrast(75%)';})()
