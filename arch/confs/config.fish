@@ -83,7 +83,7 @@ function fish_command_not_found
     __fish_default_command_not_found_handler $argv
 end
 # STARSHIP ----------------
-export PATH="$HOME/.stack/programs/x86_64-linux/ghc-tinfo6-8.10.7/bin:$HOME/.cargo/bin:$HOME/scripts:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/scripts:$PATH"
 starship init fish | source
 # STARTX
 if status --is-login
