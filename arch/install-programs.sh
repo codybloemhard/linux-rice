@@ -10,22 +10,22 @@ sudo pacman -Sy --noconfirm iw #networkmanager
 # Dev
 sudo pacman -Sy --noconfirm base-devel pacman-contrib
 sudo ../neovim/install.sh
-# install neovim things
+# Install neovim things
 ../neovim/install.sh
-# install st fork
+# Install st fork
 mkdir ~/git
 cd ~/git
 git clone https://github.com/codybloemhard/st-cody.git
 cd st-cody
 sudo make install
 cd $_path
-# install dmenu fork
+# Install dmenu fork
 cd ~/git
 git clone https://github.com/codybloemhard/dmenu-cody.git --depth=1
 cd dmenu-cody
 ./build
 cd $_path
-# install aur helper (paru)
+# Install aur helper (paru)
 sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git --depth=1
 cd paru

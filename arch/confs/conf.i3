@@ -1,65 +1,60 @@
-#cody's i3 config
+# Cody's i3 config
 set $mod Mod4
 
-#monitor order
-#no nvidia driver
-#exec xrandr --output DP-1 --output HDMI-1 --right-of DP-1 &
-#with nvidia drivers
+# monitor order
+# no nvidia driver
+# exec xrandr --output DP-1 --output HDMI-1 --right-of DP-1 &
+# with nvidia drivers
 exec xrandr --output DP-0 --output HDMI-0 --right-of DP-0 &
-#exec xranr --auto
-#set workspaces
+# bar, compositor, autotiling, scratchpad
+exec --no-startup-id ~/scripts/run-shapebar
+exec picom --xrender-sync-fence
+exec --no-startup-id "st -c stfloat"
+
+# set workspaces
 workspace 2 output HDMI-0
 workspace 1 output DP-0
 
-set $stdgap 20
+set $stdgap 10
+set $dt 5
 
-#new_window 1pixel
 gaps inner $stdgap
 gaps outer 0
 
+# border colours
 default_border pixel 2
-client.focused #000000 #000000 #000000 #000000 #888888
+client.focused #000000 #000000 #000000 #000000 #666666
 client.focused_inactive #000000 #000000 #000000 #000000 #000000
 client.unfocused #000000 #000000 #000000 #000000 #000000
 client.urgent #000000 #000000 #000000 #000000 #000000
 client.placeholder #000000 #000000 #000000 #000000 #000000
 client.background #000000
 
+# font for window titles
+font pango:monospace 12
+
+# application binds
+bindsym $mod+b exec --no-startup-id st
+bindsym $mod+h exec --no-startup-id dmenu_run
+bindsym $mod+j exec firefox
+bindsym $mod+Shift+j exec firefox --private-window
+
+# i3 binds
+bindsym $mod+f kill
+bindsym $mod+n fullscreen toggle
+bindsym $mod+Shift+f floating toggle
+bindsym $mod+k split v
+bindsym $mod+p split h
+bindsym $mod+space [class="stfloat" instance="st"] scratchpad show;
+
 bindsym $mod+z gaps inner current plus 5
 bindsym $mod+Shift+z gaps inner current minus 5
 bindsym $mod+x gaps inner current set $stdgap
 bindsym $mod+Shift+x gaps inner current set 0
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-font pango:monospace 12
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
-
-# Use Mouse+$mod to drag floating windows to their wanted position
-#floating_modifier $mod
-
-# start a terminal
-#bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+b exec st
-exec --no-startup-id "st -c stfloat"
+# window classes
 for_window [class="stfloat" instance="st"] move scratchpad, resize set 2400 1300, move position 80 70;
-bindsym $mod+space [class="stfloat" instance="st"] scratchpad show;
-# kill focused window
-bindsym $mod+f kill
-
-# start dmenu (a program launcher)
-bindsym $mod+h exec --no-startup-id dmenu_run
-bindsym Print exec screenshot0d
+for_window [class="ffplay"] floating enable
 
 # change focus
 bindsym $mod+Left focus left
@@ -72,6 +67,9 @@ bindsym $mod+e focus down
 bindsym $mod+u focus up
 bindsym $mod+o focus right
 
+# change focus between tiling / floating windows
+bindsym $mod+Shift+space focus mode_toggle
+
 # move focused window
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -83,34 +81,27 @@ bindsym $mod+Shift+e move down
 bindsym $mod+Shift+u move up
 bindsym $mod+Shift+o move right
 
-# split in horizontal orientation
-bindsym $mod+k split h
+# resize windows
+bindsym $mod+r mode "resize"
+mode "resize" {
+    bindsym a resize shrink width  $dt px
+    bindsym o resize grow   width  $dt px
+    bindsym u resize shrink height $dt px
+    bindsym e resize grow   height $dt px
 
-# split in vertical orientation
-bindsym $mod+p split v
+    # same bindings, but for the arrow keys
+    bindsym Left  resize shrink width  $dt px
+    bindsym Right resize grow   width  $dt px
+    bindsym Up    resize shrink height $dt px
+    bindsym Down  resize grow   height $dt px
 
-# enter fullscreen mode for the focused container
-bindsym $mod+n fullscreen toggle
+    # back to normal
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+}
 
-# change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+Shift+s layout stacking
-#bindsym $mod+Shift+w layout tabbed
-#bindsym $mod+e layout toggle split
-
-# toggle tiling / floating
-bindsym $mod+Shift+f floating toggle
-
-# change focus between tiling / floating windows
-#bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-#bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
-
-# Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
+# define workspaces
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -146,50 +137,9 @@ bindsym $mod+Shift+2 move container to workspace $ws8
 bindsym $mod+Shift+3 move container to workspace $ws9
 bindsym $mod+Shift+4 move container to workspace $ws10
 
-# reload the configuration file
+# reload, restart, exit
 bindsym $mod+Shift+d reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+s restart
-# exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+t exit
+bindsym $mod+Shift+t exec "i3-nagbar -t warning -m 'Kill i3?' -B 'Kill' 'i3-msg exit'"
+# bindsym $mod+Shift+t exit
 
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        set $dt 5
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width $dt px or $dt ppt
-        bindsym Down resize grow height $dt px or $dt ppt
-        bindsym Up resize shrink height $dt px or $dt ppt
-        bindsym Right resize grow width $dt px or $dt ppt
-
-        bindsym j resize shrink width $dt px or $dt ppt
-        bindsym i resize grow height $dt px or $dt ppt
-        bindsym k resize shrink height $dt px or $dt ppt
-        bindsym u resize grow width $dt px or $dt ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-}
-
-bindsym $mod+r mode "resize"
-
-bindsym $mod+j exec firefox
-
-for_window [class="ffplay"] floating enable
-
-# Simple bar when shit breaks
-#Bar {  status_command i3status }
-
-exec --no-startup-id ~/scripts/run-shapebar
-
-exec picom --xrender-sync-fence
