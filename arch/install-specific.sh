@@ -14,8 +14,6 @@ curl https://sh.rustup.rs -sSf | sh
 sudo pacman -Sy lib32-nvidia-utils steam
 # to change gtk theme by hand
 sudo pacman -S lxappearance-gtk3
-# japanese font
-yay ttf-koruri
 # pdf reader
 sudo pacman -Sy --noconfirm zathura-pdf-mupdf
 # music player

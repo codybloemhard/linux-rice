@@ -33,8 +33,16 @@ cp confs/asoundrc-std.conf ~/.asoundrc
 cp confs/profile-std.conf ~/.profile
 # backgrounds
 cp -rT ../img ~/img
-echo "Done"
 # set browser
 xdg-settings set default-web-browser firefox.desktop
 # git
 git config --global core.editor "nvim"
+# btop
+cp confs/btop.conf ~/.config/btop/btop.conf
+# directories for usb script
+mkdir ~/mnt
+mkdir ~/mnt/usb0
+mkdir ~/mnt/usb1
+mkdir ~/mnt/usb2
+mkdir ~/mnt/usb3
+echo 'Done Configuring'

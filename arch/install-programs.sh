@@ -1,10 +1,9 @@
 #!/bin/sh
-echo "Installing (minimal)"
 _path=$( pwd )
 # Sync and update
 sudo pacman -Syyu --noconfirm
 # Xorg and essentials
-sudo pacman -Sy --noconfirm xorg-server xorg-xinit xorg-xrandr xorg-xrdb xdg-utils i3-gaps i3status feh picom linux-headers nvidia htop neovim
+sudo pacman -Sy --noconfirm xorg-server xorg-xinit xorg-xrandr xorg-xrdb xdg-utils i3-gaps i3status feh picom linux-headers nvidia btop neovim firefox
 # Network
 sudo pacman -Sy --noconfirm iw #networkmanager
 # Dev
@@ -41,16 +40,19 @@ cd $_path
 sudo pacman -Sy xorg-xset # needed for caps module
 # Install Adwaita dark theme
 paru -S adwaita-slim-gtk-theme
-# Install fish and rust and starship and needed fonts for latter one
-sudo pacman -S fish rust
-cargo install starship
+# Install powerline font
 git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
 ./install.sh
 cd ..
 rm -rf fonts
+# Install Japanese font
+yay ttf-koruri
+# Install fish and rust and starship
+sudo pacman -S fish rust
+cargo install starship
 # Use dash as shell
 paru -S dashbinsh
 # Utilities
-sudo pacman -Sy --noconfirm neofetch exa scrot alsa-firmware alsa-utils firefox sl unzip zip slock pulseaudio the_silver_searcher fzf xclip bat
-echo "Done"
+sudo pacman -Sy --noconfirm neofetch exa scrot alsa-firmware alsa-utils sl unzip zip slock pulseaudio the_silver_searcher fzf xclip bat
+echo 'Done Installing'
