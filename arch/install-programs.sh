@@ -54,5 +54,5 @@ cargo install starship
 # Use dash as shell
 paru -S dashbinsh
 # Utilities
-sudo pacman -Sy --noconfirm neofetch exa scrot alsa-firmware alsa-utils sl unzip zip slock pulseaudio the_silver_searcher fzf xclip bat
+sudo pacman -Sy --noconfirm neofetch exa scrot alsa-firmware alsa-utils sl unzip zip slock pulseaudio the_silver_searcher fzf xclip bat ntp
 echo 'Done Installing'

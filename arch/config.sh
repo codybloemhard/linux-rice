@@ -46,3 +46,5 @@ mkdir ~/mnt/usb1
 mkdir ~/mnt/usb2
 mkdir ~/mnt/usb3
 echo 'Done Configuring'
+# sync time
+~/scripts/sync-time.sh
