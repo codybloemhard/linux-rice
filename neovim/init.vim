@@ -24,6 +24,13 @@ nnoremap <leader>m :w<CR>
 " 0 = home nonwhite, - = end, 9 = home absolute
 nnoremap 0 _
 nnoremap _ 0
+vnoremap 0 _
+vnoremap _ 0
+" v is V and V is v, because V is more useful more times
+nnoremap v V
+nnoremap V v
+vnoremap v V
+vnoremap V v
 " hjkl to aueo
 nnoremap a h
 nnoremap u k
@@ -105,15 +112,11 @@ Plug 'tomtom/tcomment_vim'
 Plug 'frazrepo/vim-rainbow'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'lilydjwg/colorizer'
 Plug 'Yggdroot/indentLine'
-Plug 'junegunn/limelight.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
 Plug 'dag/vim-fish'
 Plug 'cespare/vim-toml'
-Plug 'udalov/kotlin-vim'
 Plug 'tikhomirov/vim-glsl'
 Plug 'tbastos/vim-lua'
+Plug 'petRUShka/vim-opencl'
 call plug#end()

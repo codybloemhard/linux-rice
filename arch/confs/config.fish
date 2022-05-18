@@ -67,6 +67,7 @@ abbr -a fp 'ffplay'
 abbr -a ff 'firefox'
 abbr -a du 'dust'
 abbr -a day 'bat git/misc/day-plan'
+abbr -a bt 'btop'
 abbr -a encrypt 'gpg -c --no-symkey-cache --cipher-algo AES256'
 # BANG BANG ----------------
 function __history_previous_command
@@ -87,5 +88,5 @@ export PATH="$HOME/.cargo/bin:$HOME/scripts:$PATH"
 starship init fish | source
 # STARTX
 if status --is-login
-    # exec startx
+    exec startx
 end

@@ -39,12 +39,15 @@ xdg-settings set default-web-browser firefox.desktop
 git config --global core.editor "nvim"
 # btop
 cp confs/btop.conf ~/.config/btop/btop.conf
+# neovim (install plugins)
+nvim -c 'PlugInstall' '+q' '+q'
 # directories for usb script
 mkdir ~/mnt
 mkdir ~/mnt/usb0
 mkdir ~/mnt/usb1
 mkdir ~/mnt/usb2
 mkdir ~/mnt/usb3
-echo 'Done Configuring'
 # sync time
 ~/scripts/sync-time.sh
+# done
+echo 'Done Configuring'
