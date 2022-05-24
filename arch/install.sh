@@ -3,11 +3,13 @@ _path=$( pwd )
 # Sync and update
 sudo pacman -Syyu --noconfirm
 # Xorg and essentials
-sudo pacman -Sy --noconfirm xorg-server xorg-xinit xorg-xrandr xorg-xrdb xdg-utils i3-gaps i3status feh picom linux-headers nvidia btop neovim firefox
+sudo pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr xorg-xrdb xdg-utils i3-gaps feh picom linux-headers nvidia btop neovim firefox
+# Utilities
+sudo pacman -S --noconfirm neofetch exa scrot alsa-firmware alsa-utils sl unzip zip slock pulseaudio the_silver_searcher fzf xclip bat ntp
 # Network
-sudo pacman -Sy --noconfirm iw #networkmanager
+sudo pacman -S --noconfirm iw #networkmanager
 # Dev
-sudo pacman -Sy --noconfirm base-devel pacman-contrib
+sudo pacman -S --noconfirm base-devel pacman-contrib
 sudo ../neovim/install.sh
 # Install neovim things
 ../neovim/install.sh
@@ -37,7 +39,7 @@ git clone https://github.com/codybloemhard/shapebar
 cd shapebar
 sudo make install
 cd $_path
-sudo pacman -Sy xorg-xset # needed for caps module
+sudo pacman -S xorg-xset # needed for caps module
 # Install Adwaita dark theme
 paru -S adwaita-slim-gtk-theme
 # Install powerline font
@@ -53,6 +55,6 @@ sudo pacman -S fish rust
 cargo install starship
 # Use dash as shell
 paru -S dashbinsh
-# Utilities
-sudo pacman -Sy --noconfirm neofetch exa scrot alsa-firmware alsa-utils sl unzip zip slock pulseaudio the_silver_searcher fzf xclip bat ntp
+# fcitx (japanese input)
+sudo pacman -S fcitx-im fcitx-configtool fcitx-mozc
 echo 'Done Installing'

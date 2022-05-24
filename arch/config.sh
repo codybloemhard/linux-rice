@@ -1,5 +1,9 @@
 #!/bin/sh
+# Pacman
 sudo cp confs/pacman.conf /etc/pacman.conf
+# Locale
+sudo cp confs/locale.gen /etc/locale.gen
+sudo locale-gen
 # scripts folder
 cp -frT ../scripts ~/scripts
 mkdir ~/scripts/.sfiles
@@ -41,6 +45,8 @@ git config --global core.editor "nvim"
 cp confs/btop.conf ~/.config/btop/btop.conf
 # neovim (install plugins)
 nvim -c 'PlugInstall' '+q' '+q'
+# fcitx
+cp confs/fcitx.conf ~/.config/fcitx/config
 # directories for usb script
 mkdir ~/mnt
 mkdir ~/mnt/usb0

@@ -27,10 +27,10 @@ abbr -a pin 'pacman -Q | wc -l; sudo pacman -S'
 abbr -a pun 'sudo pacman -Rns'
 abbr -a pss 'pacman -Ss'
 abbr -a pls 'pacman -Qd'
-abbr -a aurls "paru -Qm"
+abbr -a aurls 'paru -Qm'
 abbr -a pct 'pacman -Q | wc -l'
 abbr -a syu 'paru -Syu'
-abbr -a pcl 'sudo pacman -Scc; paru -Sc; paru --clean'
+abbr -a pcl 'sudo paru -Sc; paru --clean'
 abbr -a pfd 'pacman -Q | grep'
 # GIT ----------------
 abbr -a ga 'git add -A; git status'
@@ -86,6 +86,11 @@ end
 # STARSHIP ----------------
 export PATH="$HOME/.cargo/bin:$HOME/scripts:$PATH"
 starship init fish | source
+# fcitx
+export XMODIFIERS='@im=fcitx'
+export GTK_IM_MODULE='fcitx'
+export QT_IM_MODULE='fcitx'
+export SDL_IM_MODULE='fcitx'
 # STARTX
 if status --is-login
     exec startx

@@ -1,5 +1,5 @@
 #!/bin/sh
 echo "Start installing and configuring..."
-./install-programs.sh
+./install.sh
 ./config.sh
 echo "Finalized"
