@@ -39,7 +39,7 @@ style = "bg:red fg:green green bold"
 only_detached = true
 
 [git_state]
-format = "([$state( $progress_current/$progress_total)]($style))[ ]($style)[](red)"
+format = "\b([$state( $progress_current/$progress_total)]($style))[ ]($style)[](red)"
 style = "bg:red fg:black bold"
 
 [package]
