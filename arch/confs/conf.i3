@@ -20,6 +20,7 @@ set $dt 5
 
 gaps inner $stdgap
 gaps outer 0
+smart_gaps on
 
 # border colours
 default_border pixel 2
@@ -29,6 +30,7 @@ client.unfocused #000000 #000000 #000000 #000000 #000000
 client.urgent #000000 #000000 #000000 #000000 #000000
 client.placeholder #000000 #000000 #000000 #000000 #000000
 client.background #000000
+hide_edge_borders smart
 
 # font for window titles
 font pango:monospace 12
@@ -57,6 +59,8 @@ for_window [class="stfloat" instance="st"] move scratchpad, resize set 2400 1300
 for_window [class="ffplay"] floating enable
 
 # change focus
+focus_on_window_activation none
+
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -80,6 +84,7 @@ bindsym $mod+Shift+a move left
 bindsym $mod+Shift+e move down
 bindsym $mod+Shift+u move up
 bindsym $mod+Shift+o move right
+
 
 # resize windows
 bindsym $mod+r mode "resize"
