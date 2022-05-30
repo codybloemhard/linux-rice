@@ -9,14 +9,14 @@ exec xrandr --output DP-0 --output HDMI-0 --right-of DP-0 &
 # bar, compositor, autotiling, scratchpad
 exec --no-startup-id ~/scripts/run-shapebar
 exec picom --xrender-sync-fence
-exec --no-startup-id "st -c stfloat"
+exec --no-startup-id "st -c stfloat -A 1.0"
 
 # set workspaces
 workspace 2 output HDMI-0
 workspace 1 output DP-0
 
 set $stdgap 10
-set $dt 5
+set $dt 20
 
 gaps inner $stdgap
 gaps outer 0
@@ -61,9 +61,9 @@ for_window [class="ffplay"] floating enable
 # change focus
 focus_on_window_activation none
 
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
+bindsym $mod+Left  focus left
+bindsym $mod+Down  focus down
+bindsym $mod+Up    focus up
 bindsym $mod+Right focus right
 
 bindsym $mod+a focus left
@@ -75,9 +75,9 @@ bindsym $mod+o focus right
 bindsym $mod+Shift+space focus mode_toggle
 
 # move focused window
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
 bindsym $mod+Shift+a move left
@@ -85,26 +85,11 @@ bindsym $mod+Shift+e move down
 bindsym $mod+Shift+u move up
 bindsym $mod+Shift+o move right
 
-
 # resize windows
-bindsym $mod+r mode "resize"
-mode "resize" {
-    bindsym a resize shrink width  $dt px
-    bindsym o resize grow   width  $dt px
-    bindsym u resize shrink height $dt px
-    bindsym e resize grow   height $dt px
-
-    # same bindings, but for the arrow keys
-    bindsym Left  resize shrink width  $dt px
-    bindsym Right resize grow   width  $dt px
-    bindsym Up    resize shrink height $dt px
-    bindsym Down  resize grow   height $dt px
-
-    # back to normal
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-    bindsym $mod+r mode "default"
-}
+bindsym $mod+Control+a resize shrink width  $dt px
+bindsym $mod+Control+o resize grow   width  $dt px
+bindsym $mod+Control+u resize shrink height $dt px
+bindsym $mod+Control+e resize grow   height $dt px
 
 # define workspaces
 set $ws1 "1"

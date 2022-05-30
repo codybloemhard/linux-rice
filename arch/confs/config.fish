@@ -23,7 +23,7 @@ set -U fish_pager_color_progress brwhite --background=cyan
 set -U fish_color_match --background=brblue
 set -U fish_color_comment gray
 # PACMAN ----------------
-abbr -a pin 'pacman -Q | wc -l; sudo pacman -S'
+abbr -a pin 'sudo pacman -S'
 abbr -a pun 'sudo pacman -Rns'
 abbr -a pss 'pacman -Ss'
 abbr -a pls 'pacman -Qd'
@@ -86,7 +86,7 @@ end
 # STARSHIP ----------------
 export PATH="$HOME/.cargo/bin:$HOME/scripts:$PATH"
 starship init fish | source
-# fcitx
+# FCITX
 export XMODIFIERS='@im=fcitx'
 export GTK_IM_MODULE='fcitx'
 export QT_IM_MODULE='fcitx'
