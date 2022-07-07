@@ -50,6 +50,7 @@ abbr -a cr 'cargo run'
 abbr -a cbr 'cargo build --release'
 abbr -a crr 'cargo run --release'
 abbr -a ct 'cargo test'
+abbr -a ctt 'cargo tarpaulin'
 # MISC ----------------
 abbr -a la 'exa -la'
 abbr -a neo 'neofetch'
@@ -62,6 +63,7 @@ abbr -a rmd 'rm -rf'
 abbr -a feh 'feh --scale-down -d'
 abbr -a ka 'sudo killall'
 abbr -a pass 'termpasshash'
+abbr -a username 'openssl rand -base64 16 | cut -c -16'
 abbr -a pp 'pplanner'
 abbr -a fp 'ffplay'
 abbr -a ff 'firefox'
@@ -69,6 +71,7 @@ abbr -a du 'dust'
 abbr -a day 'bat git/misc/day-plan'
 abbr -a bt 'btop'
 abbr -a encrypt 'gpg -c --no-symkey-cache --cipher-algo AES256'
+abbr -a acc 'cat ~/git/misc/accounts | grep '
 # BANG BANG ----------------
 function __history_previous_command
   switch (commandline -t)

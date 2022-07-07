@@ -44,6 +44,9 @@ git config --global core.editor "nvim"
 # btop
 cp confs/btop.conf ~/.config/btop/btop.conf
 # neovim (install plugins)
+mkdir /etc/xdg/nvim
+cp ../neovim/init.vim ~/.config/nvim/init.vim
+cp ../neovim/sysinit.vim /etc/xdg/nvim/sysinit.vim
 nvim -c 'PlugInstall' '+q' '+q'
 # fcitx
 cp confs/fcitx.conf ~/.config/fcitx/config

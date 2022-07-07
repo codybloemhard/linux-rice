@@ -8,9 +8,9 @@ set noswapfile
 set clipboard+=unnamedplus " use system clipboard(needs xclip)
 set backupcopy=yes
 set mouse=c " disable mouse
-" set colorcolumn=81
-call matchadd('ColorColumn', '\%81v', 100)
-highlight ColorColumn ctermbg=0
+set colorcolumn=101
+" call matchadd('ColorColumn', '\%101v')
+highlight ColorColumn ctermbg=4
 " leader = space, ; easier than :
 let mapleader = " "
 nnoremap ; :
