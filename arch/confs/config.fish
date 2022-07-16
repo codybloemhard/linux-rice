@@ -50,7 +50,7 @@ abbr -a cr 'cargo run'
 abbr -a cbr 'cargo build --release'
 abbr -a crr 'cargo run --release'
 abbr -a ct 'cargo test'
-abbr -a ctt 'cargo tarpaulin'
+abbr -a ctt 'cargo tarpaulin --ignore-tests'
 # MISC ----------------
 abbr -a la 'exa -la'
 abbr -a neo 'neofetch'

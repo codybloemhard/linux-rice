@@ -91,6 +91,10 @@ bindsym $mod+Control+o resize grow   width  $dt px
 bindsym $mod+Control+u resize shrink height $dt px
 bindsym $mod+Control+e resize grow   height $dt px
 
+# disable mouse resizing
+bindsym --border button1 nop
+bindsym --whole-window $mod+button1 nop
+
 # define workspaces
 set $ws1 "1"
 set $ws2 "2"
