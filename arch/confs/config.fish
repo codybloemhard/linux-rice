@@ -31,7 +31,7 @@ abbr -a aurls 'paru -Qm'
 abbr -a pct 'pacman -Q | wc -l'
 abbr -a syu 'paru -Syu'
 abbr -a pcl 'sudo paru -Sc; paru --clean'
-abbr -a pfd 'pacman -Q | grep'
+abbr -a pfd 'pacman -Qs'
 # GIT ----------------
 abbr -a ga 'git add -A; git status'
 abbr -a gr 'git reset'
@@ -51,6 +51,7 @@ abbr -a cbr 'cargo build --release'
 abbr -a crr 'cargo run --release'
 abbr -a ct 'cargo test'
 abbr -a ctt 'cargo tarpaulin --ignore-tests'
+abbr -a bacon 'bacon clippy-all'
 # MISC ----------------
 abbr -a la 'exa -la'
 abbr -a neo 'neofetch'
@@ -70,8 +71,17 @@ abbr -a ff 'firefox'
 abbr -a du 'dust'
 abbr -a day 'bat git/misc/day-plan'
 abbr -a bt 'btop'
-abbr -a encrypt 'gpg -c --no-symkey-cache --cipher-algo AES256'
+abbr -a enc 'scrypt enc'
+abbr -a dec 'scrypt dec'
 abbr -a acc 'cat ~/git/misc/accounts | grep '
+# VIM MODE ----------------
+bind -M default -m default a backward-char
+bind -M default -m default o forward-char
+bind -M visual -m visual a backward-char
+bind -M visual -m visual o forward-char
+bind -M default -m insert h end-of-buffer
+bind -M default l undo
+fish_vi_key_bindings
 # BANG BANG ----------------
 function __history_previous_command
   switch (commandline -t)
@@ -87,7 +97,7 @@ function fish_command_not_found
     __fish_default_command_not_found_handler $argv
 end
 # STARSHIP ----------------
-export PATH="$HOME/.cargo/bin:$HOME/scripts:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/scripts:$PATH:$HOME/.local/bin"
 starship init fish | source
 # FCITX
 export XMODIFIERS='@im=fcitx'

@@ -1,0 +1,45 @@
+{
+	"name": "Vimium C",
+	"@time": "7/29/2022, 2:08:07 AM",
+	"time": 1659053287243,
+	"environment": {
+		"extension": "1.98.3",
+		"platform": "linux",
+		"firefox": 103
+	},
+	"autoDarkMode": 1,
+	"autoReduceMotion": 0,
+	"clipSub": "",
+	"exclusionRules": [],
+	"extAllowList": "# extension id or hostname",
+	"keyMappings": [
+		"#!no-check",
+		"mapKey a h",
+		"mapKey u k",
+		"mapKey e j",
+		"mapKey o l",
+		"mapKey a h",
+		"mapKey u k",
+		"mapKey e j",
+		"mapKey o l",
+		"mapKey k o",
+		"mapKey j e",
+		"mapKey T t",
+		"mapKey t T",
+		""
+	],
+	"linkHintCharacters": "dstnriaeohqgmlwyfub",
+	"mouseReachable": false,
+	"nextPatterns": "next,more,newer,>,>>",
+	"previousPatterns": "prev,previous,back,older,<,<<",
+	"searchEngines": [
+		"gh|github: https://github.com/search?q=$s \\",
+		"  blank=https://github.com/ GitHub Repo",
+		""
+	],
+	"searchUrl":
+"https://searx.be/?preferences=eJxtVktv4zYQ_jXRRUjQ7rZo9-BTgL22QPcujMixNBHJUfiQrPz6Di3ZouIcLIPzIOfxzUcqiNixJwynDh16ME_fXilWBlyXoMMTGFMZVmDwhK6CFFmxHQ1GPFVkxaIZPV-W0y-fsLIYe9anf__571cV4IwBwav-9FsVe7R44qDAVx5DMjE07BqHcxOhXZ01UyM6NhP6E4MsX9h31dXpOcRFIjDckWKN07MGP1SBciTNqsuhVaAncAp1s538E0zA6j2hXxpyTaQoltfTyJ3JURRv5dmYzVJTgNaIP7qOnBQFxqG25D37pjmTwSDlyTvThDWFptmLBj6SapprTbJVS64r9Xldr9pPVrWUQWT5e5NMpJFFtv5fpbFNasAovlHWSqnnOBUGPKKTwgUsNpfMQvB4biRJQqmLyDTiB0oyNgVS1_VE4KJEXzhq3dUarwUidoc0NUsUvu5Tu0WCnmfSTcPSY58NJMz86_jgdpc-1iBKpRcsrX-_FOqz9pwPuJX_bEgNvjTwiHXgc5zBY63Jo4osDV_jO3tyA0HZGjmIUthr0FEnXYcQyxg6wQrcksyga9F327Jj7gw-dmmTjwaWGsYx7EGXGssT4cFtZK3LpvTQesif7bz-6r0tyOp2Lzc5KHZ6o9DzrhykUhCKMAzJxn6pc5qBCsXH86Z6tOVzrdh1Mppl0wy3IeKLD1tU8GEWT6qoqqWLMpz0LnGj3azdArCfZEE6hLdkM5JBmqghQkAhigK9N92YWkEBbOg86kXLRWYjSA06CrfJGXWLpcvYcxQqaiyMeZVaK-Nf6peRNtf3WSalxMhV8AjoVfyAjoAjwUpMhRTCkNrkYtoOWQ0y4Or8uaMYLOSO4N1MqiaMUwfVswFfhhzyOI-Zm4tYIw-LZCr4GMDt5UkuCChDX4S_gOCtdL0KjiylgcxiOTegyGUii1ysZ2qXcqOZBmqZh_BZ-J444mdh4OTVgzSTHMWHbSdePiWsScUPdkdi-f79r8uevE4a3T4uAT8c2NLe8hviUEocTBmpu8CndunQ3uZgRPQxZYjdqyCAIpAjBhn7eca2UPlkW1Paznyhgd2LdD8sjt1isYjv6fXPp7-_8exoqN-eXv94-vHjYxmgHtkEmaCuGP1cEysEfriCvAR_F1QySse7TnBXG3LpUmfv22D7C00lulpwWoEd97nO1mNO8nBY1NR1e61V8l52eGhcHvNShlFw5SSMInHRxgzJlXwp7rdPtzFjwdsr0z4M5SY_oHiTfTFC5KQlxKmc30J2yzzzTYhy_0ShjzuHkJdXVQsFl66McDhbCE6TsElgRWDqK0hyjzlJeY-8KfOsBhbcnQ3Pt_lPI_oU7qwp7ybScu1JjWPBfgunT2i8S8ruHSITQZ7r62VwhxOblYLGHnapFXhauWrr6MEFI1nr0sVrAeom2J9Wo0mCt3DKRHd52VYvQh2NMPGAS7gD82vLPrPVutjostBxiDLCKA9JYbWVDA8GDM36zpy9PP4e1Bs7C6mp9WG8yEvSyHviC0tzliflmR80Uov8RGqSN3KOzX2rhHwFKKf_ATxUUdc=&q=$s",
+	"showActionIcon": false,
+	"smoothScroll": false,
+	"vimSync": false
+}
