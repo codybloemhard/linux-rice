@@ -1,7 +1,7 @@
 {
 	"name": "Vimium C",
-	"@time": "7/30/2022, 12:34:04 AM",
-	"time": 1659134044140,
+	"@time": "7/30/2022, 8:33:00 PM",
+	"time": 1659205980736,
 	"environment": {
 		"extension": "1.98.3",
 		"platform": "linux",
@@ -21,6 +21,8 @@
 		"map o scrollRight",
 		"map [ scrollPageUp",
 		"map ] scrollPageDown",
+		"map U scrollPageUp",
+		"map E scrollPageDown",
 		"map k Vomnibar.activate",
 		"map K Vomnibar.activateInNewTab",
 		"map t Vomnibar.activateTabs",

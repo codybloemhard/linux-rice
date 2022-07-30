@@ -74,6 +74,8 @@ abbr -a bt 'btop'
 abbr -a enc 'scrypt enc'
 abbr -a dec 'scrypt dec'
 abbr -a acc 'cat ~/git/misc/accounts | grep '
+abbr -a dst 'disown (nohup st &)'
+abbr -a tree 'exa -T'
 # VIM MODE ----------------
 bind -M default -m default a backward-char
 bind -M default -m default o forward-char
