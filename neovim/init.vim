@@ -65,6 +65,9 @@ vnoremap <C-S-E> :m '>+1<CR>gv=gv
 vnoremap <C-S-U> :m '<-2<CR>gv=gv
 " clear search highlight
 nnoremap <leader>c :noh<CR>
+" centered searching
+nnoremap n nzz
+nnoremap N Nzz
 " moving between windows
 nnoremap <A-a> <C-W>h
 nnoremap <A-u> <C-W>k
@@ -75,8 +78,8 @@ nnoremap <leader>n :GFiles<CR>
 nnoremap <leader>t :Ag<CR>
 nnoremap <leader>s :Files<CR>
 " scroll through buffers
-nnoremap <C-x> :bprev<CR>
-nnoremap <C-c> :bnext<CR>
+nnoremap A :bprev<CR>
+nnoremap O :bnext<CR>
 nnoremap <leader>d :bd<CR>
 " some extras
 map <F4> :source ~/.config/nvim/init.vim<CR>
