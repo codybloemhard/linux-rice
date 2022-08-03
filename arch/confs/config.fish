@@ -76,6 +76,10 @@ abbr -a dec 'scrypt dec'
 abbr -a acc 'cat ~/git/misc/accounts | grep '
 abbr -a dst 'disown (nohup st &)'
 abbr -a tree 'exa -T'
+abbr -a fishconf 'nvim ~/.config/fish/config.fish'
+abbr -a nvimconf 'nvim ~/.config/nvim/init.vim'
+abbr -a vimconf 'nvim ~/.config/nvim/init.vim'
+abbr -a i3conf 'nvim ~/.config/i3/config'
 # VIM MODE ----------------
 bind -M default -m default a backward-char
 bind -M default -m default o forward-char
