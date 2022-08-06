@@ -65,9 +65,6 @@ vnoremap <C-S-E> :m '>+1<CR>gv=gv
 vnoremap <C-S-U> :m '<-2<CR>gv=gv
 " clear search highlight
 nnoremap <leader>c :noh<CR>
-" centered searching
-nnoremap n nzz
-nnoremap N Nzz
 " moving between windows
 nnoremap <A-a> <C-W>h
 nnoremap <A-u> <C-W>k
