@@ -42,6 +42,7 @@ abbr -a gl 'git log'
 abbr -a gb 'git branch'
 abbr -a gp 'git push origin'
 abbr -a gch 'git checkout'
+abbr -a gam 'git commit --amend - m'
 # RUST ----------------
 abbr -a cc 'cargo clippy --all-features'
 abbr -a ccc 'cargo check'
@@ -50,8 +51,11 @@ abbr -a cr 'cargo run'
 abbr -a cbr 'cargo build --release'
 abbr -a crr 'cargo run --release'
 abbr -a ct 'cargo test'
-abbr -a ctt 'cargo tarpaulin --ignore-tests'
+abbr -a ctt 'cargo tarpaulin --ignore-tests --target-dir target/tarpaulin-build --skip-clean'
 abbr -a bacon 'bacon clippy-all'
+abbr -a cil 'cargo install --path ./'
+abbr -a cia 'cargo install-update -a'
+abbr -a ca 'cargo add'
 # MISC ----------------
 abbr -a la 'exa -la'
 abbr -a neo 'neofetch'
@@ -102,8 +106,8 @@ bind ! __history_previous_command
 function fish_command_not_found
     __fish_default_command_not_found_handler $argv
 end
-# STARSHIP ----------------
 export PATH="$HOME/.cargo/bin:$HOME/scripts:$PATH:$HOME/.local/bin"
+# STARSHIP ----------------
 starship init fish | source
 # FCITX
 export XMODIFIERS='@im=fcitx'
