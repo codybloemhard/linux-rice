@@ -9,6 +9,7 @@ set clipboard+=unnamedplus " use system clipboard(needs xclip)
 set backupcopy=yes
 set mouse=c " disable mouse
 set colorcolumn=101
+set laststatus=3
 " call matchadd('ColorColumn', '\%101v')
 highlight ColorColumn ctermbg=4
 " leader = space, ; easier than :
@@ -82,9 +83,16 @@ nnoremap <leader>d :bd<CR>
 map <F4> :source ~/.config/nvim/init.vim<CR>
 map <F5> :w<CR>:!cargo run<CR>
 map <F6> :setlocal spell! spelllang=en_us<CR>
-" enable powerline chars and the top bar
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+
+"status
+highlight Sbg ctermbg=None ctermfg=1
+highlight Sft ctermbg=None ctermfg=2
+highlight Sfl ctermbg=None ctermfg=3
+highlight Sln ctermbg=None ctermfg=4
+highlight Scn ctermbg=None ctermfg=5
+
+set statusline=\%#Sbg#\%F\%=\ %#Sft#\ %{&ff}\ %#Sfl#\ %Y\ %#Sln#\ %l\ /\ %L\ :\ %p%%\ %#Scn#\ %v
+
 " whitespace config
 let g:better_whitespace_enabled = 1
 let g:strip_whitespace_on_save = 1
@@ -96,16 +104,10 @@ let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'``
 " leave out black and gray
 let g:rainbow_ctermfgs = ['red','green','yellow','blue','magenta','cyan']
 let g:indentLine_char = '┆'
-" Limelight
-let g:limelight_conceal_ctermfg = 'gray'
-let g:limelight_conceal_ctermfg = 240
-let g:limelight_default_coefficient = 0.7
-let g:limelight_paragraph_span = 1
-let g:limelight_priority = 10
+" Fzf
+let g:fzf_preview_window = ['right:60%', 'ctrl-/']
 " plugins
 call plug#begin('~/.vim/plugged')
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tomtom/tcomment_vim'

@@ -30,7 +30,7 @@ abbr -a pls 'pacman -Qd'
 abbr -a aurls 'paru -Qm'
 abbr -a pct 'pacman -Q | wc -l'
 abbr -a syu 'paru -Syu'
-abbr -a pcl 'sudo paru -Sc; paru --clean'
+abbr -a pcl 'paccache -r -k 1; paru --cc;'
 abbr -a pfd 'pacman -Qs'
 # GIT ----------------
 abbr -a ga 'git add -A; git status'
@@ -106,14 +106,15 @@ bind ! __history_previous_command
 function fish_command_not_found
     __fish_default_command_not_found_handler $argv
 end
+# EXPORTS
 export PATH="$HOME/.cargo/bin:$HOME/scripts:$PATH:$HOME/.local/bin"
-# STARSHIP ----------------
-starship init fish | source
-# FCITX
 export XMODIFIERS='@im=fcitx'
 export GTK_IM_MODULE='fcitx'
 export QT_IM_MODULE='fcitx'
 export SDL_IM_MODULE='fcitx'
+export BAT_THEME='ansi'
+# STARSHIP ----------------
+starship init fish | source
 # STARTX
 if status --is-login
     exec startx
