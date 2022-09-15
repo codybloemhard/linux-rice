@@ -18,4 +18,7 @@ sudo pacman -S lxappearance-gtk3
 sudo pacman -Sy --noconfirm zathura-pdf-mupdf
 # music player
 sudo pacman -Sy --noconfirm cmus
+# fcitx (japanese input)
+sudo pacman -S fcitx-im fcitx-configtool fcitx-mozc
+cp confs/fcitx.conf ~/.config/fcitx/config
 echo "Done"

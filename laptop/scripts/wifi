@@ -1,0 +1,8 @@
+#!/bin/sh
+sudo rfkill unblock wifi
+sudo ip link set wlan0 up
+# connmanctl
+#   scan wifi
+#   services
+#   agent on
+#   connect wifi_
