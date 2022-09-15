@@ -50,12 +50,8 @@ cp ../neovim/sysinit.vim /etc/xdg/nvim/sysinit.vim
 nvim -c 'PlugInstall' '+q' '+q'
 # fcitx
 cp confs/fcitx.conf ~/.config/fcitx/config
-# directories for usb script
+# directories for mounting shit
 mkdir ~/mnt
-mkdir ~/mnt/usb0
-mkdir ~/mnt/usb1
-mkdir ~/mnt/usb2
-mkdir ~/mnt/usb3
 # sync time
 ~/scripts/sync-time.sh
 # done
