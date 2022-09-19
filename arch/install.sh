@@ -1,13 +1,17 @@
 #!/bin/sh
 _path=$( pwd )
 # Sync and update
-sudo pacman -Syyu --noconfirm
+sudo pacman --noconfirm -Syyu
+sudo pacman --noconfirm -S artix-archlinux-support
+sudo cp confs/pacman.conf /etc/pacman.conf
+sudo pacman --noconfirm -Sy
+sudo
 # Xorg and essentials
-sudo pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr xorg-xrdb xdg-utils i3-gaps feh picom linux-headers nvidia btop neovim firefox
+sudo pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr xorg-xrdb xdg-utils cmake i3-gaps feh picom linux-headers nvidia btop neovim firefox
 # Utilities
-sudo pacman -S --noconfirm neofetch exa scrot alsa-firmware alsa-utils sl unzip zip slock pulseaudio the_silver_searcher fzf xclip bat ntp
+sudo pacman -S --noconfirm neofetch exa scrot alsa-firmware alsa-utils unzip zip slock pulseaudio the_silver_searcher fzf xclip bat ntp dust
 # Network
-sudo pacman -S --noconfirm iw #networkmanager
+sudo pacman -S --noconfirm iw wpa_supplicant #
 # Dev
 sudo pacman -S --noconfirm base-devel pacman-contrib
 sudo ../neovim/install.sh
@@ -49,12 +53,10 @@ cd fonts
 cd ..
 rm -rf fonts
 # Install Japanese font
-yay ttf-koruri
+paru ttf-koruri
 # Install fish and rust and starship
 sudo pacman -S fish rust
 cargo install starship
 # Use dash as shell
 paru -S dashbinsh
-# fcitx (japanese input)
-sudo pacman -S fcitx-im fcitx-configtool fcitx-mozc
 echo 'Done Installing'
