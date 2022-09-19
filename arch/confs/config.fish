@@ -1,4 +1,4 @@
-# FISH SETTINGS ----------------
+# FISH SETTINGS --------
 set fish_greeting
 set -U fish_color_normal normal
 set -U fish_color_command brmagenta
@@ -22,7 +22,7 @@ set -U fish_pager_color_prefix white --bold --underline
 set -U fish_pager_color_progress brwhite --background=cyan
 set -U fish_color_match --background=brblue
 set -U fish_color_comment gray
-# PACMAN ----------------
+# PACMAN ---------------
 abbr -a pin 'sudo pacman -S'
 abbr -a pun 'sudo pacman -Rns'
 abbr -a pss 'pacman -Ss'
@@ -32,7 +32,7 @@ abbr -a pct 'pacman -Q | wc -l'
 abbr -a syu 'paru -Syu'
 abbr -a pcl 'paccache -r -k 1; paru --cc;'
 abbr -a pfd 'pacman -Qs'
-# GIT ----------------
+# GIT ------------------
 abbr -a ga 'git add -A; git status'
 abbr -a gr 'git reset'
 abbr -a gd 'git diff'
@@ -43,7 +43,7 @@ abbr -a gb 'git branch'
 abbr -a gp 'git push origin'
 abbr -a gch 'git checkout'
 abbr -a gam 'git commit --amend - m'
-# RUST ----------------
+# RUST -----------------
 abbr -a cc 'cargo clippy --all-features'
 abbr -a ccc 'cargo check'
 abbr -a cb 'cargo build'
@@ -56,7 +56,18 @@ abbr -a bacon 'bacon clippy-all'
 abbr -a cil 'cargo install --path ./'
 abbr -a cia 'cargo install-update -a'
 abbr -a ca 'cargo add'
-# MISC ----------------
+# HASKELL --------------
+abbr -a cabu 'cabal update'
+abbr -a cabi 'cabal install'
+abbr -a cabr 'cabal run'
+abbr -a cabb 'cabal build'
+# OPENRC ---------------
+abbr -a rc-restart 'rc-service _ restart'
+abbr -a rc-statuz 'rc-service _ status'
+abbr -a rc-start 'rc-service _ start'
+abbr -a rc-stop 'rc-service _ stop'
+abbr -a rc-list 'rc-update -v show'
+# MISC -----------------
 abbr -a la 'exa -la'
 abbr -a neo 'neofetch'
 abbr -a sd 'sudo shutdown -hP now'
@@ -80,11 +91,12 @@ abbr -a dec 'scrypt dec'
 abbr -a acc 'cat ~/git/misc/accounts | grep '
 abbr -a dst 'disown (nohup st &)'
 abbr -a tree 'exa -T'
+abbr -a libver 'dpkg -l | grep'
 abbr -a fishconf 'nvim ~/.config/fish/config.fish'
 abbr -a nvimconf 'nvim ~/.config/nvim/init.vim'
 abbr -a vimconf 'nvim ~/.config/nvim/init.vim'
 abbr -a i3conf 'nvim ~/.config/i3/config'
-# VIM MODE ----------------
+# VIM MODE -------------
 bind -M default -m default a backward-char
 bind -M default -m default o forward-char
 bind -M visual -m visual a backward-char
@@ -92,7 +104,7 @@ bind -M visual -m visual o forward-char
 bind -M default -m insert h end-of-buffer
 bind -M default l undo
 fish_vi_key_bindings
-# BANG BANG ----------------
+# BANG BANG ------------
 function __history_previous_command
   switch (commandline -t)
   case "!"
@@ -113,7 +125,7 @@ export GTK_IM_MODULE='fcitx'
 export QT_IM_MODULE='fcitx'
 export SDL_IM_MODULE='fcitx'
 export BAT_THEME='ansi'
-# STARSHIP ----------------
+# STARSHIP -------------
 starship init fish | source
 # STARTX
 if status --is-login
