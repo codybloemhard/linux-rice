@@ -1,0 +1,41 @@
+#!/bin/bash
+#stupid ass printf %3s doesnt work on bash?
+# cpu calc: https://stackoverflow.com/questions/26791240/how-to-get-percentage-of-processor-use-with-bash
+i=118
+updv=''
+diskv=''
+while :; do
+    read cpu user nice system idle iowait irq softirq steal guest < /proc/stat
+    cpu_active_prev=$((user+system+nice+softirq+steal))
+    cpu_total_prev=$((user+system+nice+softirq+steal+idle+iowait))
+    sleep 1
+    read cpu user nice system idle iowait irq softirq steal guest < /proc/stat
+    cpu_active_cur=$((user+system+nice+softirq+steal))
+    cpu_total_cur=$((user+system+nice+softirq+steal+idle+iowait))
+    cpu_util=$((100*(cpu_active_cur-cpu_active_prev)/(cpu_total_cur-cpu_total_prev)))
+    cpu_outp=`printf %3s $cpu_util`
+    mod=$(expr $i % 120)
+    if [ $mod -eq 0 ]
+    then
+        updv=$(~/scripts/modules/updates-mod)
+        diskv=$(~/scripts/modules/disk-mod)
+    fi
+
+    outp="%{W26}"
+    outp+="%{l}"
+    outp+="%{B-}"
+    outp+="%{B-} %{B#f7768e}%{F-}%{Zt>}%{F#11113A} $(~/scripts/modules/wifi-mod) %{F#f7768e}%{B#00000000}%{Zt>}"
+    outp+="%{B#ff9e64}%{F-}%{Zt>}%{F#11113A} $(~/scripts/modules/sensor-mod) %{F#ff9e64}%{B#00000000}%{Zt>}"
+    outp+="%{B#9ece6a}%{F-}%{Zt>}%{F#11113A} $diskv %{F#9ece6a}%{B#00000000}%{Zt>}"
+    outp+="%{B#7aa2f7}%{F-}%{Zt>}%{F#11113A} $cpu_outp% %{F#7aa2f7}%{B#00000000}%{Zt>}"
+    outp+="%{B#bb9af7}%{F-}%{Zt>}%{F#11113A} $(~/scripts/modules/mem-mod) %{F#bb9af7}%{B#00000000}%{Zt>}"
+    outp+="%{B-}"
+    outp+="%{r}"
+    outp+="%{B#565f89}%{F-}%{Zt>}%{F#11113A}$(~/scripts/modules/caps-mod)%{F#565f89}%{B-}%{Zt>}"
+    outp+="%{B#565f89}%{F-}%{Zt>}%{F#11113A} $updv %{F#565f89}%{B-}%{Zt>}"
+    outp+="%{B#414868}%{F-}%{Zt>}%{F#a9b1d6} $(~/scripts/modules/dt-mod) %{F#414868}%{B-}%{Zt>} "
+
+    echo "$outp"
+
+    ((i++))
+done

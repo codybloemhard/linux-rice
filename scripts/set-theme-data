@@ -1,0 +1,4 @@
+#!/bin/sh
+~/scripts/.theme/init-background
+xrdb -merge ~/scripts/.theme/Xdmenu
+xrdb -merge ~/scripts/.theme/Xst

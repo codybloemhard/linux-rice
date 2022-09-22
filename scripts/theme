@@ -4,14 +4,12 @@ if [ -z "$theme" ]
 then
     exit;
 fi
-cp ~/scripts/themes/$theme/shapebar-conf ~/scripts/shapebar-conf
-cp ~/scripts/themes/$theme/run-shapebar ~/scripts/run-shapebar
-cp ~/scripts/themes/$theme/init-background ~/scripts/init-background
-cp ~/scripts/themes/$theme/Xdmenu ~/scripts/Xdmenu
-cp ~/scripts/themes/$theme/Xst ~/scripts/Xst
-~/scripts/themes/$theme/init-background
-xrdb -merge ~/scripts/themes/$theme/Xdmenu
-xrdb -merge ~/scripts/themes/$theme/Xst
+cp ~/scripts/themes/$theme/shapebar-conf ~/scripts/.theme/shapebar-conf
+cp ~/scripts/themes/$theme/run-shapebar ~/scripts/.theme/run-shapebar
+cp ~/scripts/themes/$theme/init-background ~/scripts/.theme/init-background
+cp ~/scripts/themes/$theme/Xdmenu ~/scripts/.theme/Xdmenu
+cp ~/scripts/themes/$theme/Xst ~/scripts/.theme/Xst
+~/scripts/set-theme-data
 pkill -USR1 '^st$'
 killall shapebar
-~/scripts/run-shapebar &> /dev/null &
+~/scripts/.theme/run-shapebar &> /dev/null &
