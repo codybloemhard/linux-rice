@@ -92,6 +92,7 @@ abbr -a acc 'cat ~/git/misc/accounts | grep '
 abbr -a dst 'disown (nohup st &)'
 abbr -a tree 'exa -T'
 abbr -a libver 'dpkg -l | grep'
+abbr -a ex 'chmod +x'
 abbr -a fishconf 'nvim ~/.config/fish/config.fish'
 abbr -a nvimconf 'nvim ~/.config/nvim/init.vim'
 abbr -a vimconf 'nvim ~/.config/nvim/init.vim'
@@ -125,6 +126,8 @@ export GTK_IM_MODULE='fcitx'
 export QT_IM_MODULE='fcitx'
 export SDL_IM_MODULE='fcitx'
 export BAT_THEME='ansi'
+export BAR_FONT_SIZE=13
+export BAR_HEIGHT=26
 # STARSHIP -------------
 starship init fish | source
 # STARTX

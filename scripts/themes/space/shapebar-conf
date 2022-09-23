@@ -21,7 +21,7 @@ while :; do
         diskv=$(~/scripts/modules/disk-mod)
     fi
 
-    outp="%{W36}%{l}%{B-}%{F-}%{Zt<}%{B#80000000}%{F#fff}"
+    outp="%{W$BAR_HEIGHT}%{l}%{B-}%{F-}%{Zt<}%{B#80000000}%{F#fff}"
     outp+=" $updv $(~/scripts/modules/caps-mod)"
     outp+="%{B-}%{F-}%{Zt>}%{B#00000000}%{F#fff}"
     outp+="%{c}%{B-}%{F#80d53924}%{Zt<}%{B#80d53924}%{F#fff} "
