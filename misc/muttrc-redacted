@@ -1,0 +1,81 @@
+set ssl_starttls = yes
+set ssl_force_tls =yes
+set imap_user = "mail@domain.nl"
+
+set folder = "imaps://mail@domain.nl@outlook.office365.com:993"
+set spoolfile = "+INBOX"
+set smtp_url = "smtp://mail@domain.nl@smtp-mail.outlook.com:587" #465, 587
+set record = "+Sent"
+set trash = ""
+set postponed = "+Drafts"
+
+set from = "mail@domain.nl"
+set realname = "fname lname"
+
+mailboxes =INBOX =Sent =s/thrash =Drafts =Junk \
+    =S =s/a =s/g =s/k =s/f \
+    =s/c =s/u
+
+set header_cache = "~/.neomutt/cache/headers"
+
+source colours.muttrc
+
+set sidebar_visible = yes
+set sidebar_width = 20
+set sidebar_short_path = yes
+set sidebar_next_new_wrap = yes
+set mail_check_stats
+
+bind index,pager,compose,attach d noop
+bind index,pager,compose,attach g noop
+bind index,pager,compose,attach gg first-entry
+bind index,pager,compose,attach G last-entry
+bind index,pager,compose,attach e next-entry
+bind index,pager,compose,attach u previous-entry
+bind index D delete-message
+bind index d undelete-message
+bind index S sync-mailbox
+
+bind index,pager o noop
+macro index,pager oi "<change-folder>=INBOX<enter>" "open to inbox"
+macro index,pager od "<change-folder>=Drafts<enter>" "open to drafts"
+macro index,pager oj "<change-folder>=Junk<enter>" "open to junk"
+macro index,pager ot "<change-folder>=s/thrash<enter>" "open to trash"
+macro index,pager ov "<change-folder>=Sent<enter>" "open to sent"
+macro index,pager os "<change-folder>=S<enter>" "open to s"
+macro index,pager oa "<change-folder>=s/a<enter>" "open to a"
+macro index,pager og "<change-folder>=s/g<enter>" "open to g"
+macro index,pager ok "<change-folder>=s/k<enter>" "open to k"
+macro index,pager of "<change-folder>=s/f<enter>" "open to f"
+macro index,pager oc "<change-folder>=s/c<enter>" "open to c"
+macro index,pager ou "<change-folder>=s/u<enter>" "open to u"
+
+bind index,pager M noop
+macro index,pager Mi ";<save-message>=INBOX<enter>" "move mail to inbox"
+macro index,pager Md ";<save-message>=Drafts<enter>" "move mail to drafts"
+macro index,pager Mj ";<save-message>=Junk<enter>" "move mail to junk"
+macro index,pager Mt ";<save-message>=s/thrash<enter>" "move mail to trash"
+macro index,pager Ms ";<save-message>=Sent<enter>" "move mail to sent"
+macro index,pager Ma ";<save-message>=Archive<enter>" "move mail to archive"
+macro index,pager Ms ";<save-message>=S<enter>" "move mail to s"
+macro index,pager Ma ";<save-message>=s/a<enter>" "move mail to a"
+macro index,pager Mg ";<save-message>=s/g<enter>" "move mail to g"
+macro index,pager Mk ";<save-message>=s/k<enter>" "move mail to k"
+macro index,pager Mf ";<save-message>=s/f<enter>" "move mail to f"
+macro index,pager Mc ";<save-message>=s/c<enter>" "move mail to c"
+macro index,pager Mu ";<save-message>=s/u<enter>" "move mail to u"
+
+bind index,pager C noop
+macro index,pager Ci ";<copy-message>=INBOX<enter>" "copy mail to inbox"
+macro index,pager Cd ";<copy-message>=Drafts<enter>" "copy mail to drafts"
+macro index,pager Cj ";<copy-message>=Junk<enter>" "copy mail to junk"
+macro index,pager Ct ";<copy-message>=s/thrash<enter>" "copy mail to trash"
+macro index,pager Cs ";<copy-message>=Sent<enter>" "copy mail to sent"
+macro index,pager Ca ";<copy-message>=Archive<enter>" "copy mail to archive"
+macro index,pager Cs ";<copy-message>=S<enter>" "copy mail to s"
+macro index,pager Ca ";<copy-message>=s/a<enter>" "copy mail to a"
+macro index,pager Cg ";<copy-message>=s/g<enter>" "copy mail to g"
+macro index,pager Ck ";<copy-message>=s/k<enter>" "copy mail to k"
+macro index,pager Cf ";<copy-message>=s/f<enter>" "copy mail to f"
+macro index,pager Cc ";<copy-message>=s/c<enter>" "copy mail to c"
+macro index,pager Cu ";<copy-message>=s/u<enter>" "copy mail to u"

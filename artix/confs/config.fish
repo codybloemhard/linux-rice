@@ -52,7 +52,7 @@ abbr -a cbr 'cargo build --release'
 abbr -a crr 'cargo run --release'
 abbr -a ct 'cargo test'
 abbr -a ctt 'cargo tarpaulin --ignore-tests --target-dir target/tarpaulin-build --skip-clean'
-abbr -a bacon 'bacon clippy-all'
+abbr -a bacon 'bacon clippy-all -w'
 abbr -a cil 'cargo install --path ./'
 abbr -a cia 'cargo install-update -a'
 abbr -a ca 'cargo add'
@@ -121,6 +121,7 @@ function fish_command_not_found
 end
 # EXPORTS
 export PATH="$HOME/.cargo/bin:$HOME/scripts:$PATH:$HOME/.local/bin"
+export EDITOR='nvim'
 export XMODIFIERS='@im=fcitx'
 export GTK_IM_MODULE='fcitx'
 export QT_IM_MODULE='fcitx'
