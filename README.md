@@ -13,14 +13,14 @@ Os                      | Artix
 Tiling window manager   | i3-gaps
 Shell (bin/sh)          | Dash
 Shell (Login)           | Fish
-Terminal                | St (https://github.com/codybloemhard/st-cody)
-Launcher                | Dmenu (https://github.com/codybloemhard/dmenu-cody)
-Status bar              | Shapebar (https://github.com/codybloemhard/shapebar)
+Terminal                | St (https://gitlab.com/codybloemhard/st-cody)
+Launcher                | Dmenu (https://gitlab.com/codybloemhard/dmenu-cody)
+Status bar              | Shapebar (https://gitlab.com/codybloemhard/shapebar)
 Prompt                  | Starship (https://github.com/starship/starship)
 Text Editor             | NeoVim
 Compositor              | Picom
 AUR Helper              | Paru
-Keymap                  | Physical: QMK (https://github.com/codybloemhard/qmk-cody)
+Keymap                  | Physical: QMK (https://gitlab.com/codybloemhard/qmk-cody)
 Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, Bat, Exa, Dust, Btop
 Themes                  | Space, Nord, Gruvbox, Hawkrad, Tokyo Night
 
@@ -86,8 +86,8 @@ Themes                  | Space, Nord, Gruvbox, Hawkrad, Tokyo Night
 2. Install git (or include it in pacstrap): `sudo pacman -S git`
 3. Make a dir for all git projects: `mkdir ~/git`
 4. Goto the new dir: `cd ~/git`
-5. Pull this repo(assuming you read this on another device): `git clone https://github.com/codybloemhard/LinuxRice.git`
-6. `cd ~/git/LinuxRice/artix`
+5. Pull this repo(assuming you read this on another device): `git clone https://gitlab.com/codybloemhard/linux-rice.git`
+6. `cd ~/git/linux-rice/artix`
 8. Give exec rights: `chmod +x calr.sh`
 9. Run it `./calr.sh`
 10. It does stuff(installing and copying config files).

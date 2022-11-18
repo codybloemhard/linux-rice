@@ -20,13 +20,13 @@ sudo ../neovim/install.sh
 # Install st fork
 mkdir ~/git
 cd ~/git
-git clone https://github.com/codybloemhard/st-cody.git
+git clone https://gitlab.com/codybloemhard/st-cody.git
 cd st-cody
 sudo make install
 cd $_path
 # Install dmenu fork
 cd ~/git
-git clone https://github.com/codybloemhard/dmenu-cody.git --depth=1
+git clone https://gitlab.com/codybloemhard/dmenu-cody.git --depth=1
 cd dmenu-cody
 ./build
 cd $_path
@@ -39,7 +39,7 @@ cd ..
 rm -rf paru
 # Install Shapebar
 cd ~/git
-git clone https://github.com/codybloemhard/shapebar
+git clone https://gitlab.com/codybloemhard/shapebar
 cd shapebar
 sudo make install
 cd $_path
