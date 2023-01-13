@@ -51,7 +51,7 @@ abbr -a cr 'cargo run'
 abbr -a cbr 'cargo build --release'
 abbr -a crr 'cargo run --release'
 abbr -a ct 'cargo test'
-abbr -a ctt 'cargo tarpaulin --ignore-tests --target-dir target/tarpaulin-build --skip-clean'
+abbr -a ctt 'cargo tarpaulin --ignore-tests --skip-clean'
 abbr -a bacon 'bacon clippy-all -w'
 abbr -a cil 'cargo install --path ./'
 abbr -a cia 'cargo install-update -a'
@@ -84,7 +84,7 @@ abbr -a pp 'pplanner'
 abbr -a fp 'ffplay'
 abbr -a ff 'firefox'
 abbr -a du 'dust'
-abbr -a day 'bat git/misc/day-plan'
+abbr -a day 'nvim ~/git/misc/day'
 abbr -a bt 'btop'
 abbr -a enc 'scrypt enc'
 abbr -a dec 'scrypt dec'
@@ -132,6 +132,6 @@ export BAR_HEIGHT=26
 # STARSHIP -------------
 starship init fish | source
 # STARTX
-if status --is-login
-    exec startx
-end
+# if status --is-login
+#     exec startx
+# end

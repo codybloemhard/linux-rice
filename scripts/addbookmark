@@ -1,0 +1,15 @@
+#!/bin/sh
+file="/home/cody/git/misc/bookmarks"
+pad="                "
+dest=$(xclip -o)
+desc=$(echo "$pad" | dmenu -p 'description: ')
+if [ -z "$desc" ]
+then
+    exit;
+fi
+if [ "$desc" = "$pad" ]
+then
+    echo "$dest" >> "$file"
+else
+    echo "$desc $dest" >> "$file"
+fi

@@ -1,0 +1,7 @@
+#!/bin/sh
+entry=$(grep . ~/git/misc/bookmarks | dmenu -i -l 10)
+if [ -z "$entry" ]
+then
+    exit;
+fi
+firefox $(echo "$entry" | awk '{print $NF}')
