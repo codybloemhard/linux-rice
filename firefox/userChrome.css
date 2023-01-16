@@ -1,0 +1,158 @@
+/* Firefrog theme */
+
+menupopup {
+    -moz-appearance: none !important;
+    background-color: #111 !important;
+}
+menuseparator {
+    -moz-appearance: none !important;
+}
+menuitem, menu {
+    -moz-appearance: none !important;
+    color: #f5d4b3 !important;
+    background-color: #111 !important;
+}
+menuitem[disabled="true"], menuitem[disabled="true"] > .menu-text {
+    color: gray !important;
+}
+menuitem:hover, menu:hover, menu[open="true"],
+menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"] {
+    -moz-appearance: none !important;
+    background-color: #333 !important;
+    color: #f5d4b3 !important;
+}
+menuitem > .menu-text, menuitem > .menu-iconic-text {
+    color: #f5d4b3 !important;
+}
+.menu-right {
+    -moz-appearance: none !important;
+    /* can't seem to get the foreground colour to change */
+    /* this will produce just a square but atleast it's of the right colour */
+    /* which i care more about */
+    /* since you can still clearly see from the square that it does indeed expand */
+    /* so funtionality is preserved, and i take colour over shape here */
+    background-color: #f5d4b3 !important;
+}
+
+toolbar, #urlbar-background {
+    -moz-appearance: none !important;
+    background-color: #111 !important;
+}
+
+/* TODO: also chance colour of the button that opens this (three bars thingy) */
+#appMenu-popup{
+    --arrowpanel-background: #111;
+    --arrowpanel-color: #f5d4b3;
+    --arrowpanel-border-color: #111;
+    --panel-separator-color: #111;
+    --panel-description-color: orange;
+    --button-hover-bgcolor: #333;
+    --button-active-bgcolor: black;
+}
+
+/* can only get :hover to work... */
+/* TODO: set selection with keyboard colour */
+/* #urlbar-background[focused] { */
+/*     -moz-appearance: none !important; */
+/*     background-color: #333 !important; */
+/* } */
+
+toolbar * {
+    color: #f5d4b3 !important;
+    border: none !important;
+}
+
+#back-button, #forward-button, #reload-button {
+    fill: #f5d4b3 !important;
+}
+
+/* TODO: make pdf viewer UI around the pdf render dark */
+
+/* these two are taken from knazarov's dotfiles */
+
+/* hides the native tabs */
+#TabsToolbar {
+    visibility: collapse !important;
+}
+
+/* just this one suffices if bar is left on top */
+/* hides the menu/URL bar */
+/* #main-window:not([customizing]) #navigator-toolbox:not(:focus-within):not(:hover) { */
+/*     margin-top: -45px; */
+/* } */
+
+#main-window #navigator-toolbox{
+    margin-top: -45px;
+}
+
+/* following code does the same as knazarov's solution but with the bar at the bottom */
+/* (takes much more code) */
+
+/* adapted from: */
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/navbar_below_content.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Moves the main toolbar (#nav-bar) to the bottom of the window */
+
+@-moz-document url(chrome://browser/content/browser.xhtml){
+  #nav-bar{
+    position: fixed !important;
+    bottom: 0px;
+    display: -webkit-box;
+    width: 100%;
+    z-index: 1;
+  }
+
+  /* Fix panels sizing */
+  .panel-viewstack{ max-height: unset !important; }
+
+  #urlbar[breakout][breakout-extend]{
+    display: flex !important;
+    flex-direction: column-reverse;
+    bottom: 0px !important;
+    top: auto !important;
+  }
+}
+
+/* adapted from: */
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/show_navbar_on_focus_only.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Hides #nav-bar and overlays it on top of tabs when urlbar is focused  */
+/* overlay_menubar.css can be used for better handling of menubar when triggered with Alt-key */
+/* This style totally breaks bookmarks toolbar but can be used with autohide_bookmarks_toolbar.css */
+
+:root[sessionrestored] #nav-bar:not([customizing]){
+  opacity: 0;
+  z-index: 3;
+}
+:root[sessionrestored] #nav-bar:focus-within{
+  opacity: 1;
+}
+
+/* adapted from: */
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/overlay_menubar.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Makes menubar appear as overlay in the top left corner */
+
+#toolbar-menubar{
+  position: fixed;
+  display: flex;
+  top: 0;
+  width: 100vw;
+  height: initial !important;
+  z-index: 10;
+  background-color: #111 !important;
+}
+
+#toolbar-menubar[autohide="true"][inactive="true"]{ height: 0px !important; }
+
+#toolbar-menubar > spacer{ flex-grow: 1; }
+#toolbar-menubar[inactive] > .titlebar-buttonbox-container{ display: none; }
+#toolbar-menubar[active] > .titlebar-buttonbox-container{ background-color: #111; }
+
+#main-menubar{
+  height: calc(var(--tab-min-height) +  2 * var(--tab-block-margin,0px));
+}
+

@@ -1,0 +1,9 @@
+#!/bin/sh
+# only work if there is one normal profile
+target=$(ls -d ~/.mozilla/firefox/*default-release)
+mkdir "$target/chrome"
+cp userChrome.css userContent.css "$target/chrome/"
+cp user.js "$target/"
+cp firefrog-logo.png firefrog-title.png ~/img/
+ln -sf ~/img/firefrog-logo.png "$target/chrome/firefrog-logo.png"
+ln -sf ~/img/firefrog-title.png "$target/chrome/firefrog-title.png"

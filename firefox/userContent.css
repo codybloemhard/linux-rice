@@ -1,0 +1,57 @@
+/* pdf viewer dark theme */
+html[mozdisallowselectionprint] #viewer {
+    filter: invert(1) contrast(75%);
+}
+
+/* home page theme */
+@-moz-document url(about:home), url(about:newtab) {
+    .click-target-container *, .top-sites-list * {
+        color: #fff !important;
+        text-shadow: 2px 2px 2px #000 !important;
+    }
+
+    body::before {
+        content: "";
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #111;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .logo {
+        width: 82px !important;
+        padding-left: 82px !important;
+        border-radius: 100% !important;
+        background-repeat: no-repeat;
+        background: url('firefrog-logo.png') !important;
+    }
+
+    .wordmark {
+        background: url('firefrog-title.png') !important;
+    }
+
+    .fake-textbox {
+        color: #f5d4b3 !important;
+	text-align: center !important;
+	margin: 0px 40px 0px 0px !important;
+    }
+
+    .search-handoff-button {
+        box-shadow: none !important;
+    }
+
+    .fake-editable {
+        align: center;
+    }
+
+    body[lwt-newtab-brighttext] {
+        --newtab-background-color-secondary: #111 !important;
+        --newtab-text-primary-color: #111 !important;
+        --newtab-primary-action-background: #f5d4b3  !important;
+    }
+}
+

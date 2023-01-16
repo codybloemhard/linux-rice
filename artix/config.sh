@@ -53,5 +53,7 @@ nvim -c 'PlugInstall' '+q' '+q'
 mkdir ~/mnt
 # sync time
 ~/scripts/sync-time.sh
+# firefox
+../firefox/install-firefrog
 # done
 echo 'Done Configuring'
