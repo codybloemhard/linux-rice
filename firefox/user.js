@@ -5,6 +5,7 @@ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // to us
 user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on all domains
 user_pref("browser.bookmarks.addedImportButton", false);
 user_pref("browser.toolbars.bookmarks.visibility", "never");
+user_pref("pdfjs.viewerCssTheme", 2); // set pdf ui to dark
 
 // arkenfox 09-01-2023 adaptation
 // license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
@@ -151,7 +152,7 @@ user_pref("browser.download.useDownloadDir", true); // enable download dir
 user_pref("browser.download.alwaysOpenPanel", false);
 user_pref("browser.download.manager.addToRecentDocs", false);
 user_pref("browser.download.always_ask_before_handling_new_types", true);
-user_pref("extensions.enabledScopes", 5);
+user_pref("extensions.enabledScopes", 1);
 user_pref("extensions.autoDisableScopes", 15);
 user_pref("extensions.postDownloadThirdPartyPrompt", false);
 

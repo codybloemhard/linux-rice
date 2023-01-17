@@ -1,6 +1,40 @@
 /* pdf viewer dark theme */
+/* pdf itself */
 html[mozdisallowselectionprint] #viewer {
     filter: invert(1) contrast(75%);
+}
+
+/* firefox ui around the pdf */
+[mozdisallowselectionprint] > body{
+    --main-color: #f5d4b3;
+    --body-bg-color: #111;
+    --errorWrapper-bg-color: #a33;
+    --progressBar-color: #111;
+    --scrollbar-color: #111;
+    --scrollbar-bg-color: #111;
+
+    --sidebar-bg-color: #111;
+    --toolbar-bg-color: #111;
+    --toolbar-border-color: #111;
+    --button-hover-color: #333;
+    --toggled-btn-bg-color: #222;
+    --dropdown-btn-bg-color: #111;
+    --separator-color: #f5d4b3;
+    --field-color: #f5d4b3;
+    --field-bg-color: #222;
+    --field-border-color: #f5d4b3;
+    --findbar-nextprevious-btn-bg-color: #f5d4b3;
+    --outline-color: #333;
+    --outline-hover-color: #444;
+    --outline-active-color: #f5d4b3;
+    --outline-active-bg-color: #222;
+    --sidebaritem-bg-color: #111;
+    --doorhanger-bg-color: #111;
+    --doorhanger-border-color: #f5d4b3;
+    --doorhanger-hover-color: #333;
+    --doorhanger-separator-color: #f5d4b3;
+    --overlay-button-bg-color: #111;
+    --overlay-button-hover-color: #333;
 }
 
 /* home page theme */

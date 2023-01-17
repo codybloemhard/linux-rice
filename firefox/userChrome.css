@@ -34,12 +34,12 @@ menuitem > .menu-text, menuitem > .menu-iconic-text {
     background-color: #f5d4b3 !important;
 }
 
-toolbar, #urlbar-background {
+toolbar, toolbar > *, #urlbar-background {
     -moz-appearance: none !important;
     background-color: #111 !important;
+    outline-color: #f5d4b3 !important;
 }
 
-/* TODO: also chance colour of the button that opens this (three bars thingy) */
 #appMenu-popup{
     --arrowpanel-background: #111;
     --arrowpanel-color: #f5d4b3;
@@ -50,23 +50,25 @@ toolbar, #urlbar-background {
     --button-active-bgcolor: black;
 }
 
-/* can only get :hover to work... */
-/* TODO: set selection with keyboard colour */
-/* #urlbar-background[focused] { */
-/*     -moz-appearance: none !important; */
-/*     background-color: #333 !important; */
-/* } */
+/* background colour of a selected link in url bar expansion... */
+/* the non selected part can be done with just #urlbar-background but selected part is this... */
+.urlbarView-row:not([type=tip], [type=dynamic], [has-buttons]):hover > .urlbarView-row-inner,
+.urlbarView-row[has-buttons] > .urlbarView-row-inner:not([selected]):hover {
+  background-color: #333 !important;
+}
+.urlbarView-row:not([type=tip], [type=dynamic])[selected] > .urlbarView-row-inner,
+.urlbarView-row-inner[selected] {
+  background-color: #333 !important;
+}
 
 toolbar * {
     color: #f5d4b3 !important;
     border: none !important;
 }
 
-#back-button, #forward-button, #reload-button {
+#back-button, #forward-button, #stop-reload-button, #PanelUI-button{
     fill: #f5d4b3 !important;
 }
-
-/* TODO: make pdf viewer UI around the pdf render dark */
 
 /* these two are taken from knazarov's dotfiles */
 
@@ -80,10 +82,6 @@ toolbar * {
 /* #main-window:not([customizing]) #navigator-toolbox:not(:focus-within):not(:hover) { */
 /*     margin-top: -45px; */
 /* } */
-
-#main-window #navigator-toolbox{
-    margin-top: -45px;
-}
 
 /* following code does the same as knazarov's solution but with the bar at the bottom */
 /* (takes much more code) */
@@ -123,10 +121,12 @@ See the above repository for updates as well as full license text. */
 /* This style totally breaks bookmarks toolbar but can be used with autohide_bookmarks_toolbar.css */
 
 :root[sessionrestored] #nav-bar:not([customizing]){
+  transform: rotateX(90deg);
   opacity: 0;
   z-index: 3;
 }
 :root[sessionrestored] #nav-bar:focus-within{
+  transform: rotateX(0deg);
   opacity: 1;
 }
 
