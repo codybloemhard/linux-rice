@@ -6,6 +6,7 @@ user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions
 user_pref("browser.bookmarks.addedImportButton", false);
 user_pref("browser.toolbars.bookmarks.visibility", "never");
 user_pref("pdfjs.viewerCssTheme", 2); // set pdf ui to dark
+user_pref("extensions.unifiedExtensions.enabled", false); // disable new "extensions" toolbar button
 
 // arkenfox 09-01-2023 adaptation
 // license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
