@@ -50,15 +50,24 @@ toolbar, toolbar > *, #urlbar-background {
     --button-active-bgcolor: black;
 }
 
+.browserContainer > findbar {
+    background-color: #111 !important;
+}
+
+.browserContainer > findbar *{
+    outline-color: #f5d4b3 !important;
+    border-color: #f5d4b3 !important;
+}
+
 /* background colour of a selected link in url bar expansion... */
 /* the non selected part can be done with just #urlbar-background but selected part is this... */
 .urlbarView-row:not([type=tip], [type=dynamic], [has-buttons]):hover > .urlbarView-row-inner,
 .urlbarView-row[has-buttons] > .urlbarView-row-inner:not([selected]):hover {
-  background-color: #333 !important;
+    background-color: #333 !important;
 }
 .urlbarView-row:not([type=tip], [type=dynamic])[selected] > .urlbarView-row-inner,
 .urlbarView-row-inner[selected] {
-  background-color: #333 !important;
+    background-color: #333 !important;
 }
 
 toolbar * {
@@ -93,23 +102,25 @@ See the above repository for updates as well as full license text. */
 /* Moves the main toolbar (#nav-bar) to the bottom of the window */
 
 @-moz-document url(chrome://browser/content/browser.xhtml){
-  #nav-bar{
-    position: fixed !important;
-    bottom: 0px;
-    display: -webkit-box;
-    width: 100%;
-    z-index: 1;
-  }
+    #nav-bar{
+        position: fixed !important;
+        bottom: 0px;
+        display: -webkit-box;
+        width: 100%;
+        z-index: 1;
+    }
 
-  /* Fix panels sizing */
-  .panel-viewstack{ max-height: unset !important; }
+    /* Fix panels sizing */
+    .panel-viewstack{
+        max-height: unset !important;
+    }
 
-  #urlbar[breakout][breakout-extend]{
-    display: flex !important;
-    flex-direction: column-reverse;
-    bottom: 0px !important;
-    top: auto !important;
-  }
+    #urlbar[breakout][breakout-extend]{
+        display: flex !important;
+        flex-direction: column-reverse;
+        bottom: 0px !important;
+        top: auto !important;
+    }
 }
 
 /* adapted from: */
@@ -121,13 +132,14 @@ See the above repository for updates as well as full license text. */
 /* This style totally breaks bookmarks toolbar but can be used with autohide_bookmarks_toolbar.css */
 
 :root[sessionrestored] #nav-bar:not([customizing]){
-  transform: rotateX(90deg);
-  opacity: 0;
-  z-index: 3;
+    transform: rotateX(90deg);
+    opacity: 0;
+    z-index: 3;
 }
+
 :root[sessionrestored] #nav-bar:focus-within{
-  transform: rotateX(0deg);
-  opacity: 1;
+    transform: rotateX(0deg);
+    opacity: 1;
 }
 
 /* adapted from: */
@@ -137,22 +149,32 @@ See the above repository for updates as well as full license text. */
 /* Makes menubar appear as overlay in the top left corner */
 
 #toolbar-menubar{
-  position: fixed;
-  display: flex;
-  top: 0;
-  width: 100vw;
-  height: initial !important;
-  z-index: 10;
-  background-color: #111 !important;
+    position: fixed;
+    display: flex;
+    top: 0;
+    width: 100vw;
+    height: initial !important;
+    z-index: 10;
+    background-color: #111 !important;
 }
 
-#toolbar-menubar[autohide="true"][inactive="true"]{ height: 0px !important; }
+#toolbar-menubar[autohide="true"][inactive="true"]{
+    height: 0px !important;
+}
 
-#toolbar-menubar > spacer{ flex-grow: 1; }
-#toolbar-menubar[inactive] > .titlebar-buttonbox-container{ display: none; }
-#toolbar-menubar[active] > .titlebar-buttonbox-container{ background-color: #111; }
+#toolbar-menubar > spacer{
+    flex-grow: 1;
+}
+
+#toolbar-menubar[inactive] > .titlebar-buttonbox-container{
+    display: none;
+}
+
+#toolbar-menubar[active] > .titlebar-buttonbox-container{
+    background-color: #111;
+}
 
 #main-menubar{
-  height: calc(var(--tab-min-height) +  2 * var(--tab-block-margin,0px));
+    height: calc(var(--tab-min-height) +  2 * var(--tab-block-margin,0px));
 }
 

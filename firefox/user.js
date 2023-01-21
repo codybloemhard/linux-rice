@@ -1,7 +1,7 @@
 // personal settings
 // user_pref("browser.download.dir", "/home/cody/downloads");
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
-user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // to use vimium everywhere,
+user_pref("privacy.resistFingerprinting.block_mozAddonManager", true); // to use vimium everywhere,
 user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on all domains
 user_pref("browser.bookmarks.addedImportButton", false);
 user_pref("browser.toolbars.bookmarks.visibility", "never");
@@ -28,7 +28,7 @@ user_pref("geo.provider.ms-windows-location", false);
 user_pref("geo.provider.use_corelocation", false);
 user_pref("geo.provider.use_gpsd", false);
 user_pref("geo.provider.use_geoclue", false);
-user_pref("intl.accept_languages", "en-UK, en");
+user_pref("intl.accept_languages", "en-US");
 user_pref("javascript.use_us_english_locale", true);
 
 user_pref("_user.js.parrot", "0300 syntax error: the parrot's not pinin' for the fjords!");
@@ -195,9 +195,58 @@ user_pref("_user.js.parrot", "6000 syntax error: the parrot's 'istory!");
 user_pref("extensions.blocklist.enabled", true);
 user_pref("network.http.referer.spoofSource", false);
 user_pref("security.dialog_enable_delay", 1000);
-user_pref("privacy.firstparty.isolate", false);
+user_pref("privacy.firstparty.isolate", true);
 user_pref("extensions.webcompat.enable_shims", true);
 user_pref("security.tls.version.enable-deprecated", false);
 user_pref("extensions.webcompat-reporter.enabled", false);
 
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
+
+// other hardening
+
+//https://privacyinternational.org/guide-step/4330/firefox-adjusting-settings-enhance-your-online-privacy
+user_pref("media.navigator.enabled", false);
+user_pref("privacy.firstparty.isolate", true);
+user_pref("geo.enabled", false);
+user_pref("media.peerconnection.enabled", false);
+user_pref("dom.event.clipboardevents.enabled", false);
+user_pref("dom.battery.enabled", false);
+user_pref("extensions.pocket.enabled", false);
+
+// https://theprivacyguide1.github.io/about_config.html
+user_pref("browser.cache.offline.enable", false);
+user_pref("browser.sessionstore.max_tabs_undo", 3);
+user_pref("extensions.blocklist.url", "https://blocklists.settings.services.mozilla.com/v1/blocklist/3/%20/%20/");
+user_pref("dom.event.contextmenu.enabled", false);
+user_pref("geo.wifi.uri", blank);
+user_pref("browser.search.geoip.url", blank);
+user_pref("browser.aboutHomeSnippets.updateUrL", blank);
+user_pref("browser.startup.homepage_override.mstone", blank);
+user_pref("browser.startup.homepage_override.buildID", blank);
+user_pref("startup.homepage_welcome_url", blank);
+user_pref("startup.homepage_welcome_url.additional", blank);
+user_pref("startup.homepage_override_url", blank);
+user_pref("toolkit.telemetry.cachedClientID", blank);
+user_pref("browser.send_pings.require_same_host", true);
+user_pref("network.dnsCacheEntries", 64);
+user_pref("places.history.enabled", true); // set to false to harden
+user_pref("browser.cache.disk_cache_ssl", false);
+user_pref("browser.cache.memory.enable", false);
+user_pref("extensions.pocket.site", blank);
+user_pref("extensions.pocket.oAuthConsumerKey", blank);
+user_pref("extensions.pocket.api", blank);
+user_pref("toolkit.telemetry.server", blank);
+user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
+user_pref("toolkit.crashreporter.infoURL", blank);
+user_pref("datareporting.healthreport.infoURL", blank);
+user_pref("datareporting.policy.firstRunURL", blank);
+user_pref("privacy.spoof_english", false);
+user_pref("gfx.font_rendering.graphite.enabled", false);
+user_pref("network.jar.block-remote-files", true);
+user_pref("javascript.options.ion", false);
+user_pref("javascript.options.native_regexp", false);
+user_pref("javascript.options.baselinejit", false);
+user_pref("dom.webaudio.enabled", false);
+user_pref("media.webaudio.enabled", false);
+user_pref("gfx.font_rendering.opentype_svg.enabled", false);
+user_pref("svg.disabled", false); // set to true to harden, bit more extreme in terms of ux
