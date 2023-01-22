@@ -1,12 +1,14 @@
 // personal settings
 // user_pref("browser.download.dir", "/home/cody/downloads");
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
-user_pref("privacy.resistFingerprinting.block_mozAddonManager", true); // to use vimium everywhere,
 user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on all domains
 user_pref("browser.bookmarks.addedImportButton", false);
 user_pref("browser.toolbars.bookmarks.visibility", "never");
 user_pref("pdfjs.viewerCssTheme", 2); // set pdf ui to dark
 user_pref("extensions.unifiedExtensions.enabled", false); // disable new "extensions" toolbar button
+
+// ?
+user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // true to use vimium everywhere?
 
 // arkenfox 09-01-2023 adaptation
 // license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
@@ -245,7 +247,7 @@ user_pref("gfx.font_rendering.graphite.enabled", false);
 user_pref("network.jar.block-remote-files", true);
 user_pref("javascript.options.ion", false);
 user_pref("javascript.options.native_regexp", false);
-user_pref("javascript.options.baselinejit", false);
+user_pref("javascript.options.baselinejit", true); // set to false to harden
 user_pref("dom.webaudio.enabled", false);
 user_pref("media.webaudio.enabled", false);
 user_pref("gfx.font_rendering.opentype_svg.enabled", false);

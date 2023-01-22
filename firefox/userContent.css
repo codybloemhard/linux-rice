@@ -38,7 +38,7 @@ html[mozdisallowselectionprint] #viewer {
 }
 
 /* home page theme */
-@-moz-document url(about:home), url(about:newtab) {
+@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
     .click-target-container *, .top-sites-list * {
         color: #fff !important;
         text-shadow: 2px 2px 2px #000 !important;
@@ -58,14 +58,17 @@ html[mozdisallowselectionprint] #viewer {
 
     .logo {
         width: 82px !important;
-        padding-left: 82px !important;
+        height: 82px !important;
         border-radius: 100% !important;
         background-repeat: no-repeat;
         background: url('firefrog-logo.png') !important;
+        background-size: 82px !important;
     }
 
     .wordmark {
         background: url('firefrog-title.png') !important;
+        width: 134px !important;
+        height: 82px !important;
     }
 
     .fake-textbox {
@@ -76,10 +79,16 @@ html[mozdisallowselectionprint] #viewer {
 
     .search-handoff-button {
         box-shadow: none !important;
+        fill: #111 !important;
     }
 
     .fake-editable {
         align: center;
+    }
+
+    .search-inner-wrapper > *, .info, #info-body, #private-browsing-myths{
+        color: #f5d4b3 !important;
+        background: #111 !important;
     }
 
     body[lwt-newtab-brighttext] {
