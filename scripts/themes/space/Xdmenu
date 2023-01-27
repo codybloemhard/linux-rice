@@ -2,3 +2,5 @@ dmenu.background: #111111
 dmenu.foreground: #eeeeee
 dmenu.selbackground: #333333
 dmenu.selforeground: #ffffff
+dmenu.highlightforeground: #2a42ca
+dmenu.highlightselforeground: #78d127
