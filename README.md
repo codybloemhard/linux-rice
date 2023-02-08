@@ -93,25 +93,33 @@ Themes                  | Space, Nord, Gruvbox, Hawkrad, Tokyo Night
 10. It does stuff(installing and copying config files).
 11. You now have the programs, my configs, repos installed, system updated etc.
 12. `startx` to start the x server.
-### Step 1.5(optional) Configure wifi:
-2. View your network interfaces `sudo ip link show`
-3. Pick your interface, called _interface from now.
-4. List all networks by running `sudo iw dev interface scan | grep -i ssid`
-5. Pick one called _ssid from now.
-6. You know the password for the network, called _key from now.
-7. Backup example conf: `cp /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant-std.conf`
-8. Populate the conf with our data. `wpa_passphrase _ssid _key >> /etc/wpa_supplicant/wpa_supplicant.conf`
-9. For some reason had to do `killall wpa_applicant`;
-10. `wpa_supplicant -B -i<interface_name> -c<path/to/configuration/file> -Dwext`
-11. `dhcpcd _interface`
-12. Should work now, `pacman -Syu` and `ping somewebsite` should work.
-13. If not, i also had to repeat some steps. If it prompts that it has this file in /usr/.... after step 10, just remove it with `rm filename`. and repeat step 10.
+### Configure wifi (wpa, optional):
+0. View your network interfaces `sudo ip link show`
+1. Pick your interface, called _interface from now.
+2. List all networks by running `sudo iw dev interface scan | grep -i ssid`
+3. Pick one called _ssid from now.
+4. You know the password for the network, called _key from now.
+5. Backup example conf: `cp /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant-std.conf`
+6. Populate the conf with our data. `wpa_passphrase _ssid _key >> /etc/wpa_supplicant/wpa_supplicant.conf`
+7. For some reason had to do `killall wpa_applicant`;
+8. `wpa_supplicant -B -i<interface_name> -c<path/to/configuration/file> -Dwext`
+9. `dhcpcd _interface`
+10. Should work now, `pacman -Syu` and `ping somewebsite` should work.
+11. If not, i also had to repeat some steps. If it prompts that it has this file in /usr/.... after step 10, just remove it with `rm filename`. and repeat step 10.
+### Confige wifi (connmanctl, optional):
+0. `connmanctl`
+1. `enable wifi`
+2. `scan wifi`
+3. `agent on`
+4. `connect wifi_...`
 ### Some tid bits
+- mount boot partition to `/mnt/boot`, but install grub with `grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub`
 - If you use grub and it boots to an grub terminal instead of the menu, boot from usb again, arch-chroot into your system, install grub with `--removable` flag.
 - when chrooted in, install `pacman -S iwd dhcpcd` as they are only present at the install iso and not in your fresh system.
 - Install sudo `pacman -S sudo`
 - Make a normal user `useradd -m username` and set password `passwd username`
 - Add user as sudoer `su -c visudo`, scroll down till you see `root ALL=(ALL) ALL`, add under that line `username ALL=(ALL) ALL`
+
 ## More Examples
 
 ![Gruvbox Theme Example](https://codyb.xyz/img/rice1.webp)
