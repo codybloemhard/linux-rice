@@ -1,0 +1,7 @@
+#!/bin/sh
+pacman -S opendoas
+echo "permit cody\npermit persist cody\n" > /etc/doas.conf
+chown -c root:root /etc/doas.conf
+chmod -c 0400 /etc/doas.conf
+doas -C /etc/doas.conf && echo "doas config ok." || echo "doas config error!"
+ln -s /usr/bin/doas /usr/bin/sudo

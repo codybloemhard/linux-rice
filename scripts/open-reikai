@@ -1,9 +1,9 @@
 #!/bin/sh
-sudo --remove-timestamp
-sudo mkdir /mnt/reikai
-sudo mount ramfs -t ramfs /mnt/reikai
-sudo chown cody /mnt/reikai
-sudo --remove-timestamp # otherwise sudo password is used in scrypt (?)
+doas -L
+doas mkdir /mnt/reikai
+doas mount ramfs -t ramfs /mnt/reikai
+doas chown cody /mnt/reikai
+# doas --remove-timestamp # otherwise doas password is used in scrypt (?)
 scrypt dec /home/cody/git/misc/vault.zip.scrypt /mnt/reikai/vault.zip
 unzip -qq /mnt/reikai/vault.zip -d /mnt/reikai/
 rm /mnt/reikai/vault.zip

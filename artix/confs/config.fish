@@ -23,8 +23,8 @@ set -U fish_pager_color_progress brwhite --background=cyan
 set -U fish_color_match --background=brblue
 set -U fish_color_comment gray
 # PACMAN ---------------
-abbr -a pin 'sudo pacman -S'
-abbr -a pun 'sudo pacman -Rns'
+abbr -a pin 'doas pacman -S'
+abbr -a pun 'doas pacman -Rns'
 abbr -a pss 'pacman -Ss'
 abbr -a pls 'pacman -Qd'
 abbr -a aurls 'paru -Qm'
@@ -70,14 +70,14 @@ abbr -a rc-list 'rc-update -v show'
 # MISC -----------------
 abbr -a la 'exa -la'
 abbr -a neo 'neofetch'
-abbr -a sd 'sudo shutdown -hP now'
-abbr -a rs 'sudo shutdown -r now'
+abbr -a sd 'doas shutdown -hP now'
+abbr -a rs 'doas shutdown -r now'
 abbr -a p 'python'
 abbr -a vim 'nvim'
 abbr -a v 'nvim'
 abbr -a rmd 'rm -rf'
 abbr -a feh 'feh --scale-down -d'
-abbr -a ka 'sudo killall'
+abbr -a ka 'doas killall'
 abbr -a pass 'termpasshash'
 abbr -a username 'openssl rand -base64 16 | cut -c -16'
 abbr -a pp 'pplanner'

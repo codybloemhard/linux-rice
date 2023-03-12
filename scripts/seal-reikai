@@ -1,6 +1,6 @@
 #!/bin/sh
 mv /home/cody/git/misc/vault.zip.scrypt /home/cody/git/misc/vault.zip.scrypt.b
-sudo --remove-timestamp
+doas -L
 cd /mnt/reikai/
 zip -qq -r vault.zip vault
 scrypt enc vault.zip vault.zip.scrypt

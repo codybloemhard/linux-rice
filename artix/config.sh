@@ -1,9 +1,9 @@
 #!/bin/sh
 # Pacman
-sudo cp confs/pacman.conf /etc/pacman.conf
+doas cp confs/pacman.conf /etc/pacman.conf
 # Locale
-sudo cp confs/locale.gen /etc/locale.gen
-sudo locale-gen
+doas cp confs/locale.gen /etc/locale.gen
+doas locale-gen
 # scripts folder
 cp -frT ../scripts ~/scripts
 mkdir ~/scripts/.sfiles
@@ -47,7 +47,7 @@ cp confs/btop.conf ~/.config/btop/btop.conf
 mkdir ~/.config/nvim
 mkdir /etc/xdg/nvim
 cp ../neovim/init.vim ~/.config/nvim/init.vim
-sudo cp ../neovim/sysinit.vim /etc/xdg/nvim/sysinit.vim
+doas cp ../neovim/sysinit.vim /etc/xdg/nvim/sysinit.vim
 nvim -c 'PlugInstall' '+q' '+q'
 # directories for mounting shit
 mkdir ~/mnt

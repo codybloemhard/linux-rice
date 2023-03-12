@@ -1,9 +1,9 @@
 #!/bin/sh
 echo "This action will close the path to reikai and all content will be lost."
-sudo --remove-timestamp
+doas -L
 # ensure content is gone even if it fumbles with umount so it can't remove reikai itself
-sudo rm -rf /mnt/reikai/*
-sudo umount /mnt/reikai
+doas rm -rf /mnt/reikai/*
+doas umount /mnt/reikai
 sync
-sudo rm -rf /mnt/reikai
+doas rm -rf /mnt/reikai
 echo "Reikai has closed and it's content is gone."
