@@ -12,6 +12,8 @@ set colorcolumn=101
 set laststatus=3
 " call matchadd('ColorColumn', '\%101v')
 highlight ColorColumn ctermbg=4
+" fix fzf/telescope background colour
+highlight NormalFloat ctermbg=0
 " leader = space, ; easier than :
 let mapleader = " "
 nnoremap ; :
@@ -84,7 +86,7 @@ map <F4> :source ~/.config/nvim/init.vim<CR>
 map <F5> :w<CR>:!cargo run<CR>
 map <F6> :setlocal spell! spelllang=en_us<CR>
 
-"status
+" status
 highlight Sbg ctermbg=None ctermfg=1
 highlight Sft ctermbg=None ctermfg=2
 highlight Sfl ctermbg=None ctermfg=3
@@ -105,7 +107,10 @@ let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'``
 let g:rainbow_ctermfgs = ['red','green','yellow','blue','magenta','cyan']
 let g:indentLine_char = '┆'
 " Fzf
-let g:fzf_preview_window = ['right:60%', 'ctrl-/']
+let g:fzf_preview_window = ['right:0%', 'ctrl-/']
+" Vim Wifi
+let g:vimwiki_list = [{'path': '~/.vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_global_ext = 0
 " plugins
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -121,4 +126,7 @@ Plug 'cespare/vim-toml'
 Plug 'tikhomirov/vim-glsl'
 Plug 'tbastos/vim-lua'
 Plug 'petRUShka/vim-opencl'
+Plug 'othree/html5.vim'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'vimwiki/vimwiki'
 call plug#end()

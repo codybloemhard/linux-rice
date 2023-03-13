@@ -107,6 +107,9 @@ bind -M visual -m visual a backward-char
 bind -M visual -m visual o forward-char
 bind -M default -m insert h end-of-buffer
 bind -M default l undo
+bind -M default p fish_clipboard_paste
+bind -M default yy fish_clipboard_copy
+bind -M default Y fish_clipboard_copy
 fish_vi_key_bindings
 # BANG BANG ------------
 function __history_previous_command
