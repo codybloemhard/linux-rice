@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/bin/sh
 echo "$(date +%H:%M:%S) | $(date +%d/%m/%y) $(date +%a)"

@@ -20,20 +20,25 @@ while :; do
         updv=$(~/scripts/modules/updates-mod)
         diskv=$(~/scripts/modules/disk-mod)
     fi
+    sensv=$(~/scripts/modules/sensor-mod)
+    wifiv=$(~/scripts/modules/wifi-mod)
+    memv=$(~/scripts/modules/mem-mod)
+    capsv=$(~/scripts/modules/caps-mod)
+    dtv=$(~/scripts/modules/dt-mod)
 
     outp="%{W$BAR_HEIGHT}"
     outp+="%{l}"
     outp+="%{B-}"
-    outp+="%{B-} %{B#BF616A}%{F-}%{Zt>}%{F#11113A} $(~/scripts/modules/wifi-mod) %{F#BF616A}%{B#3b4252}%{Zt>}"
-    outp+="%{B#D08770}%{F-}%{Zt>}%{F#11113A} $(~/scripts/modules/sensor-mod) %{F#D08770}%{B#3b4252}%{Zt>}"
-    outp+="%{B#A3BE8C}%{F-}%{Zt>}%{F#11113A} $diskv %{F#A3BE8C}%{B#3b4252}%{Zt>}"
-    outp+="%{B#5E81AC}%{F-}%{Zt>}%{F#11113A} $cpu_outp% %{F#5E81AC}%{B#3b4252}%{Zt>}"
-    outp+="%{B#B48EAD}%{F-}%{Zt>}%{F#11113A} $(~/scripts/modules/mem-mod) %{F#B48EAD}%{B#3b4252}%{Zt>}"
+    outp+="%{B-} %{B#BF616A}%{F-}%{Zt>}%{F#11113A} $sensv %{F#BF616A}%{B#3b4252}%{Zt>}"
+    outp+="%{B#D08770}%{F-}%{Zt>}%{F#11113A} $diskv %{F#D08770}%{B#3b4252}%{Zt>}"
+    outp+="%{B#A3BE8C}%{F-}%{Zt>}%{F#11113A} $wifiv %{F#A3BE8C}%{B#3b4252}%{Zt>}"
+    outp+="%{B#5E81AC}%{F-}%{Zt>}%{F#11113A} $memv %{F#5E81AC}%{B#3b4252}%{Zt>}"
+    outp+="%{B#B48EAD}%{F-}%{Zt>}%{F#11113A} $cpu_outp% %{F#B48EAD}%{B#3b4252}%{Zt>}"
     outp+="%{B-}"
     outp+="%{r}"
-    outp+="%{B#434c5e}%{F-}%{Zt>}%{F#ECEFF4}$(~/scripts/modules/caps-mod)%{F#434c5e}%{B-}%{Zt>}"
+    outp+="%{B#434c5e}%{F-}%{Zt>}%{F#ECEFF4}$capsv%{F#434c5e}%{B-}%{Zt>}"
     outp+="%{B#434c5e}%{F-}%{Zt>}%{F#ECEFF4} $updv %{F#434c5e}%{B-}%{Zt>}"
-    outp+="%{B#4c566a}%{F-}%{Zt>}%{F#ECEFF4} $(~/scripts/modules/dt-mod) %{F#4c566a}%{B-}%{Zt>} "
+    outp+="%{B#4c566a}%{F-}%{Zt>}%{F#ECEFF4} $dtv %{F#4c566a}%{B-}%{Zt>} "
 
     echo "$outp"
 

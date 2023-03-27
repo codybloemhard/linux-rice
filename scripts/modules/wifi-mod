@@ -1,4 +1,7 @@
-#!/bin/bash
-iw dev wlan0 link | grep 'SSID' | awk '{ print $2 }' | tr -d '\n'
+#!/bin/sh
+# show SSID
+# iw dev wlan0 link | grep 'SSID' | awk '{ print $2 }' | tr -d '\n'
+# show device
+iw dev | grep 'Interface' | awk '{print $2}' | tr -d '\n'
 echo -n ': '
 cat /proc/net/wireless | grep 'wlan' | awk '{ split(FILENAME, array, "/"); print array[5] $3 }' | tr -d '.'

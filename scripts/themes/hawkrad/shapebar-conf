@@ -20,18 +20,23 @@ while :; do
         updv=$(~/scripts/modules/updates-mod)
         diskv=$(~/scripts/modules/disk-mod)
     fi
+    sensv=$(~/scripts/modules/sensor-mod)
+    wifiv=$(~/scripts/modules/wifi-mod)
+    memv=$(~/scripts/modules/mem-mod)
+    capsv=$(~/scripts/modules/caps-mod)
+    dtv=$(~/scripts/modules/dt-mod)
 
     outp="%{l}"
     outp+="%{B-}"
-    outp+="%{O12}%{F#dc322f} $(~/scripts/modules/wifi-mod) "
-    outp+="%{O24}%{F#b58900} $(~/scripts/modules/sensor-mod) "
-    outp+="%{O24}%{F#859900} $diskv "
-    outp+="%{O24}%{F#268bd2} $cpu_outp% "
-    outp+="%{O24}%{F#d33682} $(~/scripts/modules/mem-mod) "
-    outp+="%{O24}%{F#d65d0e}$(~/scripts/modules/caps-mod)%{B-}"
+    outp+="%{O12}%{F#dc322f} $sensv "
+    outp+="%{O24}%{F#b58900} $diskv "
+    outp+="%{O24}%{F#859900} $wifiv "
+    outp+="%{O24}%{F#268bd2} $memv "
+    outp+="%{O24}%{F#d33682} $cpu_outp% "
+    outp+="%{O24}%{F#d65d0e}$capsv%{B-}"
     outp+="%{r}%{B-}%{F#fbf1c7}"
     outp+="%{O24}%{F#93a1a1} $updv "
-    outp+="%{O24}%{F#839496} $(~/scripts/modules/dt-mod) %{B-}%{O12}"
+    outp+="%{O24}%{F#839496} $dtv %{B-}%{O12}"
 
     echo "$outp"
 

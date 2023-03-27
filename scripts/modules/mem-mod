@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 memstr=$(free -m | grep 'Mem:')
 echo $memstr | awk 'ORS="";{print $3}'
-echo -n ' / '
-echo $memstr | awk 'ORS="";{print $2}'
+# echo -n ' / '
+# echo $memstr | awk 'ORS="";{print $2}'
 echo ' MB'
