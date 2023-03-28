@@ -70,8 +70,6 @@ abbr -a rc-list 'rc-update -v show'
 # MISC -----------------
 abbr -a la 'exa -la'
 abbr -a neo 'neofetch'
-abbr -a sd 'doas shutdown -hP now'
-abbr -a rs 'doas shutdown -r now'
 abbr -a p 'python'
 abbr -a vim 'nvim'
 abbr -a v 'nvim'
@@ -111,6 +109,29 @@ bind -M default p fish_clipboard_paste
 bind -M default yy fish_clipboard_copy
 bind -M default Y fish_clipboard_copy
 fish_vi_key_bindings
+# Y/N
+function reikai_check
+  while true
+    read -l -P 'Is reikai sealed? [y/N] ' confirm
+
+    switch $confirm
+      case Y y
+        return 0
+      case '' N n
+        return 1
+    end
+  end
+end
+function rs
+  if reikai_check
+    doas shutdown -r now
+  end
+end
+function sd
+  if reikai_check
+    doas shutdown -hP now
+  end
+end
 # BANG BANG ------------
 function __history_previous_command
   switch (commandline -t)
