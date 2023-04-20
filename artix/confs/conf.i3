@@ -38,6 +38,7 @@ font pango:monospace 12
 # application binds
 bindsym $mod+b exec --no-startup-id st
 bindsym $mod+h exec --no-startup-id dmenu_run
+bindsym $mod+equal exec --no-startup-id ffbookmark
 bindsym $mod+j exec firefox
 bindsym $mod+Shift+j exec firefox --private-window
 
@@ -108,28 +109,18 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+q workspace $ws1
-bindsym $mod+g workspace $ws2
-bindsym $mod+m workspace $ws3
-bindsym $mod+l workspace $ws4
-bindsym $mod+w workspace $ws5
-bindsym $mod+y workspace $ws6
-bindsym $mod+1 workspace $ws7
-bindsym $mod+2 workspace $ws8
-bindsym $mod+3 workspace $ws9
-bindsym $mod+4 workspace $ws10
+bindsym $mod+g workspace $ws1
+bindsym $mod+m workspace $ws2
+bindsym $mod+l workspace $ws3
+bindsym $mod+w workspace $ws4
+bindsym $mod+y workspace $ws5
 
 # move focused container to workspace
-bindsym $mod+Shift+q move container to workspace $ws1
-bindsym $mod+Shift+g move container to workspace $ws2
-bindsym $mod+Shift+m move container to workspace $ws3
-bindsym $mod+Shift+l move container to workspace $ws4
-bindsym $mod+Shift+w move container to workspace $ws5
-bindsym $mod+Shift+y move container to workspace $ws6
-bindsym $mod+Shift+1 move container to workspace $ws7
-bindsym $mod+Shift+2 move container to workspace $ws8
-bindsym $mod+Shift+3 move container to workspace $ws9
-bindsym $mod+Shift+4 move container to workspace $ws10
+bindsym $mod+Shift+g move container to workspace $ws1
+bindsym $mod+Shift+m move container to workspace $ws2
+bindsym $mod+Shift+l move container to workspace $ws3
+bindsym $mod+Shift+w move container to workspace $ws4
+bindsym $mod+Shift+y move container to workspace $ws5
 
 # reload, restart, exit
 bindsym $mod+Shift+d reload

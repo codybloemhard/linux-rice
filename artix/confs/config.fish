@@ -43,6 +43,7 @@ abbr -a gb 'git branch'
 abbr -a gp 'git push origin'
 abbr -a gch 'git checkout'
 abbr -a gam 'git commit --amend - m'
+abbr -a gcl 'git clone'
 # RUST -----------------
 abbr -a cc 'cargo clippy --all-features'
 abbr -a ccc 'cargo check'
