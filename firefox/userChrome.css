@@ -105,7 +105,6 @@ See the above repository for updates as well as full license text. */
     #nav-bar{
         position: fixed !important;
         bottom: 0px;
-        display: -webkit-box;
         width: 100%;
         z-index: 1;
     }
