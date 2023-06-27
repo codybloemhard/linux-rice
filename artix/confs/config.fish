@@ -86,13 +86,17 @@ abbr -a du 'dust'
 abbr -a bt 'btop'
 abbr -a enc 'scrypt enc'
 abbr -a dec 'scrypt dec'
-abbr -a acc 'cat /mnt/reikai/vault/accounts | grep '
 abbr -a dst 'disown (nohup st &)'
 abbr -a tree 'exa -T'
 abbr -a libver 'dpkg -l | grep'
 abbr -a ex 'chmod +x'
+# pacmd list-sinks | grep -e 'name:' -e 'index' # to find devices
+abbr -a recordaudio 'parec -d alsa_output.usb-S.M.S.L_Audio_SMSL_M-3_Desktop_DAC-00.analog-stereo.monitor | lame -r -V0 - sample.mp3'
+# specific file and directory based
+abbr -a acc 'cat /mnt/reikai/vault/accounts | grep '
 abbr -a notes 'nvim ~/.vimwiki/index.md'
 abbr -a day 'nvim /mnt/reikai/vault/day'
+abbr -a yeet 'nvim ~/doc/yeet'
 abbr -a vault 'cd /mnt/reikai/vault/'
 abbr -a misc 'cd ~/git/misc/'
 abbr -a fishconf 'nvim ~/.config/fish/config.fish'
@@ -112,22 +116,31 @@ bind -M default Y fish_clipboard_copy
 fish_vi_key_bindings
 # Y/N
 function reikai_check
-  while true
-    read -l -P 'Is reikai sealed? [y/N] ' confirm
+    cat /mnt/reikai/.sealstamp | read -za STAMP
+    md5sum /mnt/reikai/vault/* | awk '{print $1}' | read -za CURRENT
 
-    switch $confirm
-      case Y y
-        return 0
-      case '' N n
-        return 1
+    if test "$STAMP" = "$CURRENT"
+      echo 'reikai stamp is current'
+      return 0
+    else
+      echo 'rekai stamp is deprecated'
+      read -l -P 'Force shutdown? [y/N] ' confirm
+
+      switch $confirm
+        case Y y
+          return 0
+        case '' N n
+          return 1
+      end
     end
-  end
 end
+
 function rs
   if reikai_check
     doas shutdown -r now
   end
 end
+
 function sd
   if reikai_check
     doas shutdown -hP now

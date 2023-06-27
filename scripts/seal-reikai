@@ -1,8 +1,13 @@
 #!/bin/sh
-mv /home/cody/git/misc/vault.zip.scrypt /home/cody/git/misc/vault.zip.scrypt.b
+cp /home/cody/git/misc/vault.zip.scrypt /home/cody/git/misc/vault.zip.scrypt.b
 doas -L
 cd /mnt/reikai/
 zip -qq -r vault.zip vault
 scrypt enc vault.zip vault.zip.scrypt
-mv vault.zip.scrypt /home/cody/git/misc/vault.zip.scrypt
-rm vault.zip
+if [ $? -eq 0 ]
+then
+  mv vault.zip.scrypt /home/cody/git/misc/vault.zip.scrypt
+  rm vault.zip
+  md5sum /mnt/reikai/vault/* | awk '{print $1}' > /mnt/reikai/.sealstamp
+  echo 'sealed'
+fi
