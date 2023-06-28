@@ -7,3 +7,6 @@ doas chown cody /mnt/reikai
 scrypt dec /home/cody/git/misc/vault.zip.scrypt /mnt/reikai/vault.zip
 unzip -qq /mnt/reikai/vault.zip -d /mnt/reikai/
 rm /mnt/reikai/vault.zip
+md5sum /mnt/reikai/vault/* | awk '{print $1}' > /mnt/reikai/.sealstamp
+echo 'reikai: opened'
+

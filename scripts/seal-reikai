@@ -9,5 +9,5 @@ then
   mv vault.zip.scrypt /home/cody/git/misc/vault.zip.scrypt
   rm vault.zip
   md5sum /mnt/reikai/vault/* | awk '{print $1}' > /mnt/reikai/.sealstamp
-  echo 'sealed'
+  echo 'reikai: sealed'
 fi

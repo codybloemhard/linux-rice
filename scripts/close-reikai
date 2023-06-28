@@ -1,9 +1,9 @@
 #!/bin/sh
-echo "This action will close the path to reikai and all content will be lost."
+echo "This action will close the path to reikai and all content will be lost!"
 doas -L
 # ensure content is gone even if it fumbles with umount so it can't remove reikai itself
 doas rm -rf /mnt/reikai/*
 doas umount /mnt/reikai
 sync
 doas rm -rf /mnt/reikai
-echo "Reikai has closed and it's content is gone."
+echo "reikai: closed and it's content is gone."

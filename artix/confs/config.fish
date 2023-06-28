@@ -114,24 +114,43 @@ bind -M default p fish_clipboard_paste
 bind -M default yy fish_clipboard_copy
 bind -M default Y fish_clipboard_copy
 fish_vi_key_bindings
-# Y/N
+# reikai preservation
+
 function reikai_check
-    cat /mnt/reikai/.sealstamp | read -za STAMP
-    md5sum /mnt/reikai/vault/* | awk '{print $1}' | read -za CURRENT
+    if test -e /mnt/reikai
+        df /mnt/reikai | tail -n 1 | awk '{print $1}' | read filesystemtype
+        if test "$filesystemtype" = 'ramfs'
+            echo 'reikai: open'
+        else
+            echo 'reikai: closed'
+            return 0
+        end
+    else
+        echo 'reikai: nonexistant'
+            return 0
+    end
+
+    if test -e /mnt/reikai/.sealstamp
+        cat /mnt/reikai/.sealstamp | read -za STAMP
+        md5sum /mnt/reikai/vault/* | awk '{print $1}' | read -za CURRENT
+        echo 'reikai: stamp found'
+    else
+        echo 'reikai: stamp not found'
+        return 0
+    end
 
     if test "$STAMP" = "$CURRENT"
-      echo 'reikai stamp is current'
-      return 0
+        echo 'reikai: stamp is current'
+        return 0
     else
-      echo 'rekai stamp is deprecated'
-      read -l -P 'Force shutdown? [y/N] ' confirm
+        echo 'reikai: stamp is deprecated'
+        read -l -P 'Force shutdown? [y/N] ' confirm
 
-      switch $confirm
-        case Y y
-          return 0
-        case '' N n
-          return 1
-      end
+        if test "$confirm" = 'y'
+            return 0
+        else
+            return 1
+        end
     end
 end
 
