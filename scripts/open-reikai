@@ -1,12 +1,17 @@
 #!/bin/sh
 doas -L
-doas mkdir /mnt/reikai
+doas mkdir /mnt/reikai 2> /dev/null
 doas mount ramfs -t ramfs /mnt/reikai
 doas chown cody /mnt/reikai
 # doas --remove-timestamp # otherwise doas password is used in scrypt (?)
 scrypt dec /home/cody/git/misc/vault.zip.scrypt /mnt/reikai/vault.zip
-unzip -qq /mnt/reikai/vault.zip -d /mnt/reikai/
-rm /mnt/reikai/vault.zip
-md5sum /mnt/reikai/vault/* | awk '{print $1}' > /mnt/reikai/.sealstamp
-echo 'reikai: opened'
+if [ $? -eq 0 ]
+then
+    unzip -qq /mnt/reikai/vault.zip -d /mnt/reikai/
+    rm /mnt/reikai/vault.zip
+    md5sum /mnt/reikai/vault/* | awk '{print $1}' > /mnt/reikai/.sealstamp
+    printf "\033[35mreikai\033[0m: \033[32mopened\033[0m"
+else
+    printf "\033[35mreikai\033[0m: \033[31mfailed to open\033[0m"
+fi
 

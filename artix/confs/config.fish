@@ -117,33 +117,39 @@ fish_vi_key_bindings
 # reikai preservation
 
 function reikai_check
+    set red '\e[31m'
+    set green '\e[32m'
+    set orange '\e[33m'
+    set blue '\e[34m'
+    set purple '\e[35m'
+    set end '\e[0m'
     if test -e /mnt/reikai
         df /mnt/reikai | tail -n 1 | awk '{print $1}' | read filesystemtype
         if test "$filesystemtype" = 'ramfs'
-            echo 'reikai: open'
+            echo -e "$purple \breikai$end: $blue \bopen$end"
         else
-            echo 'reikai: closed'
+            echo -e "$purple \breikai: $orange \bclosed$end"
             return 0
         end
     else
-        echo 'reikai: nonexistant'
+        echo -e "$purple \breikai: $orange \bnonexistant$end"
             return 0
     end
 
     if test -e /mnt/reikai/.sealstamp
         cat /mnt/reikai/.sealstamp | read -za STAMP
         md5sum /mnt/reikai/vault/* | awk '{print $1}' | read -za CURRENT
-        echo 'reikai: stamp found'
+        echo -e "$purple \breikai: $blue \bstamp found$end"
     else
-        echo 'reikai: stamp not found'
+        echo -e "$purple \breikai: $orange \bstamp not found$end"
         return 0
     end
 
     if test "$STAMP" = "$CURRENT"
-        echo 'reikai: stamp is current'
+        echo -e "$purple \breikai: $green \bstamp is current$end"
         return 0
     else
-        echo 'reikai: stamp is deprecated'
+        echo -e "$purple \breikai: $red \bstamp is deprecated$end"
         read -l -P 'Force shutdown? [y/N] ' confirm
 
         if test "$confirm" = 'y'
