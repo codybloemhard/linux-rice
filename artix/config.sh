@@ -42,6 +42,7 @@ xdg-settings set default-web-browser firefox.desktop
 # git
 git config --global core.editor "nvim"
 # btop
+mkdir ~/.config/btop
 cp confs/btop.conf ~/.config/btop/btop.conf
 # neovim (install plugins)
 mkdir ~/.config/nvim
