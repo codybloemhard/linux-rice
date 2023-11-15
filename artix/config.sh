@@ -1,4 +1,7 @@
 #!/bin/sh
+# xs
+mkdir ~/.config/sx
+cp confs/xsrc ~/.config/sx/xsrc
 # Pacman
 doas cp confs/pacman.conf /etc/pacman.conf
 # Locale

@@ -58,6 +58,7 @@ bindsym $mod+Shift+x gaps inner current set 0
 # window classes
 for_window [class="stfloat" instance="st"] move scratchpad, resize set 2400 1300, move position 80 70;
 for_window [class="ffplay"] floating enable
+for_window [class="city"] floating enable
 
 # change focus
 focus_on_window_activation none

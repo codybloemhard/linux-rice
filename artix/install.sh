@@ -6,9 +6,10 @@ doas pacman --noconfirm -S artix-archlinux-support
 doas cp confs/pacman.conf /etc/pacman.conf
 doas pacman --noconfirm -Sy
 # Xorg and essentials
-doas pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr xorg-xrdb xdg-utils cmake i3-gaps feh picom linux-headers nvidia btop neovim firefox
+doas pacman -S --noconfirm xorg-server xorg-xauth xorg-xmodmap xorg-xrandr xorg-xrdb xdg-utils cmake i3-gaps feh picom linux-headers nvidia-dkms btop neovim firefox
+doas cp confs/sx /usr/bin/sx
 # Utilities
-doas pacman -S --noconfirm neofetch exa scrot alsa-firmware alsa-utils unzip zip slock pulseaudio the_silver_searcher fzf xclip bat ntp dust
+doas pacman -S --noconfirm neofetch scrot alsa-firmware alsa-utils unzip zip slock pulseaudio the_silver_searcher fzf xclip ntp dust
 # Network
 doas pacman -S --noconfirm iw wpa_supplicant #
 # Dev
@@ -57,6 +58,8 @@ paru ttf-koruri
 # Install fish and rust and starship
 doas pacman -S fish rust
 cargo install starship
+# Install rust utils
+cargo install bat exa onefetch bacon cargo-update cargo-tarpaulin
 # Use dash as shell
 paru -S dashbinsh
 echo 'Done Installing'
