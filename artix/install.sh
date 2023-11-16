@@ -60,6 +60,11 @@ doas pacman -S fish rust
 cargo install starship
 # Install rust utils
 cargo install bat exa onefetch bacon cargo-update cargo-tarpaulin
+cd ~/git
+git clone https://gitlab.com/codybloemhard/paclog
+cd paclog
+cargo install --path ./
+cd $_path
 # Use dash as shell
 paru -S dashbinsh
 echo 'Done Installing'

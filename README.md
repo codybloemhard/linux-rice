@@ -27,7 +27,7 @@ Text editor             | NeoVim
 Compositor              | Picom
 AUR helper              | Paru
 Keymap                  | Physical: QMK (https://gitlab.com/codybloemhard/qmk-cody)
-Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, Bat, Exa, Dust, Btop
+Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, Bat, Exa, Dust, Btop, Paclog
 Themes                  | Space, Nord, Gruvbox, Hawkrad, Tokyo Night
 
 ## Example Image
