@@ -23,7 +23,6 @@ while :; do
     sensv=$(~/scripts/modules/sensor-mod)
     wifiv=$(~/scripts/modules/wifi-mod)
     memv=$(~/scripts/modules/mem-mod)
-    capsv=$(~/scripts/modules/caps-mod)
     dtv=$(~/scripts/modules/dt-mod)
 
     outp="%{l}"
@@ -33,7 +32,6 @@ while :; do
     outp+="%{O24}%{F#859900} $wifiv "
     outp+="%{O24}%{F#268bd2} $memv "
     outp+="%{O24}%{F#d33682} $cpu_outp% "
-    outp+="%{O24}%{F#d65d0e}$capsv%{B-}"
     outp+="%{r}%{B-}%{F#fbf1c7}"
     outp+="%{O24}%{F#93a1a1} $updv "
     outp+="%{O24}%{F#839496} $dtv %{B-}%{O12}"
