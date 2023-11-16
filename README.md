@@ -1,36 +1,46 @@
 # Cody's Linux Rice (Artix / Arch / Void)
+
 ## Maintained?
+
 * Artix: Yes, I use this rice on my Artix desktop daily
 * Arch: Kinda, after some minor tweaks it should be fine on Arch.
 * Void: No, I used to use void on desktop and laptop but not anymore. The config is outdated.
+
 ## About
+
 - A minimal but useable desktop environment for my personal use.
 - Supports live theme changing.
 
 Key                     | Value
 ------------------------|-----------------------------------
 Os                      | Artix
-Tiling window manager   | i3-gaps
+Display server          | X11
+Display init            | xs (https://github.com/Earnestly/sx)
+Window manager          | i3-gaps
 Shell (bin/sh)          | Dash
 Shell (Login)           | Fish
 Terminal                | St (https://gitlab.com/codybloemhard/st-cody)
 Launcher                | Dmenu (https://gitlab.com/codybloemhard/dmenu-cody)
 Status bar              | Shapebar (https://gitlab.com/codybloemhard/shapebar)
 Prompt                  | Starship (https://github.com/starship/starship)
-Text Editor             | NeoVim
+Text editor             | NeoVim
 Compositor              | Picom
-AUR Helper              | Paru
+AUR helper              | Paru
 Keymap                  | Physical: QMK (https://gitlab.com/codybloemhard/qmk-cody)
 Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, Bat, Exa, Dust, Btop
 Themes                  | Space, Nord, Gruvbox, Hawkrad, Tokyo Night
 
 ## Example Image
+
 ![Nord Theme Example](https://codyb.xyz/img/rice0.webp)
 
 ## Usefull Shortcuts
+
 - C: Control, S:Shift, M:Mod.
-- M = Mod (arch: windowskey, void: alt).
+- M = Mod (windowskey).
+
 ### i3-gaps
+
 - M-f           = close window
 - M-b           = open terminal
 - M-j           = open browser
@@ -62,7 +72,9 @@ Themes                  | Space, Nord, Gruvbox, Hawkrad, Tokyo Night
 - M-S-d         = reload config file
 - M-S-s         = restart i3, keep windows open
 - M-S-t         = close i3, xserver
+
 ### st-cody
+
 - Mouse to select text(if you want)
 - C-u           = scroll up
 - C-e           = scroll down
@@ -79,8 +91,11 @@ Themes                  | Space, Nord, Gruvbox, Hawkrad, Tokyo Night
     - Return    = Quit select mode and keep selection
     - /, ?      = Search forward, backwards
     - n, N      = Next, previous search result
+
 # Install
+
 ## Install Rice:
+
 0. Assuming you have internet access now and you only have artix installed.
 1. Login as a normal user.
 2. Install git (or include it in pacstrap): `sudo pacman -S git`
@@ -93,7 +108,9 @@ Themes                  | Space, Nord, Gruvbox, Hawkrad, Tokyo Night
 10. It does stuff(installing and copying config files).
 11. You now have the programs, my configs, repos installed, system updated etc.
 12. `startx` to start the x server.
+
 ### Configure wifi (wpa, optional):
+
 0. View your network interfaces `sudo ip link show`
 1. Pick your interface, called _interface from now.
 2. List all networks by running `sudo iw dev interface scan | grep -i ssid`
@@ -106,13 +123,17 @@ Themes                  | Space, Nord, Gruvbox, Hawkrad, Tokyo Night
 9. `dhcpcd _interface`
 10. Should work now, `pacman -Syu` and `ping somewebsite` should work.
 11. If not, i also had to repeat some steps. If it prompts that it has this file in /usr/.... after step 10, just remove it with `rm filename`. and repeat step 10.
+
 ### Confige wifi (connmanctl, optional):
+
 0. `connmanctl`
 1. `enable wifi`
 2. `scan wifi`
 3. `agent on`
 4. `connect wifi_...`
+
 ### Some tid bits
+
 - mount boot partition to `/mnt/boot`, but install grub with `grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub`
 - If you use grub and it boots to an grub terminal instead of the menu, boot from usb again, arch-chroot into your system, install grub with `--removable` flag.
 - when chrooted in, install `pacman -S iwd dhcpcd` as they are only present at the install iso and not in your fresh system.

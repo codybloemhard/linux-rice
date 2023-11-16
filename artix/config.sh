@@ -1,4 +1,5 @@
 #!/bin/sh
+mkdir ~/.config
 # xs
 mkdir ~/.config/sx
 cp confs/xsrc ~/.config/sx/xsrc
@@ -10,9 +11,6 @@ doas locale-gen
 # scripts folder
 cp -frT ../scripts ~/scripts
 mkdir ~/scripts/.sfiles
-# xorg
-mkdir ~/.config
-cp confs/.xinitrc ~/.xinitrc
 # i3
 mkdir ~/.config/i3
 cp confs/conf.i3 ~/.config/i3/config
