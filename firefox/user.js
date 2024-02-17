@@ -120,7 +120,7 @@ user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
 user_pref("browser.xul.error_pages.expert_bad_cert", true);
 
 user_pref("_user.js.parrot", "1600 syntax error: the parrot rests in peace!");
-user_pref("network.http.referer.XOriginPolicy", 2);
+user_pref("network.http.referer.XOriginPolicy", 0); // set to 2 to harden, 0 for donmai/pixiv
 // 0=send full URI (default), 1=scheme+host+port+path, 2=scheme+host+port
 user_pref("network.http.referer.XOriginTrimmingPolicy", 1);
 

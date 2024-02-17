@@ -57,5 +57,8 @@ mkdir ~/mnt
 ~/scripts/sync-time.sh
 # firefox
 ../firefox/install-firefrog
+# tty login text
+doas cp confs/issue /etc/issue
+doas cp confs/motd /etc/motd
 # done
 echo 'Done Configuring'

@@ -10,6 +10,8 @@ set backupcopy=yes
 set mouse=c " disable mouse
 set colorcolumn=101
 set laststatus=3
+set conceallevel=0
+set noshowmode
 " call matchadd('ColorColumn', '\%101v')
 highlight ColorColumn ctermbg=4
 " fix fzf/telescope background colour
@@ -83,8 +85,8 @@ nnoremap O :bnext<CR>
 nnoremap <leader>d :bd<CR>
 " some extras
 map <F4> :source ~/.config/nvim/init.vim<CR>
-map <F5> :w<CR>:!cargo run<CR>
-map <F6> :setlocal spell! spelllang=en_us<CR>
+map <F5> :w<CR>:!./compile<CR>
+map <F6> :setlocal spell! spelllang=en_gb<CR>
 
 " status
 highlight Sbg ctermbg=None ctermfg=1
@@ -119,14 +121,12 @@ Plug 'tomtom/tcomment_vim'
 Plug 'frazrepo/vim-rainbow'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'lilydjwg/colorizer'
 Plug 'Yggdroot/indentLine'
 Plug 'dag/vim-fish'
 Plug 'cespare/vim-toml'
-Plug 'tikhomirov/vim-glsl'
 Plug 'tbastos/vim-lua'
-Plug 'petRUShka/vim-opencl'
 Plug 'othree/html5.vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'vimwiki/vimwiki'
+Plug 'harryhanYuhao/typst.vim'
 call plug#end()

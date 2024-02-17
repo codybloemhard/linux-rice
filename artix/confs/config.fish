@@ -69,6 +69,7 @@ abbr -a rc-start 'rc-service _ start'
 abbr -a rc-stop 'rc-service _ stop'
 abbr -a rc-list 'rc-update -v show'
 # MISC -----------------
+abbr -a ls 'exa'
 abbr -a la 'exa -la'
 abbr -a neo 'neofetch'
 abbr -a p 'python'

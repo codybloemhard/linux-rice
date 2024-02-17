@@ -15,10 +15,9 @@ exec --no-startup-id "st -c stfloat -A 1.0"
 workspace 2 output HDMI-0
 workspace 1 output DP-0
 
-set $stdgap 10
 set $dt 20
 
-gaps inner $stdgap
+gaps inner 8
 gaps outer 0
 smart_gaps on
 
@@ -49,11 +48,6 @@ bindsym $mod+Shift+f floating toggle
 bindsym $mod+k split v
 bindsym $mod+p split h
 bindsym $mod+space [class="stfloat" instance="st"] scratchpad show;
-
-bindsym $mod+z gaps inner current plus 5
-bindsym $mod+Shift+z gaps inner current minus 5
-bindsym $mod+x gaps inner current set $stdgap
-bindsym $mod+Shift+x gaps inner current set 0
 
 # window classes
 for_window [class="stfloat" instance="st"] move scratchpad, resize set 2400 1300, move position 80 70;
@@ -103,11 +97,6 @@ set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+g workspace $ws1

@@ -14,6 +14,7 @@
 Key                     | Value
 ------------------------|-----------------------------------
 Os                      | Artix
+Init system             | OpenRC
 Display server          | X11
 Display init            | xs (https://github.com/Earnestly/sx)
 Window manager          | i3-gaps
