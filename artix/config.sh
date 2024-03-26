@@ -45,6 +45,10 @@ git config --global core.editor "nvim"
 # btop
 mkdir ~/.config/btop
 cp confs/btop.conf ~/.config/btop/btop.conf
+# sfeed
+mkdir ~/.config/sfeed
+mkdir ~/.config/sfeed/feeds
+cp confs/sfeedrc ~/.config/sfeed/sfeedrc
 # neovim (install plugins)
 mkdir ~/.config/nvim
 mkdir /etc/xdg/nvim

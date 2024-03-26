@@ -2,12 +2,10 @@
 echo "Installing (specific)"
 # latex
 doas pacman -Sy texlive-most mupdf
-# discord
-yay -S discord
 # minecraft
-yay -S minecraft-launcher
+paru minecraft-launcher
 # vscode opensource
-yay -S vscodium-bin
+paru vscodium-bin
 #rust lang
 curl https://sh.rustup.rs -sSf | sh
 # steam
@@ -21,4 +19,6 @@ doas pacman -Sy --noconfirm cmus
 # fcitx (japanese input)
 doas pacman -S fcitx-im fcitx-configtool fcitx-mozc
 cp confs/fcitx.conf ~/.config/fcitx/config
+# sfeed (rss)
+doas paru sfeed
 echo "Done"

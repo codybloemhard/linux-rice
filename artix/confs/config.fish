@@ -108,6 +108,7 @@ abbr -a fishconf 'nvim ~/.config/fish/config.fish'
 abbr -a nvimconf 'nvim ~/.config/nvim/init.vim'
 abbr -a vimconf 'nvim ~/.config/nvim/init.vim'
 abbr -a i3conf 'nvim ~/.config/i3/config'
+abbr -a rssconf 'nvim ~/.config/sfeed/sfeedrc'
 # VIM MODE -------------
 bind -M default -m default a backward-char
 bind -M default -m default o forward-char

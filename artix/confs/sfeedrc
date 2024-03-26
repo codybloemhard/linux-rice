@@ -1,0 +1,19 @@
+sfeedpath="$HOME/.config/sfeed/feeds"
+
+feeds() {
+    # feed <name> <feedurl> [basesiteurl] [encoding]
+    # blogs
+    feed "Egor Dmitriev" "https://egordmitriev.dev/atom.xml" "https://egordmitriev.dev"
+    feed "Rust Main" "https://blog.rust-lang.org/feed.xml"
+    feed "Rust Inside" "https://blog.rust-lang.org/inside-rust/feed.xml"
+    # youtube
+    feed "PicotheSpicyWarlord" "https://yewtu.be/feed/channel/UCyEJzdViuBHCo4Cokj4-BgQ"
+    feed "U0YKNAHT0N" "https://yewtu.be/feed/channel/UCqfHQDUjK49FbPxrOFu0SeA"
+    feed "Kane B" "https://yewtu.be/feed/channel/UCGVHC4L6gjS13AMe-JMOjHg"
+    feed "Jared Hernderson" "https://yewtu.be/feed/channel/UC2Kyj04yISmHr1V-UlJz4eg"
+    feed "Hemmingway Jones" "https://yewtu.be/feed/channel/UCUiDIApvh8OarYLHlACsyVw"
+    feed "The Goulet Pen Company" "https://yewtu.be/feed/channel/UCPdFDFTd6P1a__tAr8CrpCQ"
+    feed "The Plain Bagel" "https://yewtu.be/feed/channel/UCFCEuCsyWP0YkP3CZ3Mr01Q"
+    feed "Money & Macro" "https://yewtu.be/feed/channel/UCCKpicnIwBP3VPxBAZWDeNA"
+    feed "Brodie Robertson" "https://yewtu.be/feed/channel/UCld68syR8Wi-GY_n4CaoJGA"
+}

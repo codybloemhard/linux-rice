@@ -128,5 +128,6 @@ Plug 'tbastos/vim-lua'
 Plug 'othree/html5.vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'vimwiki/vimwiki'
-Plug 'harryhanYuhao/typst.vim'
+" Plug 'harryhanYuhao/typst.vim'
+Plug 'pest-parser/pest.vim'
 call plug#end()
