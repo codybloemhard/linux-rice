@@ -30,7 +30,7 @@ abbr -a pls 'pacman -Qd'
 abbr -a aurls 'paru -Qm'
 abbr -a pct 'pacman -Q | wc -l'
 abbr -a syu 'paru -Syu'
-abbr -a pcl 'doas paccache -r -k 1; paru -cc;'
+abbr -a pcl 'doas paccache -r -k 1; paru -c;'
 abbr -a pfd 'pacman -Qs'
 # GIT ------------------
 abbr -a ga 'git add -A; git status'

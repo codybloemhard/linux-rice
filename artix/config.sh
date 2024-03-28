@@ -61,8 +61,13 @@ mkdir ~/mnt
 ~/scripts/sync-time.sh
 # firefox
 ../firefox/install-firefrog
-# tty login text
+# grub, startup, TTY, login
+cp confs/console-colours ~/.config/console-colours
 doas cp confs/issue /etc/issue
 doas cp confs/motd /etc/motd
+doas cp confs/colours /etc/init.d/colours
+doas rc-update add colours sysinit
+doas cp confs/grub /etc/default/grub
+doas grub-mkconfig -o /boot/grub/grub.cfg
 # done
 echo 'Done Configuring'
