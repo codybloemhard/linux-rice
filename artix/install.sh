@@ -59,7 +59,7 @@ paru ttf-koruri
 doas pacman -S fish rust
 cargo install starship
 # Install rust utils
-cargo install bat exa onefetch bacon cargo-update cargo-tarpaulin
+cargo install bat eza onefetch bacon cargo-update cargo-tarpaulin
 cd ~/git
 git clone https://gitlab.com/codybloemhard/paclog
 cd paclog
