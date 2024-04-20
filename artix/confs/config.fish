@@ -103,6 +103,7 @@ abbr -a day 'nvim /mnt/reikai/vault/day'
 abbr -a yeet 'nvim ~/doc/yeet'
 abbr -a vault 'cd /mnt/reikai/vault/'
 abbr -a misc 'cd ~/git/misc/'
+abbr -a watchlist 'nvim ~/git/misc/watchlist'
 abbr -a pullphotos 'adb pull /sdcard/DCIM/Camera'
 abbr -a fishconf 'nvim ~/.config/fish/config.fish'
 abbr -a nvimconf 'nvim ~/.config/nvim/init.vim'
@@ -199,8 +200,8 @@ export GTK_IM_MODULE='fcitx'
 export QT_IM_MODULE='fcitx'
 export SDL_IM_MODULE='fcitx'
 export BAT_THEME='ansi'
-export BAR_FONT_SIZE=13
-export BAR_HEIGHT=26
+export BAR_FONT_SIZE=18
+export BAR_HEIGHT=24
 # STARSHIP -------------
 starship init fish | source
 # STARTX

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+sfeed_curses ~/.config/sfeed/feeds/*
+
+# url=$(sfeed_plain "$HOME/.config/sfeed/feeds/"* | fzf --height=32 --border=sharp +s | \
+#    sed -n 's@^.* \([a-zA-Z]*://\)\(.*\)$@\1\2@p')
+# test -n "${url}" && firefox "${url}"
