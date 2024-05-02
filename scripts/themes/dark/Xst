@@ -1,0 +1,21 @@
+st.alpha: 1.0
+st.background: #000000
+st.foreground: #555555
+
+st.color0: #050505
+st.color1: #553333
+st.color2: #335533
+st.color3: #554433
+st.color4: #333355
+st.color5: #553355
+st.color6: #334455
+st.color7: #444444
+
+st.color8: #111111
+st.color9: #663333
+st.color10: #336633
+st.color11: #664433
+st.color12: #333366
+st.color13: #663366
+st.color14: #334466
+st.color15: #666666

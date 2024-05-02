@@ -1,0 +1,42 @@
+#!/bin/bash
+#stupid ass printf %3s doesnt work on bash?
+# cpu calc: https://stackoverflow.com/questions/26791240/how-to-get-percentage-of-processor-use-with-bash
+i=118
+updv=''
+diskv=''
+while :; do
+    read cpu user nice system idle iowait irq softirq steal guest < /proc/stat
+    cpu_active_prev=$((user+system+nice+softirq+steal))
+    cpu_total_prev=$((user+system+nice+softirq+steal+idle+iowait))
+    sleep 1
+    read cpu user nice system idle iowait irq softirq steal guest < /proc/stat
+    cpu_active_cur=$((user+system+nice+softirq+steal))
+    cpu_total_cur=$((user+system+nice+softirq+steal+idle+iowait))
+    cpu_util=$((100*(cpu_active_cur-cpu_active_prev)/(cpu_total_cur-cpu_total_prev)))
+    cpu_outp=`printf %3s $cpu_util`
+    mod=$(expr $i % 120)
+    if [ $mod -eq 0 ]
+    then
+        updv=$(~/scripts/modules/updates-mod)
+        diskv=$(~/scripts/modules/disk-mod)
+    fi
+    sensv=$(~/scripts/modules/sensor-mod)
+    wifiv=$(~/scripts/modules/wifi-mod)
+    memv=$(~/scripts/modules/mem-mod)
+    dtv=$(~/scripts/modules/dt-mod)
+
+    outp="%{l}"
+    outp+="%{B-}"
+    outp+="%{O12}%{F#553333} $sensv "
+    outp+="%{O24}%{F#554433} $diskv "
+    outp+="%{O24}%{F#335533} $wifiv "
+    outp+="%{O24}%{F#333355} $memv "
+    outp+="%{O24}%{F#553355} $cpu_outp% "
+    outp+="%{r}%{B-}%{F#555555}"
+    outp+="%{O24}%{F#555555} $updv "
+    outp+="%{O24}%{F#555555} $dtv %{B-}%{O12}"
+
+    echo "$outp"
+
+    ((i++))
+done
