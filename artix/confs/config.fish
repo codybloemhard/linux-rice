@@ -35,7 +35,7 @@ abbr -a pfd 'pacman -Qs'
 # GIT ------------------
 abbr -a ga 'git add -A; git status'
 abbr -a gr 'git reset'
-abbr -a gd 'git diff'
+abbr -a gd 'git diff HEAD~0'
 abbr -a gc 'git commit -m'
 abbr -a gdc 'git diff HEAD~0 --stat'
 abbr -a gl 'git log'

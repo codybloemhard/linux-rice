@@ -114,7 +114,7 @@ let g:strip_whitespace_confirm = 0
 
 " some visual stuff
 let g:rainbow_active = 1
-let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```', '"""':'"""', "'''":"'''", '<':'>'}
+let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```', '"""':'"""', "'''":"'''" }
 
 " leave out black and gray
 let g:rainbow_ctermfgs = ['red','green','yellow','blue','magenta','cyan']

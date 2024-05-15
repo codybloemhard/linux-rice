@@ -6,10 +6,11 @@ doas pacman --noconfirm -S artix-archlinux-support
 doas cp confs/pacman.conf /etc/pacman.conf
 doas pacman --noconfirm -Sy
 # Xorg and essentials
-doas pacman -S --noconfirm xorg-server xorg-xauth xorg-xmodmap xorg-xrandr xorg-xrdb xdg-utils cmake i3-gaps feh picom linux-headers nvidia-dkms btop neovim firefox
+doas pacman -S --noconfirm xorg-server xorg-xauth xorg-xmodmap xorg-xrandr xorg-xrdb xdg-utils cmake i3-gaps picom linux-headers nvidia-dkms neovim firefox
 doas cp confs/sx /usr/bin/sx
 # Utilities
-doas pacman -S --noconfirm neofetch scrot alsa-firmware alsa-utils unzip zip slock pulseaudio the_silver_searcher fzf xclip ntp dust
+# not needed? alsa-firmware, alsa-utils
+doas pacman -S --noconfirm scrot unzip zip slock pulseaudio the_silver_searcher fzf xclip ntp dust btop feh
 # Network
 doas pacman -S --noconfirm iw wpa_supplicant #
 # Dev

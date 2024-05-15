@@ -29,7 +29,7 @@ Compositor              | Picom
 AUR helper              | Paru
 Keymap                  | Physical: QMK (https://gitlab.com/codybloemhard/qmk-cody)
 Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, Bat, Eza, Dust, Btop, Paclog
-Themes                  | Space, Nord, Gruvbox, Hawkrad, Tokyo Night
+Themes                  | Nord, Gruvbox, Hawkrad, Tokyo Night, Space, Dark
 
 ## Example Image
 
