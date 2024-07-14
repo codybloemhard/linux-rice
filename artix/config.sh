@@ -33,7 +33,7 @@ chsh -s $(which fish)
 cp confs/starship.toml ~/.config/
 cp confs/config.fish ~/.config/fish/
 # to select right audio device(smsl m3 dac for me)
-cp confs/asoundrc-std.conf ~/.asoundrc
+cp confs/asoundrc-std.conf ~/.config/alsa/asoundrc
 # profile
 cp confs/profile-std.conf ~/.profile
 # backgrounds

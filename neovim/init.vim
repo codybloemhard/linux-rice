@@ -118,7 +118,8 @@ let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'``
 
 " leave out black and gray
 let g:rainbow_ctermfgs = ['red','green','yellow','blue','magenta','cyan']
-let g:indentLine_char = '┆'
+" let g:indentLine_char = '┆'
+let g:indentLine_char = ' '
 
 " Fzf
 let g:fzf_preview_window = ['right,0%,border-sharp', 'ctrl-/']

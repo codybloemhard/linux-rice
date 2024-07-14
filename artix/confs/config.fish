@@ -81,7 +81,7 @@ abbr -a ka 'doas killall'
 abbr -a pass 'termpasshash'
 abbr -a username 'openssl rand -base64 16 | cut -c -16'
 abbr -a pp 'pplanner'
-abbr -a fp 'ffplay'
+abbr -a fp 'ffplay -hide_banner -seek_interval 5 -fast'
 abbr -a ff 'firefox'
 abbr -a du 'dust'
 abbr -a bt 'btop'
@@ -89,6 +89,7 @@ abbr -a enc 'scrypt enc'
 abbr -a dec 'scrypt dec'
 abbr -a dst 'disown (nohup st &)'
 abbr -a tree 'eza -T'
+abbr -a gtree 'eza -T --git-ignore'
 abbr -a libver 'dpkg -l | grep'
 abbr -a ex 'chmod +x'
 abbr -a weather 'curl wttr.in'
@@ -195,13 +196,18 @@ end
 # EXPORTS
 export PATH="$HOME/.cargo/bin:$HOME/scripts:$PATH:$HOME/.local/bin"
 export EDITOR='nvim'
+export BAT_THEME='ansi'
+export BAR_FONT_SIZE=18
+export BAR_HEIGHT=24
 export XMODIFIERS='@im=fcitx'
 export GTK_IM_MODULE='fcitx'
 export QT_IM_MODULE='fcitx'
 export SDL_IM_MODULE='fcitx'
-export BAT_THEME='ansi'
-export BAR_FONT_SIZE=18
-export BAR_HEIGHT=24
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 # STARSHIP -------------
 starship init fish | source
 # STARTX
