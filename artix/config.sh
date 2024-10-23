@@ -61,6 +61,9 @@ mkdir ~/mnt
 ~/scripts/sync-time.sh
 # firefox
 ../firefox/install-firefrog
+# mpv
+mkdir ~/.config/mpv
+cp confs/mpv.conf ~/.config/mpv/mpv.conf
 # grub, startup, TTY, login
 cp confs/console-colours ~/.config/console-colours
 doas cp confs/issue /etc/issue

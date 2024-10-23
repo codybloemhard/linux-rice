@@ -76,7 +76,7 @@ abbr -a p 'python'
 abbr -a vim 'nvim'
 abbr -a v 'nvim'
 abbr -a rmd 'rm -rf'
-abbr -a feh 'feh --scale-down -d'
+abbr -a feh 'feh -.ZdB black'
 abbr -a ka 'doas killall'
 abbr -a pass 'termpasshash'
 abbr -a username 'openssl rand -base64 16 | cut -c -16'
@@ -111,6 +111,7 @@ abbr -a nvimconf 'nvim ~/.config/nvim/init.vim'
 abbr -a vimconf 'nvim ~/.config/nvim/init.vim'
 abbr -a i3conf 'nvim ~/.config/i3/config'
 abbr -a rssconf 'nvim ~/.config/sfeed/sfeedrc'
+abbr -a sxconf 'nvim ~/.config/sx/sxrc'
 # VIM MODE -------------
 bind -M default -m default a backward-char
 bind -M default -m default o forward-char

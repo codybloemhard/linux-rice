@@ -18,6 +18,8 @@ doas pacman -S --noconfirm pacman-contrib
 doas ../neovim/install.sh
 # Install neovim things
 ../neovim/install.sh
+# makepkg
+doas echo 'PACMAN_AUTH=doas' >> /etc/makepkg.conf
 # Install st fork
 mkdir ~/git
 cd ~/git

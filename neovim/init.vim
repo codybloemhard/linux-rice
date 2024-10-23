@@ -47,6 +47,12 @@ vnoremap u k
 vnoremap e j
 vnoremap o l
 
+" swap { and }
+nnoremap { }
+nnoremap } {
+vnoremap { }
+vnoremap } {
+
 " replace overwritten commands
 nnoremap h a
 nnoremap H A

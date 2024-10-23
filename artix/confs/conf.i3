@@ -52,6 +52,7 @@ bindsym $mod+space [class="stfloat" instance="st"] scratchpad show;
 # window classes
 for_window [class="stfloat" instance="st"] move scratchpad, resize set 2400 1300, move position 80 70;
 for_window [class="ffplay"] floating enable
+for_window [class="mpv"] floating enable
 for_window [class="city"] floating enable
 
 # change focus
