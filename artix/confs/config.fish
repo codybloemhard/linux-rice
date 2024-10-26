@@ -95,6 +95,7 @@ abbr -a ex 'chmod +x'
 abbr -a weather 'curl wttr.in'
 abbr -a pl 'paclog'
 abbr -a head 'sed 10q'
+abbr -a rm 'mrm'
 # pacmd list-sinks | grep -e 'name:' -e 'index' # to find devices
 abbr -a recordaudio 'parec -d alsa_output.usb-S.M.S.L_Audio_SMSL_M-3_Desktop_DAC-00.analog-stereo.monitor | lame -r -V0 - sample.mp3'
 # specific file and directory based
