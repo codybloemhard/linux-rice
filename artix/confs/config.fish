@@ -210,6 +210,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
+export MANPAGER='nvim +Man!'
 # STARSHIP -------------
 starship init fish | source
 # STARTX
