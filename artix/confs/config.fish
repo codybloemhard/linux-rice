@@ -94,6 +94,7 @@ abbr -a libver 'dpkg -l | grep'
 abbr -a ex 'chmod +x'
 abbr -a weather 'curl wttr.in'
 abbr -a pl 'paclog'
+abbr -a plp 'paclog package'
 abbr -a head 'sed 10q'
 abbr -a rm 'mrm'
 # pacmd list-sinks | grep -e 'name:' -e 'index' # to find devices
