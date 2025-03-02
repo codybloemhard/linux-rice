@@ -125,6 +125,12 @@ bind -M default p fish_clipboard_paste
 bind -M default yy fish_clipboard_copy
 bind -M default Y fish_clipboard_copy
 fish_vi_key_bindings
+set fish_cursor_default block
+set fish_cursor_insert underscore
+set fish_cursor_replace underscore
+set fish_cursor_replace_one underscore
+set fish_cursor_external block
+set fish_cursor_visual block
 # reikai preservation
 
 function reikai_check

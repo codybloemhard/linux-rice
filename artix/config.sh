@@ -42,6 +42,16 @@ cp -rT ../img ~/img
 xdg-settings set default-web-browser firefox.desktop
 # git
 git config --global core.editor "nvim"
+git config --global column.ui auto
+git config --global branch.sort -committerdate
+git config --global tag.sort version:refname
+git config --global init.defaultBranch master
+git config --global diff.algorithm histogram # default is myers
+git config --global diff.colorMoved plain
+git config --global diff.mnemonicPrefix true
+git config --global diff.renames true
+git config --global push.autoSetupRemote true
+git config --global push.followTags true
 # btop
 mkdir ~/.config/btop
 cp confs/btop.conf ~/.config/btop/btop.conf
