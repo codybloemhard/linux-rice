@@ -1,0 +1,2 @@
+#!/bin/sh
+~/scr/.theme/shapebar-conf | shapebar -c -B "#3b4252" -F "#3b4252" -p -g "x$BAR_HEIGHT++" -f "Literation Mono Powerline:style=Bold:pixelsize=$BAR_FONT_SIZE" -a 2

@@ -1,0 +1,15 @@
+#!/bin/sh
+theme=$(echo 'space\nnord\ngruvbox\nhawkrad\ntokyo-night\ndark' | dmenu -l 6 )
+if [ -z "$theme" ]
+then
+    exit;
+fi
+cp ~/scr/themes/$theme/shapebar-conf ~/scr/.theme/shapebar-conf
+cp ~/scr/themes/$theme/run-shapebar ~/scr/.theme/run-shapebar
+cp ~/scr/themes/$theme/init-background ~/scr/.theme/init-background
+cp ~/scr/themes/$theme/Xdmenu ~/scr/.theme/Xdmenu
+cp ~/scr/themes/$theme/Xst ~/scr/.theme/Xst
+~/scr/set-theme-data
+pkill -USR1 '^st$'
+killall shapebar
+~/scr/.theme/run-shapebar &> /dev/null &

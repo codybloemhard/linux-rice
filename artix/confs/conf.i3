@@ -7,7 +7,7 @@ set $mod Mod4
 # with nvidia drivers
 exec xrandr --output DP-0 --output HDMI-0 --right-of DP-0 &
 # bar, compositor, autotiling, scratchpad
-exec --no-startup-id ~/scripts/.theme/run-shapebar
+exec --no-startup-id ~/scr/.theme/run-shapebar
 exec picom --xrender-sync-fence
 exec --no-startup-id "st -c stfloat -A 1.0"
 

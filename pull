@@ -3,3 +3,4 @@
 cp ~/.config/fish/config.fish artix/confs/config.fish
 cp ~/.config/i3/config artix/confs/conf.i3
 cp ~/.config/nvim/init.vim neovim/init.vim
+cp -rT ~/scr scr

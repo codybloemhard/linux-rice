@@ -100,6 +100,7 @@ abbr -a rm 'mrm'
 # pacmd list-sinks | grep -e 'name:' -e 'index' # to find devices
 abbr -a recordaudio 'parec -d alsa_output.usb-S.M.S.L_Audio_SMSL_M-3_Desktop_DAC-00.analog-stereo.monitor | lame -r -V0 - sample.mp3'
 # specific file and directory based
+abbr -a reload 'source ~/.config/fish/config.fish'
 abbr -a acc 'cat /mnt/reikai/vault/accounts | grep '
 abbr -a notes 'nvim ~/.vimwiki/index.md'
 abbr -a day 'nvim /mnt/reikai/vault/day'
@@ -114,6 +115,7 @@ abbr -a vimconf 'nvim ~/.config/nvim/init.vim'
 abbr -a i3conf 'nvim ~/.config/i3/config'
 abbr -a rssconf 'nvim ~/.config/sfeed/sfeedrc'
 abbr -a sxconf 'nvim ~/.config/sx/sxrc'
+abbr -a pacmanconf 'doas nvim /etc/pacman.conf'
 # VIM MODE -------------
 bind -M default -m default a backward-char
 bind -M default -m default o forward-char
@@ -203,7 +205,7 @@ function fish_command_not_found
     __fish_default_command_not_found_handler $argv
 end
 # EXPORTS
-export PATH="$HOME/.cargo/bin:$HOME/scripts:$PATH:$HOME/.local/bin"
+export PATH="$HOME/.cargo/bin:$HOME/scr:$PATH:$HOME/.local/bin"
 export EDITOR='nvim'
 export BAT_THEME='ansi'
 export BAR_FONT_SIZE=18

@@ -1,5 +1,6 @@
 #!/bin/sh
 mkdir ~/.config
+mkdir ~/dow
 # xs
 mkdir ~/.config/sx
 cp confs/xsrc ~/.config/sx/xsrc
@@ -9,15 +10,15 @@ doas cp confs/pacman.conf /etc/pacman.conf
 doas cp confs/locale.gen /etc/locale.gen
 doas locale-gen
 # scripts folder
-cp -frT ../scripts ~/scripts
-mkdir ~/scripts/.sfiles
+cp -frT ../scr ~/scr
+mkdir ~/scr/.sfiles
 # i3
 mkdir ~/.config/i3
 cp confs/conf.i3 ~/.config/i3/config
 # shapebar
-cp ~/git/shapebar/run-shapebar ~/scripts/run-shapebar
-cp ~/git/shapebar/shapebar-conf ~/scripts/shapebar-conf
-cp -r ~/git/shapebar/modules ~/scripts/
+cp ~/git/shapebar/run-shapebar ~/scr/run-shapebar
+cp ~/git/shapebar/shapebar-conf ~/scr/shapebar-conf
+cp -r ~/git/shapebar/modules ~/scr/
 # gtk theme
 mkdir ~/.config/gtk-3.0
 cp confs/gtk-gtk3.css ~/.config/gtk-3.0/gtk.css
@@ -68,7 +69,7 @@ nvim -c 'PlugInstall' '+q' '+q'
 # directories for mounting shit
 mkdir ~/mnt
 # sync time
-~/scripts/sync-time.sh
+~/scr/sync-time.sh
 # firefox
 ../firefox/install-firefrog
 # mpv

@@ -1,0 +1,10 @@
+#!/bin/sh
+doas mkdir tramfs
+doas mount ramfs -t ramfs tramfs
+doas chown cody tramfs
+# doas --remove-timestamp # otherwise doas password is used in scrypt (?)
+scrypt dec $1 tramfs/tempzip.zip
+if [ $? -eq 0 ]
+then
+    unzip -qq tramfs/tempzip.zip -d tramfs/
+fi

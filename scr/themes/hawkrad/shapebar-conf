@@ -17,24 +17,24 @@ while :; do
     mod=$(expr $i % 120)
     if [ $mod -eq 0 ]
     then
-        updv=$(~/scripts/modules/updates-mod)
-        diskv=$(~/scripts/modules/disk-mod)
+        updv=$(~/scr/modules/updates-mod)
+        diskv=$(~/scr/modules/disk-mod)
     fi
-    sensv=$(~/scripts/modules/sensor-mod)
-    wifiv=$(~/scripts/modules/wifi-mod)
-    memv=$(~/scripts/modules/mem-mod)
-    dtv=$(~/scripts/modules/dt-mod)
+    sensv=$(~/scr/modules/sensor-mod)
+    wifiv=$(~/scr/modules/wifi-mod)
+    memv=$(~/scr/modules/mem-mod)
+    dtv=$(~/scr/modules/dt-mod)
 
     outp="%{l}"
     outp+="%{B-}"
-    outp+="%{O12}%{F#553333} $sensv "
-    outp+="%{O24}%{F#554433} $diskv "
-    outp+="%{O24}%{F#335533} $wifiv "
-    outp+="%{O24}%{F#333355} $memv "
-    outp+="%{O24}%{F#553355} $cpu_outp% "
-    outp+="%{r}%{B-}%{F#555555}"
-    outp+="%{O24}%{F#555555} $updv "
-    outp+="%{O24}%{F#555555} $dtv %{B-}%{O12}"
+    outp+="%{O12}%{F#dc322f} $sensv "
+    outp+="%{O24}%{F#b58900} $diskv "
+    outp+="%{O24}%{F#859900} $wifiv "
+    outp+="%{O24}%{F#268bd2} $memv "
+    outp+="%{O24}%{F#d33682} $cpu_outp% "
+    outp+="%{r}%{B-}%{F#fbf1c7}"
+    outp+="%{O24}%{F#93a1a1} $updv "
+    outp+="%{O24}%{F#839496} $dtv %{B-}%{O12}"
 
     echo "$outp"
 

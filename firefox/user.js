@@ -1,5 +1,5 @@
 // personal settings
-// user_pref("browser.download.dir", "/home/cody/downloads");
+// user_pref("browser.download.dir", "/home/cody/dow");
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on all domains
 user_pref("browser.bookmarks.addedImportButton", false);
