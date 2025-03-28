@@ -1,0 +1,3 @@
+#!/bin/sh
+
+mpv "$(fzf -0 -q '!^. .mp4$ | .mkv$ | .m4v$ ')"

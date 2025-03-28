@@ -12,6 +12,8 @@ set colorcolumn=101
 set laststatus=3
 set conceallevel=0
 set noshowmode
+set cursorline
+set cursorlineopt=number
 
 " leader = space, ; easier than :
 let mapleader = " "
@@ -19,11 +21,11 @@ nnoremap ; :
 vnoremap ; :
 
 " quick save and quiting options
+nnoremap <leader>q :silent! wa <bar> qa!<CR>
+vnoremap <leader>q :silent! wa <bar> qa!<CR>
 nnoremap <leader>g :w<CR>
 vnoremap <leader>g :w<CR>
-nnoremap <leader>q :wq<CR>
-vnoremap <leader>q :wq<CR>
-nnoremap <leader>m :w<CR>
+nnoremap <leader>m :silent! wa<CR>
 
 " 0 = home nonwhite, - = end, 9 = home absolute
 nnoremap 0 _
@@ -160,8 +162,6 @@ highlight PmenuThumb     ctermbg=0
 highlight TabLine        cterm=underline ctermfg=0 ctermbg=7
 highlight TabLineSel     cterm=bold
 highlight TabLineFill    cterm=reverse
-highlight CursorColumn   ctermbg=7
-highlight CursorLine     cterm=underline
 highlight MatchParen     ctermbg=14
 highlight Constant       ctermfg=5
 highlight Special        ctermfg=5
@@ -191,10 +191,11 @@ highlight Search         ctermfg=0    ctermbg=11
 
 " Dim line numbers, comments, color columns, the status line, splits and sign
 " columns.
-set cursorline
-set cursorlineopt=number
 highlight LineNr       ctermfg=8
-highlight CursorLineNr ctermfg=7    ctermbg=NONE cterm=NONE
+" why not work >:(
+" highlight CursorLine   ctermfg=0    ctermbg=0 cterm=underline
+" highlight CursorColumn              ctermbg=9
+highlight CursorLineNr ctermfg=7    ctermbg=NONE cterm=bold
 highlight Comment      ctermfg=15
 highlight ColorColumn  ctermfg=7    ctermbg=8
 highlight Folded       ctermfg=7    ctermbg=8
@@ -202,9 +203,9 @@ highlight FoldColumn   ctermfg=7    ctermbg=8
 highlight Pmenu        ctermfg=15   ctermbg=8
 highlight PmenuSel     ctermfg=15   ctermbg=8
 highlight SpellCap     ctermfg=7    ctermbg=8
-highlight StatusLine   ctermfg=15   ctermbg=8    cterm=bold
-highlight StatusLineNC ctermfg=7    ctermbg=8    cterm=NONE
-highlight VertSplit    ctermfg=7    ctermbg=8    cterm=NONE
+highlight StatusLine   ctermfg=15   ctermbg=NONE cterm=bold
+highlight StatusLineNC ctermfg=7    ctermbg=NONE
+highlight VertSplit    ctermfg=7    ctermbg=8
 highlight SignColumn                ctermbg=8
 
 highlight link DimFzfFg     Normal
