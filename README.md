@@ -4,7 +4,12 @@
 
 * Artix: Yes, I use this rice on my Artix desktop daily
 * Arch: Kinda, after some minor tweaks it should be fine on Arch.
-* Void: No, I used to use void on desktop and laptop but not anymore. The config is outdated.
+* Void: No, the config is outdated.
+
+Currently moving away from i3-gaps into ringwm.
+I3 is only used as backup right now.
+Bar config is already less compatible with i3.
+To be removed after the testing period.
 
 ## About
 
@@ -16,19 +21,20 @@ Key                     | Value
 Os                      | Artix
 Init system             | OpenRC
 Display server          | X11
-Display init            | xs (https://github.com/Earnestly/sx)
-Window manager          | i3-gaps
+Display init            | sx (https://github.com/Earnestly/sx)
+WM (phase in)           | Ringwm (https://github.com/codybloemhard/ringwm)
+WM (phase out)          | i3-gaps
 Shell (bin/sh)          | Dash
 Shell (Login)           | Fish
-Terminal                | St (https://gitlab.com/codybloemhard/st-cody)
-Launcher                | Dmenu (https://gitlab.com/codybloemhard/dmenu-cody)
+Terminal                | St (https://github.com/codybloemhard/st-cody)
+Launcher                | Dmenu (https://github.com/codybloemhard/dmenu-cody)
 Status bar              | Shapebar (https://gitlab.com/codybloemhard/shapebar)
 Prompt                  | Starship (https://github.com/starship/starship)
 Text editor             | NeoVim
 Compositor              | Picom
 AUR helper              | Paru
-Keymap                  | Physical: QMK (https://gitlab.com/codybloemhard/qmk-cody)
-Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, Bat, Eza, Dust, Btop, Paclog
+Keymap                  | Physical: QMK (https://github.com/codybloemhard/qmk-cody)
+Notable Utils           | Scrot, Slock, Feh, Fzf, Ag, Bat, Eza, Dust, Btop, Paclog, Reat
 Themes                  | Nord, Gruvbox, Hawkrad, Tokyo Night, Space, Dark
 
 ## Example Image
