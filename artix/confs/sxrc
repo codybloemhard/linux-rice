@@ -2,10 +2,10 @@
 #xrandr --auto
 set-theme-data
 
-if true; then
+if false; then
   i3
 else
-  exec xrandr --output DP-0 --output HDMI-0 --right-of DP-0 &
+  exec xrandr --output DP-0 --primary --output HDMI-0 --right-of DP-0 &
   exec picom --xrender-sync-fence &
   exec ~/scr/.theme/run-shapebar &
   exec /home/cody/git/penrose-cody/target/release/penrose-cody
