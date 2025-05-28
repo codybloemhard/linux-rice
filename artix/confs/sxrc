@@ -8,5 +8,5 @@ else
   exec xrandr --output DP-0 --primary --output HDMI-0 --right-of DP-0 &
   exec picom --xrender-sync-fence &
   exec ~/scr/.theme/run-shapebar &
-  exec /home/cody/git/penrose-cody/target/release/penrose-cody
+  exec /home/cody/git/ringwm/target/release/ringwm
 fi
