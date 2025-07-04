@@ -6,7 +6,9 @@ user_pref("browser.bookmarks.addedImportButton", false);
 user_pref("browser.toolbars.bookmarks.visibility", "never");
 user_pref("pdfjs.viewerCssTheme", 2); // set pdf ui to dark
 user_pref("extensions.unifiedExtensions.enabled", false); // disable new "extensions" toolbar button
-user_pref("browser.tabs.loadBookmarksInTabs", true);
+user_pref("browser.tabs.loadBookmarksInTabs", false); // true
+user_pref("cookiebanners.service.mode", 2)
+user_pref("browser.urlbar.scotchBonnet.enableOverride", false); // disable new search engine selection
 
 // ?
 user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // true to use vimium everywhere?
@@ -215,7 +217,7 @@ user_pref("media.peerconnection.enabled", false);
 user_pref("dom.event.clipboardevents.enabled", false);
 user_pref("dom.battery.enabled", false);
 user_pref("extensions.pocket.enabled", false);
-user_pref("dom.private-attribution.submission.enabled", false)
+user_pref("dom.private-attribution.submission.enabled", true) // false
 
 // https://theprivacyguide1.github.io/about_config.html
 user_pref("browser.cache.offline.enable", false);
@@ -250,7 +252,7 @@ user_pref("network.jar.block-remote-files", true);
 user_pref("javascript.options.ion", false);
 user_pref("javascript.options.native_regexp", false);
 user_pref("javascript.options.baselinejit", true); // set to false to harden
-user_pref("dom.webaudio.enabled", false);
+user_pref("dom.webaudio.enabled", true); // set to false to harden, true to make spotify work
 user_pref("media.webaudio.enabled", false);
 user_pref("gfx.font_rendering.opentype_svg.enabled", false);
 user_pref("svg.disabled", false); // set to true to harden, bit more extreme in terms of ux
