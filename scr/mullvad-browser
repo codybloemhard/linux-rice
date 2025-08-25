@@ -1,0 +1,3 @@
+#!/bin/sh
+cd ~/tem/mullvad-browser/Browser/
+./start-mullvad-browser

@@ -83,5 +83,8 @@ doas cp confs/colours /etc/init.d/colours
 doas rc-update add colours sysinit
 doas cp confs/grub /etc/default/grub
 doas grub-mkconfig -o /boot/grub/grub.cfg
+# iptables firewall
+doas cp confs/firewall /etc/init.d/firewall
+doas rc-update add firewall boot
 # done
 echo 'Done Configuring'
