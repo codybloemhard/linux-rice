@@ -119,15 +119,15 @@ Themes                  | Nord, Gruvbox, Hawkrad, Tokyo Night, Space, Dark
 ### Configure wifi (wpa, optional):
 
 0. View your network interfaces `sudo ip link show`
-1. Pick your interface, called _interface from now.
-2. List all networks by running `sudo iw dev interface scan | grep -i ssid`
-3. Pick one called _ssid from now.
-4. You know the password for the network, called _key from now.
+1. Pick your interface, called INT from now.
+2. List all networks by running `sudo iw dev INT scan | grep -i ssid`
+3. Pick one called SSID from now.
+4. You know the password for the network, called KEY from now.
 5. Backup example conf: `cp /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant-std.conf`
-6. Populate the conf with our data. `wpa_passphrase _ssid _key >> /etc/wpa_supplicant/wpa_supplicant.conf`
+6. Populate the conf with our data. `wpa_passphrase SSID KEY >> /etc/wpa_supplicant/wpa_supplicant.conf`
 7. For some reason had to do `killall wpa_applicant`;
 8. `wpa_supplicant -B -i<interface_name> -c<path/to/configuration/file> -Dwext`
-9. `dhcpcd _interface`
+9. `dhcpcd INT`
 10. Should work now, `pacman -Syu` and `ping somewebsite` should work.
 11. If not, i also had to repeat some steps. If it prompts that it has this file in /usr/.... after step 10, just remove it with `rm filename`. and repeat step 10.
 
@@ -137,7 +137,8 @@ Themes                  | Nord, Gruvbox, Hawkrad, Tokyo Night, Space, Dark
 1. `enable wifi`
 2. `scan wifi`
 3. `agent on`
-4. `connect wifi_...`
+4. `services`
+5. `connect wifi_...`
 
 ### Some tid bits
 
