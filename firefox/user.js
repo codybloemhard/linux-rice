@@ -7,7 +7,7 @@ user_pref("browser.toolbars.bookmarks.visibility", "never");
 user_pref("pdfjs.viewerCssTheme", 2); // set pdf ui to dark
 user_pref("extensions.unifiedExtensions.enabled", false); // disable new "extensions" toolbar button
 user_pref("browser.tabs.loadBookmarksInTabs", false); // true
-user_pref("cookiebanners.service.mode", 2)
+user_pref("cookiebanners.service.mode", 2);
 user_pref("browser.urlbar.scotchBonnet.enableOverride", false); // disable new search engine selection
 
 // ?
@@ -217,35 +217,35 @@ user_pref("media.peerconnection.enabled", false);
 user_pref("dom.event.clipboardevents.enabled", false);
 user_pref("dom.battery.enabled", false);
 user_pref("extensions.pocket.enabled", false);
-user_pref("dom.private-attribution.submission.enabled", true) // false
+user_pref("dom.private-attribution.submission.enabled", true); // false
 
 // https://theprivacyguide1.github.io/about_config.html
 user_pref("browser.cache.offline.enable", false);
 user_pref("browser.sessionstore.max_tabs_undo", 3);
 user_pref("extensions.blocklist.url", "https://blocklists.settings.services.mozilla.com/v1/blocklist/3/%20/%20/");
 user_pref("dom.event.contextmenu.enabled", false);
-user_pref("geo.wifi.uri", blank);
-user_pref("browser.search.geoip.url", blank);
-user_pref("browser.aboutHomeSnippets.updateUrL", blank);
-user_pref("browser.startup.homepage_override.mstone", blank);
-user_pref("browser.startup.homepage_override.buildID", blank);
-user_pref("startup.homepage_welcome_url", blank);
-user_pref("startup.homepage_welcome_url.additional", blank);
-user_pref("startup.homepage_override_url", blank);
-user_pref("toolkit.telemetry.cachedClientID", blank);
+user_pref("geo.wifi.uri", "");
+user_pref("browser.search.geoip.url", "");
+user_pref("browser.aboutHomeSnippets.updateUrL", "");
+user_pref("browser.startup.homepage_override.mstone", "");
+user_pref("browser.startup.homepage_override.buildID", "");
+user_pref("startup.homepage_welcome_url", "");
+user_pref("startup.homepage_welcome_url.additional", "");
+user_pref("startup.homepage_override_url", "");
+user_pref("toolkit.telemetry.cachedClientID", "");
 user_pref("browser.send_pings.require_same_host", true);
 user_pref("network.dnsCacheEntries", 64);
 user_pref("places.history.enabled", true); // set to false to harden
 user_pref("browser.cache.disk_cache_ssl", false);
 user_pref("browser.cache.memory.enable", false);
-user_pref("extensions.pocket.site", blank);
-user_pref("extensions.pocket.oAuthConsumerKey", blank);
-user_pref("extensions.pocket.api", blank);
-user_pref("toolkit.telemetry.server", blank);
+user_pref("extensions.pocket.site", "");
+user_pref("extensions.pocket.oAuthConsumerKey", "");
+user_pref("extensions.pocket.api", "");
+user_pref("toolkit.telemetry.server", "");
 user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
-user_pref("toolkit.crashreporter.infoURL", blank);
-user_pref("datareporting.healthreport.infoURL", blank);
-user_pref("datareporting.policy.firstRunURL", blank);
+user_pref("toolkit.crashreporter.infoURL", "");
+user_pref("datareporting.healthreport.infoURL", "");
+user_pref("datareporting.policy.firstRunURL", "");
 user_pref("privacy.spoof_english", false);
 user_pref("gfx.font_rendering.graphite.enabled", false);
 user_pref("network.jar.block-remote-files", true);
@@ -256,3 +256,17 @@ user_pref("dom.webaudio.enabled", true); // set to false to harden, true to make
 user_pref("media.webaudio.enabled", false);
 user_pref("gfx.font_rendering.opentype_svg.enabled", false);
 user_pref("svg.disabled", false); // set to true to harden, bit more extreme in terms of ux
+
+// ai
+user_pref("browser.ml.enable", false);
+user_pref("browser.ml.chat.enabled", false);
+user_pref("browser.ml.chat.menu", false);
+user_pref("browser.ml.chat.page", false);
+user_pref("browser.ml.chat.page.footerBadge", false);
+user_pref("browser.ml.chat.page.menuBadge", false);
+user_pref("browser.ml.linkPreview.enabled", false);
+user_pref("browser.ml.pageAssist.enabled", false);
+user_pref("browser.tabs.groups.smart.enabled", false);
+user_pref("browser.tabs.groups.smart.userEnabled", false);
+user_pref("extensions.ml.enabled", false);
+user_pref("browser.search.visualSearch.featureGate", false);

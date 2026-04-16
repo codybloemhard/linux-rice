@@ -1,11 +1,11 @@
 #!/bin/sh
-#xrandr --auto
 set-theme-data
 
 if false; then
   i3
 else
   exec xrandr --output DP-0 --primary --output HDMI-0 --right-of DP-0 &
+  #xrandr --auto
   exec picom --xrender-sync-fence &
   exec ~/scr/.theme/run-shapebar &
   exec /home/cody/git/ringwm/target/release/ringwm
